@@ -1,3 +1,5 @@
+import ExecutiveSlider from "@/components/ExecutiveSlider";
+
 const MeetOurTeam = () => {
   return (
     <div className="w-full h-auto flex flex-col items-start gap-5 my-10">
@@ -12,6 +14,7 @@ const MeetOurTeam = () => {
       </div>
 
       {/* Slider */}
+      <ExecutiveSlider />
     </div>
   );
 };

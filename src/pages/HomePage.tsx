@@ -5,6 +5,7 @@ import BusinessModel from "@/sections/HomeSection/BusinessModel";
 import CoreValues from "@/sections/HomeSection/CoreValues";
 import Engagements from "@/sections/HomeSection/Engagements";
 import Hero from "@/sections/HomeSection/Hero";
+import MeetOurTeam from "@/sections/HomeSection/MeetOurTeam";
 import MissionVision from "@/sections/HomeSection/MissionVision";
 import Offers from "@/sections/HomeSection/Offers";
 
@@ -31,7 +32,7 @@ const HomePage = () => {
 
       <Divider />
 
-      {/* <MeetOurTeam /> */}
+      <MeetOurTeam />
     </div>
   );
 };
