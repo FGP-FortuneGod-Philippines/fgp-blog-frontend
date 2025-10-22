@@ -1,26 +1,7 @@
-import ceo from "@/assets/executives/CEO.png";
-import jarl from "@/assets/executives/jarl.png";
-import kevin from "@/assets/executives/kevin-1.png";
-import stanley from "@/assets/executives/stanley.png";
 import BaseSlider from "./BaseSlider";
-
-interface MeetTeamProps {
-  name: string;
-  position: string;
-  image: string;
-  email?: string;
-  facebook?: string;
-  linkedin?: string;
-}
+import { executiveTeam } from "@/constants";
 
 const ExecutiveSlider = () => {
-  const executiveTeam: MeetTeamProps[] = [
-    { name: "David Huang", position: "Chairman / CEO", image: ceo },
-    { name: "Jarl Lin", position: "Chief Finance Officer", image: jarl },
-    { name: "Stanley Liu", position: "President", image: stanley },
-    { name: "Kevin Yang", position: "Global Trade Director", image: kevin },
-  ];
-
   const customSettings = {
     speed: 2000,
     autoplay: true,
@@ -30,7 +11,7 @@ const ExecutiveSlider = () => {
     slidesToShow: 3,
   };
 
-  // ✅ Dynamically generate slides
+  // Dynamic Slides
   const slides = executiveTeam.map((exec) => (
     <div key={exec.name} className="text-center">
       <img
@@ -44,7 +25,7 @@ const ExecutiveSlider = () => {
   ));
 
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto my-10">
       <BaseSlider slides={slides} settings={customSettings} />
     </section>
   );

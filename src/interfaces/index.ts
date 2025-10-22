@@ -27,3 +27,12 @@ export interface Accordion {
   description: string;
   item: string;
 }
+
+export interface MeetTeamProps {
+  name: string;
+  position: string;
+  image: string;
+  email?: string;
+  facebook?: string;
+  linkedin?: string;
+}

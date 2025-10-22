@@ -1,4 +1,5 @@
 import ExecutiveSlider from "@/components/ExecutiveSlider";
+import ForeignSlider from "@/components/ForeignSlider";
 
 const MeetOurTeam = () => {
   return (
@@ -15,6 +16,8 @@ const MeetOurTeam = () => {
 
       {/* Slider */}
       <ExecutiveSlider />
+
+      <ForeignSlider />
     </div>
   );
 };

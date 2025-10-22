@@ -3,10 +3,21 @@ import trade from "@/assets/offer/International trade-rafiki.png";
 import operation from "@/assets/offer/Operating system upgrade-amico (1).png";
 import project from "@/assets/offer/Projections-bro.png";
 
+import ceo from "@/assets/executives/CEO.png";
+import jarl from "@/assets/executives/jarl.png";
+import kevin from "@/assets/executives/kevin-1.png";
+import stanley from "@/assets/executives/stanley.png";
+
+import duke from "@/assets/foreign-affairs/Duke-Liu.png";
+import elden from "@/assets/foreign-affairs/Elden-Tu.png";
+import steven from "@/assets/foreign-affairs/Steven-Lien.png";
+import william from "@/assets/foreign-affairs/William.png";
+
 import type {
   Accordion,
   CoreValues,
   Engagement,
+  MeetTeamProps,
   NavLink,
   OfferCards,
 } from "@/interfaces";
@@ -138,4 +149,22 @@ export const keyAdvantage: Accordion[] = [
       "Adaptable for retail, wholesale, and cross-border operations.",
     item: "5",
   },
+];
+
+export const executiveTeam: MeetTeamProps[] = [
+  { name: "David Huang", position: "Chairman / CEO", image: ceo },
+  { name: "Jarl Lin", position: "Chief Finance Officer", image: jarl },
+  { name: "Stanley Liu", position: "President", image: stanley },
+  { name: "Kevin Yang", position: "Global Trade Director", image: kevin },
+];
+
+export const foreignTeam: MeetTeamProps[] = [
+  { name: "Duke Liu", position: "Director International Affairs", image: duke },
+  { name: "Elden Tu", position: "Senior Consultant", image: elden },
+  {
+    name: "Steven Lien",
+    position: "Director International Affairs",
+    image: steven,
+  },
+  { name: "William Wang", position: "Project Manager", image: william },
 ];
