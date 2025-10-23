@@ -1,14 +1,14 @@
-import { foreignTeam } from "@/constants";
+import { phBusinessAssociates } from "@/constants";
 import BaseSlider from "./BaseSlider";
 
-const ForeignSlider = () => {
+const PhBusinessAssociate = () => {
   const customSettings = {
     autoplay: false,
     arrows: false,
     slidesToShow: 4,
   };
 
-  const slides = foreignTeam.map((team) => (
+  const slides = phBusinessAssociates.map((team) => (
     <div key={team.name} className="text-center">
       <img
         src={team.image}
@@ -22,10 +22,10 @@ const ForeignSlider = () => {
 
   return (
     <section className="container mx-auto my-10">
-      <h3 className="mb-10">Foreign Affairs</h3>
+      <h3 className="mb-10">Philippine Business Associates</h3>
       <BaseSlider slides={slides} settings={customSettings} />
     </section>
   );
 };
 
-export default ForeignSlider;
+export default PhBusinessAssociate;

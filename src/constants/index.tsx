@@ -13,6 +13,8 @@ import elden from "@/assets/foreign-affairs/Elden-Tu.png";
 import steven from "@/assets/foreign-affairs/Steven-Lien.png";
 import william from "@/assets/foreign-affairs/William.png";
 
+import fidel from "@/assets/ph-business-associates/fidel-ferrer.png";
+
 import type {
   Accordion,
   CoreValues,
@@ -167,4 +169,8 @@ export const foreignTeam: MeetTeamProps[] = [
     image: steven,
   },
   { name: "William Wang", position: "Project Manager", image: william },
+];
+
+export const phBusinessAssociates: MeetTeamProps[] = [
+  { name: "Engr. Fidel Ferrer", position: "Senior Consultant", image: fidel },
 ];
