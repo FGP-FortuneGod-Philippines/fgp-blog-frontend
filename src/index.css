@@ -245,3 +245,17 @@
     @apply italic text-sm tracking-tighter;
   }
 }
+
+/* React Slick CSS Configurations */
+/* Change inactive dot color */
+.slick-dots li button:before {
+  font-size: 12px; /* optional: adjust size */
+  color: var(--primary-ctc) !important; /* change this to your color */
+  opacity: 1; /* make sure it’s fully visible */
+}
+
+/* Change active dot color */
+.slick-dots li.slick-active button:before {
+  color: var(--primary-ctc) !important; /* your active color */
+  opacity: 100% !important;
+}
