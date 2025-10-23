@@ -1,5 +1,6 @@
 import ExecutiveSlider from "@/components/ExecutiveSlider";
 import ForeignSlider from "@/components/ForeignSlider";
+import OperationsTeam from "@/components/OperationsTeam";
 import PhBusinessAssociate from "@/components/PhBusinessAssociate";
 
 const MeetOurTeam = () => {
@@ -21,6 +22,8 @@ const MeetOurTeam = () => {
       <ForeignSlider />
 
       <PhBusinessAssociate />
+
+      <OperationsTeam />
     </div>
   );
 };

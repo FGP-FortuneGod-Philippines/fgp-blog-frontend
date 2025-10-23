@@ -15,6 +15,13 @@ import william from "@/assets/foreign-affairs/William.png";
 
 import fidel from "@/assets/ph-business-associates/fidel-ferrer.png";
 
+import hera from "@/assets/operations-team/Hera.png";
+import gelo from "@/assets/operations-team/Gelo.png";
+import cess from "@/assets/operations-team/Cess.png";
+import jin from "@/assets/operations-team/jin.png";
+import lane from "@/assets/operations-team/Lane.png";
+import lea from "@/assets/operations-team/Lea.png";
+
 import type {
   Accordion,
   CoreValues,
@@ -173,4 +180,37 @@ export const foreignTeam: MeetTeamProps[] = [
 
 export const phBusinessAssociates: MeetTeamProps[] = [
   { name: "Engr. Fidel Ferrer", position: "Senior Consultant", image: fidel },
+];
+
+export const operationsTeam: MeetTeamProps[] = [
+  {
+    name: "Hera Krizelda Almacen",
+    position: "Human Resources & Admin Officer",
+    image: hera,
+  },
+  {
+    name: "Heraclea Afable",
+    position: "Accounting and Finance Lead",
+    image: lea,
+  },
+  {
+    name: "Princess Rita Yandoc",
+    position: "Accounting and Treasury Officer",
+    image: cess,
+  },
+  {
+    name: "Angelo Lopez",
+    position: "IT Web Management & Graphic Design Artist",
+    image: gelo,
+  },
+  {
+    name: "Nerilane Maranan",
+    position: "Executive Assistant & Marketing Supervisor",
+    image: lane,
+  },
+  {
+    name: "Lyn Ching Docuyanan",
+    position: "Marketing Staff",
+    image: jin,
+  },
 ];
