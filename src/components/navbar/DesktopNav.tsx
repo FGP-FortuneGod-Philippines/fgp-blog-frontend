@@ -1,23 +1,17 @@
-import { Link } from "react-router";
-
-import logo from "../assets/fgp-img.png";
-
-// Components
-import { Button } from "./ui/button";
+import { navLinks } from "@/constants";
+import { Button } from "../ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "./ui/navigation-menu";
+} from "../ui/navigation-menu";
+import logo from "@/assets/fgp-img.png";
+import { Link } from "react-router";
 
-// Constants and Interfaces
-import { navLinks } from "@/constants";
-import type { NavLink } from "@/interfaces";
-
-const Navbar = () => {
+const DesktopNav = () => {
   return (
-    <div className="wrapper h-[5rem] flex justify-between items-center">
+    <header className="wrapper h-[5rem] flex justify-between items-center max-md:hidden">
       {/* Logo */}
       <div className="w-20 h-20">
         <img
@@ -32,7 +26,7 @@ const Navbar = () => {
         <NavigationMenu>
           <NavigationMenuList className="gap-10">
             {navLinks &&
-              navLinks.map((link: NavLink) => (
+              navLinks.map((link) => (
                 <NavigationMenuItem key={link.path}>
                   <NavigationMenuLink
                     asChild
@@ -50,8 +44,8 @@ const Navbar = () => {
       <div>
         <Button>Contact Us</Button>
       </div>
-    </div>
+    </header>
   );
 };
 
-export default Navbar;
+export default DesktopNav;
