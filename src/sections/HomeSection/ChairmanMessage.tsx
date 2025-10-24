@@ -48,7 +48,7 @@ const ChairmanMessage = () => {
         </p>
       </div>
 
-      <div className="lg:w-[70%] w-full flex flex-col justify-center items-center my-10 mx-auto border">
+      <div className="lg:w-[70%] w-full flex flex-col justify-center items-center my-10 mx-auto">
         <div className="w-full flex flex-col my-10">
           <h3 className="text-4xl">
             FortuneGod: Driving Growth, Innovation, and Sustainability Across
