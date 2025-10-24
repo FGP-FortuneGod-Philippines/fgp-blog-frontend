@@ -1,10 +1,10 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import { Outlet } from "react-router";
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-auto">
+    <div className="relative flex flex-col justify-center items-center h-auto">
       <Navbar />
       <Outlet />
       <Footer />
