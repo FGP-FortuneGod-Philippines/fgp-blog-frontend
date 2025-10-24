@@ -5,7 +5,7 @@ const ChairmanMessage = () => {
         <div className="flex flex-col my-10 gap-10">
           <h3>Together for a Brighter Future</h3>
 
-          <h3 className="text-4xl">
+          <h3 className="text-3xl">
             A Message from Our Chairman on Our Vision Ahead
           </h3>
         </div>
@@ -48,15 +48,15 @@ const ChairmanMessage = () => {
         </p>
       </div>
 
-      <div className="flex flex-col justify-center items-center my-10">
-        <div className="max-w-[70%] w-full flex flex-col my-10">
+      <div className="lg:w-[70%] w-full flex flex-col justify-center items-center my-10 mx-auto">
+        <div className="w-full flex flex-col my-10">
           <h3 className="text-4xl">
             FortuneGod: Driving Growth, Innovation, and Sustainability Across
             Asia-Pacific
           </h3>
         </div>
 
-        <p className="max-w-[50%] w-full text-center">
+        <p className="w-full text-center">
           FortuneGod is more than a trading company—it is a strategic partner
           for growth. By combining cross-border trade, e-commerce innovation,
           and sustainable investments, we empower Philippine businesses, uplift
