@@ -1,24 +1,24 @@
-import Slider, { type Settings } from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Carousel, CarouselContent } from "./ui/carousel";
 
-export interface BaseSliderProps {
+interface BaseSliderProps {
   slides: React.ReactNode[];
-  settings?: Settings;
+  opts?: Record<string, any>;
+  plugins?: any[];
 }
 
-const BaseSlider = ({ slides, settings }: BaseSliderProps) => {
-  const defaultSettings: Settings = {
-    slidesToScroll: 1,
-    ...settings,
-  };
-
+const BaseSlider = ({ slides, opts, plugins }: BaseSliderProps) => {
   return (
-    <Slider {...defaultSettings}>
-      {slides.map((slide, index) => (
-        <div key={index}>{slide}</div>
-      ))}
-    </Slider>
+    <Carousel
+      opts={{
+        align: "start",
+        ...opts,
+      }}
+      plugins={plugins}
+      className="w-full"
+    >
+      <CarouselContent className="w-full">{slides}</CarouselContent>
+    </Carousel>
   );
 };
 
