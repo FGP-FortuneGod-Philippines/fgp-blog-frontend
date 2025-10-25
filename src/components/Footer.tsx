@@ -5,10 +5,10 @@ const Footer = () => {
     <div className="w-full h-auto flex flex-col items-center bg-[#faf5e5] py-20 max-lg:px-10 gap-y-[5rem]">
       <div className="max-w-[90rem] w-full h-auto flex flex-col ">
         {/* Top Side */}
-        <div className="flex justify-between items-start">
+        <div className="flex justify-between items-start max-lg:flex-col max-lg:gap-10">
           {/* Top Left */}
           <div className="flex flex-col items-start justify-start gap-2">
-            <div className="md:w-[70%] w-full">
+            <div className="md:w-[28rem] w-full">
               <h3 className="text-start">
                 FGP FortuneGod Philippines Trading Inc.
               </h3>
@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
 
           {/* Top Right */}
-          <div className="flex justify-end gap-10">
+          <div className="flex max-lg:flex-col-reverse justify-end gap-10">
             <div className="w-[20rem] flex flex-col gap-4 items-start">
               <div className="flex flex-col items-start text-justify hyphens-auto break-words">
                 <p>© 2025 FGP FortuneGod</p>
@@ -51,7 +51,7 @@ const Footer = () => {
       {/* Bottom Side */}
       <div className="max-w-[90rem] w-full h-auto flex flex-col ">
         {/* Top Side */}
-        <div className="flex justify-between items-start flex-wrap">
+        <div className="flex justify-between items-start flex-wrap max-lg:flex-col max-lg:gap-10">
           {/* Address Section */}
           <div className="flex flex-col items-start justify-start gap-5 md:w-[40%] w-full">
             <div className="flex flex-col gap-5">
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
 
           {/* Center and Right Columns */}
-          <div className="flex flex-1 justify-center gap-20">
+          <div className="flex flex-1 justify-center max-lg:flex-col g:gap-20">
             {/* Services */}
             <div className="flex flex-col gap-5 items-start">
               <h3 className="text-base font-semibold">Services</h3>

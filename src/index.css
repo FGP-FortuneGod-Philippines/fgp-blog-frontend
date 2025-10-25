@@ -6,6 +6,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  --breakpoint-xs: 30rem;
+
   --font-sans: "Poppins", sans-serif;
   --font-title: "Cormorant Garamond", serif;
 
@@ -207,19 +209,19 @@
   }
 
   h1 {
-    @apply font-bold text-5xl tracking-wide;
+    @apply font-bold text-5xl tracking-wide max-md:text-4xl;
 
     font-family: var(--font-title);
   }
 
   h2 {
-    @apply font-bold text-4xl tracking-wide;
+    @apply font-bold text-4xl tracking-wide max-md:text-3xl;
 
     font-family: var(--font-title);
   }
 
   h3 {
-    @apply font-semibold text-center text-3xl tracking-wide;
+    @apply font-semibold text-center text-3xl max-md:text-2xl tracking-wide;
   }
 
   h4 {
@@ -227,7 +229,7 @@
   }
 
   p {
-    @apply text-base tracking-wide leading-7;
+    @apply text-base tracking-wide leading-7 max-md:text-sm;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -240,11 +242,11 @@
 
 @layer components {
   .wrapper {
-    @apply max-w-[1440px] w-full px-10 py-5;
+    @apply max-w-[1440px] w-full px-10 py-5 max-md:p-3;
   }
 
   .blockquote {
-    @apply italic text-sm tracking-tighter;
+    @apply italic text-sm tracking-tighter max-md:text-xs;
   }
 }
 
