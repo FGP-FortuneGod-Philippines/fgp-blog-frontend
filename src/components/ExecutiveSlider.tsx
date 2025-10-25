@@ -6,9 +6,22 @@ const ExecutiveSlider = () => {
     speed: 2000,
     autoplay: true,
     autoplaySpeed: 3000,
-    centerMode: true,
     arrows: false,
     slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   // Dynamic Slides

@@ -13,13 +13,7 @@ const BaseSlider = ({ slides, settings }: BaseSliderProps) => {
     ...settings,
   };
 
-  return (
-    <Slider {...defaultSettings}>
-      {slides.map((slide, index) => (
-        <div key={index}>{slide}</div>
-      ))}
-    </Slider>
-  );
+  return <Slider {...defaultSettings}>{slides}</Slider>;
 };
 
 export default BaseSlider;
