@@ -19,7 +19,8 @@ const Advantages = () => {
       </div>
 
       {/* Accordion */}
-      <div className="max-w-[70.5rem] w-full h-auto flex justify-center items-stretch gap-5 my-10">
+      <div className="max-w-[70.5rem] w-full h-auto flex max-md:flex-col justify-center items-stretch gap-5 my-10">
+        {/* Left Accord */}
         <div className="w-full flex flex-col items-center justify-center gap-5">
           <h3>Why FortuneGod?</h3>
 
@@ -47,6 +48,7 @@ const Advantages = () => {
           </Accordion>
         </div>
 
+        {/* Left Accord */}
         <div className="w-full flex flex-col items-center justify-center gap-5">
           <h3>Key Market Advantages</h3>
 

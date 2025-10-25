@@ -1,6 +1,6 @@
 const BusinessModel = () => {
   return (
-    <div className="w-full h-auto flex items-start gap-5 my-10">
+    <div className="w-full h-auto flex max-md:flex-col items-start gap-5 my-10">
       <div className="w-full h-full flex justify-center">
         <h3>Business Model Overview</h3>
       </div>
