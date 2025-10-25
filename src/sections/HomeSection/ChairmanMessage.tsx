@@ -1,8 +1,8 @@
 const ChairmanMessage = () => {
   return (
     <div className="w-full h-auto text-center flex flex-col my-10">
-      <div className="flex flex-col justify-center items-center  my-10">
-        <div className="flex flex-col my-10 gap-10">
+      <div className="flex flex-col justify-center items-center my-10">
+        <div className="flex flex-col mb-10 gap-5">
           <h3>Together for a Brighter Future</h3>
 
           <h3 className="text-3xl">
@@ -10,7 +10,7 @@ const ChairmanMessage = () => {
           </h3>
         </div>
 
-        <p className="max-w-[50%] w-full text-justify">
+        <p className="max-w-[40rem] w-full text-justify">
           Chairman’s Message <br />
           <br /> As Chairman of FortuneGod Group of Companies ., I am honored to
           share our journey, vision, and enduring commitment with you. <br />
@@ -48,13 +48,11 @@ const ChairmanMessage = () => {
         </p>
       </div>
 
-      <div className="lg:w-[70%] w-full flex flex-col justify-center items-center my-10 mx-auto">
-        <div className="w-full flex flex-col my-10">
-          <h3 className="text-4xl">
-            FortuneGod: Driving Growth, Innovation, and Sustainability Across
-            Asia-Pacific
-          </h3>
-        </div>
+      <div className="max-w-[70rem] w-full flex flex-col justify-center items-center my-10 mx-auto">
+        <h3 className="text-4xl">
+          FortuneGod: Driving Growth, Innovation, and Sustainability Across
+          Asia-Pacific
+        </h3>
 
         <p className="w-full text-center">
           FortuneGod is more than a trading company—it is a strategic partner
