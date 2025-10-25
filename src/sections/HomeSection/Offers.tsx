@@ -7,9 +7,9 @@ const Offers = () => {
     <div className="w-full h-auto flex flex-col gap-10 my-10">
       <h3>What We Do and Offer</h3>
 
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-3">
         {cards.map((card) => (
-          <div key={card.alt} className="h-auto flex flex-col gap-5">
+          <div key={card.alt} className="w-full h-auto flex flex-col">
             <div className="w-full h-[21.875rem]">
               <img
                 src={card.src}
@@ -18,7 +18,7 @@ const Offers = () => {
               />
             </div>
 
-            <div className="flex flex-col gap-3 justify-start items-start">
+            <div className="flex flex-col justify-start items-start py-2 px-3">
               <p className="font-semibold tracking-wide">{card.label}</p>
               <Button className="w-fit">
                 Learn More
