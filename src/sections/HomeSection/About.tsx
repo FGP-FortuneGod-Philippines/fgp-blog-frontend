@@ -4,8 +4,8 @@ const About = () => {
   return (
     <>
       {/* About Us */}
-      <div className="max-w-[70.5rem] w-full h-auto flex justify-center items-center gap-5">
-        <div className="w-full h-[31.25rem]">
+      <div className="max-w-[70.5rem] w-full h-auto flex justify-center items-center max-md:flex-col gap-5">
+        <div className="w-full h-[31.25rem] max-md:h-[20rem]">
           <img
             src={aboutIllustration}
             alt="about illustration"

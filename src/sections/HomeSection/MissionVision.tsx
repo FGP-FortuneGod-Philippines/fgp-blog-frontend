@@ -5,7 +5,7 @@ const MissionVision = () => {
   return (
     <div className="w-full h-auto flex flex-col justify-center items-center gap-5 my-10">
       {/* Mission */}
-      <div className="max-w-[70.5rem] w-full h-auto flex justify-center items-center gap-5">
+      <div className="max-w-[70.5rem] w-full h-auto flex max-md:flex-col justify-center items-center gap-5">
         <div className="w-full h-[20.25rem]">
           <img
             src={mission}
@@ -28,7 +28,7 @@ const MissionVision = () => {
       </div>
 
       {/* Vision */}
-      <div className="max-w-[70.5rem] w-full h-auto flex justify-center items-center gap-5">
+      <div className="max-w-[70.5rem] w-full h-auto flex max-md:flex-col-reverse justify-center items-center gap-5">
         <div className="w-full h-auto flex flex-col gap-3">
           <h3>Vision</h3>
           <p className="text-justify">

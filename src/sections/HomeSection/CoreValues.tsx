@@ -3,7 +3,7 @@ import { coreValues } from "@/constants";
 
 const CoreValues = () => {
   return (
-    <div className="max-w-[70.5rem] w-full grid grid-cols-3 gap-5 my-10">
+    <div className="max-w-[70.5rem] w-full grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-5 my-10">
       {coreValues &&
         coreValues.map((value) =>
           value.icon && value.description ? (
