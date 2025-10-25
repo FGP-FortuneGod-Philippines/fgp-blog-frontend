@@ -161,8 +161,8 @@ export const keyAdvantage: Accordion[] = [
 ];
 
 export const executiveTeam: MeetTeamProps[] = [
-  { name: "David Huang", position: "Chairman / CEO", image: ceo },
   { name: "Jarl Lin", position: "Chief Finance Officer", image: jarl },
+  { name: "David Huang", position: "Chairman / CEO", image: ceo },
   { name: "Stanley Liu", position: "President", image: stanley },
   { name: "Kevin Yang", position: "Global Trade Director", image: kevin },
 ];
