@@ -91,7 +91,7 @@ export const cards: OfferCards[] = [
   {
     src: project,
     alt: "Project Illustration",
-    label: "Project and Investment",
+    label: "Projects",
   },
   {
     src: operation,

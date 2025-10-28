@@ -3,10 +3,10 @@ import vision from "@/assets/missionVision/vision.png";
 
 const MissionVision = () => {
   return (
-    <div className="w-full h-auto flex flex-col justify-center items-center gap-5 my-10">
+    <div className="w-full h-auto flex flex-col justify-center items-center gap-5 my-10 max-md:my-0">
       {/* Mission */}
       <div className="max-w-[70.5rem] w-full h-auto flex max-md:flex-col justify-center items-center gap-5">
-        <div className="w-full h-[20.25rem]">
+        <div className="w-full h-[20.25rem] max-md:h-[15.25rem]">
           <img
             src={mission}
             alt="mission img"
@@ -38,7 +38,7 @@ const MissionVision = () => {
           </p>
         </div>
 
-        <div className="w-full h-[20.25rem]">
+        <div className="w-full h-[20.25rem] max-md:h-[15.25rem]">
           <img
             src={vision}
             alt="mission img"

@@ -13,7 +13,7 @@ const ExecutiveSlider = () => {
   ));
 
   return (
-    <section className="w-full h-auto flex justify-center items-center">
+    <section className="w-full h-auto">
       <BaseSlider
         opts={{ loop: true }}
         plugins={[Autoplay({ delay: 2000 })]}

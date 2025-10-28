@@ -15,7 +15,7 @@ const TeamLayout = ({ data, className }: TeamProps) => {
           <img
             src={data.image}
             alt={data.name}
-            className="w-45 h-45 mx-auto rounded-full object-contain mb-4"
+            className="max-sm:w-30 max-sm:h-30 w-40 h-40 mx-auto rounded-full object-contain mb-4"
           />
           <h4 className="text-sm">{data.name}</h4>
           <p className="text-xs">{data.position}</p>
