@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { navLinks } from "@/constants";
 import { Button } from "../ui/button";
 import {
@@ -8,26 +7,10 @@ import {
   NavigationMenuList,
 } from "../ui/navigation-menu";
 import logo from "@/assets/fgp-img.png";
-import { useLocation, useNavigate } from "react-router";
+import { useHandleNavClicks } from "./NavClicks";
 
 const DesktopNav = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleNavClick = (link: any) => {
-    if (link.scrollTo) {
-      // If already on home page
-      if (location.pathname === "/") {
-        const section = document.getElementById(link.scrollTo);
-        if (section) section.scrollIntoView({ behavior: "smooth" });
-      } else {
-        // Navigate to home and include the hash
-        navigate(`/#${link.scrollTo}`);
-      }
-    } else {
-      navigate(link.path);
-    }
-  };
+  const { handleNavClick } = useHandleNavClicks();
 
   return (
     <header className="wrapper h-[5rem] flex justify-between items-center max-md:hidden">
@@ -51,7 +34,6 @@ const DesktopNav = () => {
                     asChild
                     className="font-medium tracking-wide text-sm"
                   >
-                    {/* <Link to={link.path}>{link.label}</Link> */}
                     <span
                       className="cursor-pointer"
                       onClick={() => handleNavClick(link)}
