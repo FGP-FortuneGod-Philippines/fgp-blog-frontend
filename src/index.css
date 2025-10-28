@@ -263,3 +263,17 @@
   color: var(--primary-ctc) !important; /* your active color */
   opacity: 100% !important;
 }
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.blink-animation {
+  animation: blink 1.5s ease-in-out infinite;
+}

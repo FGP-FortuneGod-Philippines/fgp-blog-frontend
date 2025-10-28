@@ -22,8 +22,18 @@ import jin from "@/assets/operations-team/jin.png";
 import lane from "@/assets/operations-team/Lane.png";
 import lea from "@/assets/operations-team/Lea.png";
 
+import loveph from "@/assets/banner-slides/Love-Lastly-na.png";
+import rides from "@/assets/banner-slides/last-star.png";
+import terraces from "@/assets/banner-slides/rice-terraces-person.png";
+import festival from "@/assets/banner-slides/festi-finale.png";
+import river from "@/assets/banner-slides/kids-river.png";
+import groupSelfie from "@/assets/banner-slides/gruop-selfie-1.png";
+import vacation from "@/assets/banner-slides/iloilo-person.png";
+import meeting from "@/assets/banner-slides/meeting-final.png";
+
 import type {
   Accordion,
+  BannerSlidesProps,
   CoreValues,
   Engagement,
   MeetTeamProps,
@@ -212,5 +222,44 @@ export const operationsTeam: MeetTeamProps[] = [
     name: "Lyn Ching Docuyanan",
     position: "Marketing Staff",
     image: jin,
+  },
+];
+
+export const slides: BannerSlidesProps[] = [
+  { img: loveph },
+  {
+    img: rides,
+    description:
+      "Screams, laughter, and hands in the air riding a rollercoaster with friends in the philippines is pure joy you can't forget",
+  },
+  {
+    img: terraces,
+    description:
+      "Each layer of the terraces tells a story, each smiles tells what it means to be Filipino",
+  },
+  {
+    img: festival,
+    description:
+      "Dancing in the streets, smiling with strangers this is what being filipino feels like",
+  },
+  {
+    img: river,
+    description:
+      "Every splash tells a story, of filipino childhood, friendship, and joy of being free",
+  },
+  {
+    img: groupSelfie,
+    description:
+      "Beyond the view, it's the bond filipino friendship that turns every trip into memory",
+  },
+  {
+    img: vacation,
+    description:
+      "More than destinations it's the people that make every filipino journey unforgettable",
+  },
+  {
+    img: meeting,
+    description:
+      "In every filipino city, progress begins with people and purpose",
   },
 ];

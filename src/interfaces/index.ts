@@ -37,3 +37,8 @@ export interface MeetTeamProps {
   facebook?: string;
   linkedin?: string;
 }
+
+export interface BannerSlidesProps {
+  img: string;
+  description?: string;
+}
