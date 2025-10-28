@@ -41,7 +41,7 @@ import {
 
 export const navLinks: NavLink[] = [
   { path: "/", label: "Home" },
-  { path: "#about", label: "About" },
+  { path: "/", label: "About", scrollTo: "about" },
   { path: "/chairman", label: "Chairman" },
   { path: "/announcement", label: "Announcement" },
 ];

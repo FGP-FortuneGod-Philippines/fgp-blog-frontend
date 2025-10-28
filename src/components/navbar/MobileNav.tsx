@@ -44,7 +44,7 @@ const MobileNav = () => {
               <NavigationMenuList className="gap-5 flex justify-start items-start flex-col">
                 {navLinks &&
                   navLinks.map((link) => (
-                    <NavigationMenuItem key={link.path}>
+                    <NavigationMenuItem key={link.label}>
                       <NavigationMenuLink
                         asChild
                         className="font-medium tracking-wide text-sm"
