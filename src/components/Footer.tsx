@@ -20,7 +20,7 @@ const Footer = () => {
 
           {/* Top Right */}
           <div className="flex max-lg:flex-col-reverse justify-end gap-10">
-            <div className="w-[20rem] flex flex-col gap-4 items-start">
+            <div className="max-w-[20rem] w-full flex flex-col gap-4 items-start">
               <div className="flex flex-col items-start text-justify hyphens-auto break-words">
                 <p>© 2025 FGP FortuneGod</p>
                 <p>
@@ -28,7 +28,7 @@ const Footer = () => {
                   Entrepreneurs through E-Commerce
                 </p>
               </div>
-              <h4 className="text-lg">Company</h4>
+              <h4>Company</h4>
             </div>
 
             <div className="flex items-start justify-start gap-5 mt-1">
@@ -53,27 +53,21 @@ const Footer = () => {
         {/* Top Side */}
         <div className="flex justify-between items-start flex-wrap max-lg:flex-col max-lg:gap-10">
           {/* Address Section */}
-          <div className="flex flex-col items-start justify-start gap-5 md:w-[40%] w-full">
+          <div className="flex flex-col items-start justify-start gap-5 max-w-[40rem] w-full">
             <div className="flex flex-col gap-5">
-              <h3 className="text-base font-semibold text-start">Address</h3>
-              <p className="text-left text-base leading-6">
+              <h4 className="font-semibold text-start">Address</h4>
+              <p>
                 Unit3211, 32/F Trium Square, Sen. Gil Puyat Ave. Cor. Leveriza
                 Street, Brgy. 37 Pasay City, 1300 Metro Manila, Philippines
               </p>
             </div>
 
-            <div className="flex flex-col gap-5">
-              <h3 className="text-base font-semibold text-start">
-                Contact Us:
-              </h3>
+            <div className="flex flex-col gap-5 break-all">
+              <h4 className="font-semibold text-start">Contact Us:</h4>
               <div className="flex flex-col">
-                <p className="text-left text-base leading-6">
-                  +63 931-020-7050
-                </p>
-                <p className="text-left text-base leading-6">+63-2-85168137</p>
-                <p className="text-left text-base leading-6">
-                  support@fortunegodph.com
-                </p>
+                <p>+63 931-020-7050</p>
+                <p>+63-2-85168137</p>
+                <p>support@fortunegodph.com</p>
               </div>
             </div>
           </div>
@@ -82,21 +76,35 @@ const Footer = () => {
           <div className="flex flex-1 justify-center max-lg:flex-col g:gap-20">
             {/* Services */}
             <div className="flex flex-col gap-5 items-start">
-              <h3 className="text-base font-semibold">Services</h3>
-              <ul className="space-y-1">
-                <li>Ecommerce</li>
-                <li>International Trade</li>
-                <li>Project & Investment</li>
-                <li>Turn Key Operations</li>
+              <h4 className="font-semibold">Services</h4>
+              <ul>
+                <li>
+                  <p>Ecommerce</p>
+                </li>
+                <li>
+                  <p>International Trade</p>
+                </li>
+                <li>
+                  <p>Project & Investment</p>
+                </li>
+                <li>
+                  <p>Turn Key Operations</p>
+                </li>
               </ul>
             </div>
 
             {/* Navigation */}
             <div className="flex flex-col gap-5 items-start mt-11">
-              <ul className="space-y-1">
-                <li>Home</li>
-                <li>About</li>
-                <li>Announcement</li>
+              <ul>
+                <li>
+                  <p>Home</p>
+                </li>
+                <li>
+                  <p>About</p>
+                </li>
+                <li>
+                  <p>Announcement</p>
+                </li>
               </ul>
             </div>
           </div>

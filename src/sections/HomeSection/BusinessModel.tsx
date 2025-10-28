@@ -1,6 +1,6 @@
 const BusinessModel = () => {
   return (
-    <div className="w-full h-auto flex max-md:flex-col items-start gap-5 my-10">
+    <div className="w-full h-auto flex max-md:flex-col items-start gap-5 my-10 max-md:my-5">
       <div className="w-full h-full flex justify-center">
         <h3>Business Model Overview</h3>
       </div>
@@ -11,18 +11,24 @@ const BusinessModel = () => {
           the fast-growing Philippine digital economy, combining:
         </p>
 
-        <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+        <ul className="ml-6 list-disc [&>li]:mt-2">
           <li>
-            China Supply Chain Procurement – affordable, reliable sourcing for
-            local demand.
+            <p>
+              China Supply Chain Procurement – affordable, reliable sourcing for
+              local demand.
+            </p>
           </li>
           <li>
-            Philippine Global Export Platform – giving local products
-            international reach.
+            <p>
+              Philippine Global Export Platform – giving local products
+              international reach.
+            </p>
           </li>
           <li>
-            High-Value Membership Economy – cashback, loyalty, and referral
-            rewards to sustain user growth.
+            <p>
+              High-Value Membership Economy – cashback, loyalty, and referral
+              rewards to sustain user growth.
+            </p>
           </li>
         </ul>
 

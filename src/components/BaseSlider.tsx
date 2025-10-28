@@ -17,7 +17,7 @@ const BaseSlider = ({ slides, opts, plugins }: BaseSliderProps) => {
       plugins={plugins}
       className="w-full"
     >
-      <CarouselContent className="w-full">{slides}</CarouselContent>
+      <CarouselContent>{slides}</CarouselContent>
     </Carousel>
   );
 };

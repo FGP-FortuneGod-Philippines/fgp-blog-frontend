@@ -30,7 +30,7 @@
   /* --foreground: oklch(0.145 0 0); */
   --foreground: #584910; /* Custom foreground */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: #584910;
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.8062 0.1305 80.5909);
@@ -209,27 +209,27 @@
   }
 
   h1 {
-    @apply font-bold text-5xl tracking-wide max-md:text-4xl;
+    @apply font-bold text-5xl tracking-wide max-sm:tracking-normal max-md:text-4xl max-sm:text-2xl;
 
     font-family: var(--font-title);
   }
 
   h2 {
-    @apply font-bold text-4xl tracking-wide max-md:text-3xl;
+    @apply font-bold text-4xl tracking-wide max-sm:tracking-normal max-md:text-[1.70rem] max-sm:text-xl;
 
     font-family: var(--font-title);
   }
 
   h3 {
-    @apply font-semibold text-center text-3xl max-md:text-2xl tracking-wide;
+    @apply font-semibold text-center text-3xl max-md:text-2xl max-xs:text-lg tracking-wide;
   }
 
   h4 {
-    @apply text-xl font-semibold tracking-wide;
+    @apply text-xl max-md:text-lg font-semibold max-sm:tracking-normal max-xs:text-sm;
   }
 
   p {
-    @apply text-base tracking-wide leading-7 max-md:text-sm;
+    @apply text-base tracking-normal leading-7 max-sm:text-sm max-xs:text-xs;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -246,7 +246,7 @@
   }
 
   .blockquote {
-    @apply italic text-sm tracking-tighter max-md:text-xs;
+    @apply italic text-sm tracking-tighter max-md:tracking-tight max-md:text-[10px];
   }
 }
 

@@ -4,10 +4,10 @@ import { LuArrowRight } from "react-icons/lu";
 
 const Offers = () => {
   return (
-    <div className="w-full h-auto flex flex-col gap-10 my-10">
+    <div className="w-full h-auto flex flex-col gap-10 max-md:gap-5 max-xs:gap-0 my-10">
       <h3>What We Do and Offer</h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 xs:grid-cols-2 gap-3">
+      <div className="grid md:grid-cols-4 grid-cols-2 gap-3">
         {cards.map((card) => (
           <div
             key={card.alt}
@@ -22,10 +22,8 @@ const Offers = () => {
             </div>
 
             <div className="flex flex-col justify-start items-start">
-              <p className="font-semibold tracking-wide max-lg:text-sm">
-                {card.label}
-              </p>
-              <Button className="w-fit">
+              <p className="font-semibold">{card.label}</p>
+              <Button className="w-fit max-sm:text-xs">
                 Learn More
                 <LuArrowRight />
               </Button>

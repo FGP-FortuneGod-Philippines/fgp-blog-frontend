@@ -5,11 +5,11 @@ import PhBusinessAssociate from "@/components/meet-team/PhBusinessAssociate";
 
 const MeetOurTeam = () => {
   return (
-    <div className="w-full h-auto flex flex-col items-start gap-5 mt-10">
+    <div className="w-full h-auto flex flex-col items-start gap-5 max-md:gap-3 mt-10">
       {/* Title */}
-      <div className="h-auto flex flex-col items-center">
-        <h3 className="text-center text-5xl">Meet Our Team</h3>
-        <p className="text-center my-10">
+      <div className="w-full h-auto flex flex-col justify-center items-center">
+        <h3>Meet Our Team</h3>
+        <p className="max-w-[50rem] w-full text-center my-5">
           Meet the passionate visionaries and dedicated experts behind
           ShoPilipinas, driving innovation, empowering local sellers, and
           shaping the future of Philippine e-commerce.
