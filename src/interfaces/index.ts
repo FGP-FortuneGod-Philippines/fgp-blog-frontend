@@ -3,6 +3,7 @@ import type { IconType } from "react-icons";
 export interface NavLink {
   path: string;
   label: string;
+  scrollTo?: string;
 }
 
 export interface Engagement {

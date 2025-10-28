@@ -15,10 +15,12 @@ import {
   NavigationMenuList,
 } from "../ui/navigation-menu";
 import { navLinks } from "@/constants";
-import { Link } from "react-router";
 import { LuMenu } from "react-icons/lu";
+import { useHandleNavClicks } from "./NavClicks";
 
 const MobileNav = () => {
+  const { handleNavClick } = useHandleNavClicks();
+
   return (
     <Drawer direction="left">
       <DrawerTrigger asChild>
@@ -44,12 +46,17 @@ const MobileNav = () => {
               <NavigationMenuList className="gap-5 flex justify-start items-start flex-col">
                 {navLinks &&
                   navLinks.map((link) => (
-                    <NavigationMenuItem key={link.path}>
+                    <NavigationMenuItem key={link.label}>
                       <NavigationMenuLink
                         asChild
                         className="font-medium tracking-wide text-sm"
                       >
-                        <Link to={link.path}>{link.label}</Link>
+                        <span
+                          className="cursor-pointer"
+                          onClick={() => handleNavClick(link)}
+                        >
+                          {link.label}
+                        </span>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                   ))}

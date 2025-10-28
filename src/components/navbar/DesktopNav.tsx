@@ -7,9 +7,11 @@ import {
   NavigationMenuList,
 } from "../ui/navigation-menu";
 import logo from "@/assets/fgp-img.png";
-import { Link } from "react-router";
+import { useHandleNavClicks } from "./NavClicks";
 
 const DesktopNav = () => {
+  const { handleNavClick } = useHandleNavClicks();
+
   return (
     <header className="wrapper h-[5rem] flex justify-between items-center max-md:hidden">
       {/* Logo */}
@@ -27,12 +29,17 @@ const DesktopNav = () => {
           <NavigationMenuList className="gap-10">
             {navLinks &&
               navLinks.map((link) => (
-                <NavigationMenuItem key={link.path}>
+                <NavigationMenuItem key={link.label}>
                   <NavigationMenuLink
                     asChild
                     className="font-medium tracking-wide text-sm"
                   >
-                    <Link to={link.path}>{link.label}</Link>
+                    <span
+                      className="cursor-pointer"
+                      onClick={() => handleNavClick(link)}
+                    >
+                      {link.label}
+                    </span>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
