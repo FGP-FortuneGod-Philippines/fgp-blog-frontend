@@ -7,7 +7,7 @@ import {
   DrawerHeader,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import logo from "@/assets/fgp-img.png";
+import logo from "@/assets/fgp-img.webp";
 import {
   NavigationMenu,
   NavigationMenuItem,

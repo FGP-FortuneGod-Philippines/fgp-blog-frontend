@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/carousel";
 import { slides } from "@/constants";
 import Autoplay from "embla-carousel-autoplay";
-import LazyImage from "./LazyImage";
 
 const Banner = () => {
   return (
@@ -20,7 +19,7 @@ const Banner = () => {
           <CarouselItem key={index} className="border-none">
             <Card className="p-0 border-none">
               <CardContent className="relative aspect-video flex justify-center items-center border p-0 border-none shadow-none">
-                <LazyImage
+                <img
                   src={slide.img}
                   alt="placeholder"
                   className="w-full h-full object-cover"

@@ -1,6 +1,9 @@
-import Banner from "@/components/Banner";
+// import Banner from "@/components/Banner";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import { lazy, Suspense } from "react";
 
 const Hero = () => {
+  const Banner = lazy(() => import("@/components/Banner"));
   return (
     <div className="w-full h-auto flex flex-col items-center">
       {/* Title */}
@@ -14,7 +17,9 @@ const Hero = () => {
 
       {/* Banner */}
       <div className="max-w-[62.5rem] w-full max-h-[62.5rem] h-auto">
-        <Banner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Banner />
+        </Suspense>
       </div>
     </div>
   );

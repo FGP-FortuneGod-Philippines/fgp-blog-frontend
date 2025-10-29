@@ -1,5 +1,5 @@
-import mission from "@/assets/missionVision/mission.png";
-import vision from "@/assets/missionVision/vision.png";
+import mission from "@/assets/missionVision/mission.webp";
+import vision from "@/assets/missionVision/vision.webp";
 import LazyImage from "@/components/LazyImage";
 
 const MissionVision = () => {
