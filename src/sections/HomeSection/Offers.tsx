@@ -24,7 +24,7 @@ const Offers = () => {
 
             <div className="flex flex-col justify-start items-start">
               <p className="font-semibold">{card.label}</p>
-              <Button className="w-fit max-sm:text-xs">
+              <Button className="w-fit max-sm:text-xs cursor-pointer">
                 Learn More
                 <LuArrowRight />
               </Button>
