@@ -11,6 +11,7 @@ const MissionVision = () => {
           <LazyImage
             src={mission}
             alt="mission img"
+            effect="blur"
             className="w-full h-full object-cover rounded-lg"
           />
         </div>
@@ -43,6 +44,7 @@ const MissionVision = () => {
           <LazyImage
             src={vision}
             alt="mission img"
+            effect="blur"
             className="w-full h-full object-cover rounded-lg"
           />
         </div>

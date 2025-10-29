@@ -13,6 +13,7 @@ const About = () => {
           <LazyImage
             src={aboutIllustration}
             alt="about illustration"
+            effect="blur"
             className="w-full h-full object-contain"
           />
         </div>
