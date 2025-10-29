@@ -24,9 +24,11 @@ const Banner = () => {
                   alt="placeholder"
                   className="w-full h-full object-cover"
                 />
-                <p className="absolute bottom-18 left-10 opacity-70 text-white w-[55rem] ">
-                  {slide.description}
-                </p>
+                <div className="absolute inset-0 flex items-end px-4 pb-16 max-lg:pb-10 max-sm:pb-5">
+                  <p className="text-white text-sm max-sm:text-xs max-xs:text-[8px] w-full opacity-70 leading-relaxed text-center">
+                    {slide.description}
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </CarouselItem>
