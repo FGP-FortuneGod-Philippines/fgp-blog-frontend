@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import LazyImage from "../LazyImage";
 import { Card, CardContent } from "../ui/card";
 import { CarouselItem } from "../ui/carousel";
 
@@ -12,7 +13,7 @@ const TeamLayout = ({ data, className }: TeamProps) => {
     <CarouselItem key={data.name} className={`basis-full ${className}`}>
       <Card className="border-none shadow-none">
         <CardContent className="text-center">
-          <img
+          <LazyImage
             src={data.image}
             alt={data.name}
             className="max-sm:w-30 max-sm:h-30 w-40 h-40 mx-auto rounded-full object-contain mb-4"

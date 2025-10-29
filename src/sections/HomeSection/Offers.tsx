@@ -1,3 +1,4 @@
+import LazyImage from "@/components/LazyImage";
 import { Button } from "@/components/ui/button";
 import { cards } from "@/constants";
 import { LuArrowRight } from "react-icons/lu";
@@ -14,7 +15,7 @@ const Offers = () => {
             className="w-full h-auto flex flex-col items-center gap-5"
           >
             <div className="max-w-[15rem] w-full h-[15rem]">
-              <img
+              <LazyImage
                 src={card.src}
                 alt={card.alt}
                 className="w-full h-full object-contain"
