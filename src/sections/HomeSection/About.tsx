@@ -1,4 +1,4 @@
-import aboutIllustration from "@/assets/About me-rafiki.png";
+import aboutIllustration from "@/assets/About me-rafiki.webp";
 import LazyImage from "@/components/LazyImage";
 
 const About = () => {

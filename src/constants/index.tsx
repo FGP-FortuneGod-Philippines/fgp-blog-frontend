@@ -1,35 +1,35 @@
-import ecommerce from "@/assets/offer/Ecommerce web page-amico.png";
-import trade from "@/assets/offer/International trade-rafiki.png";
-import operation from "@/assets/offer/Operating system upgrade-amico (1).png";
-import project from "@/assets/offer/Projections-bro.png";
+import ecommerce from "@/assets/offer/Ecommerce web page-amico.webp";
+import trade from "@/assets/offer/International trade-rafiki.webp";
+import operation from "@/assets/offer/Operating system upgrade-amico (1).webp";
+import project from "@/assets/offer/Projections-bro.webp";
 
-import ceo from "@/assets/executives/CEO.png";
-import jarl from "@/assets/executives/jarl.png";
-import kevin from "@/assets/executives/kevin-1.png";
-import stanley from "@/assets/executives/stanley.png";
+import ceo from "@/assets/executives/CEO.webp";
+import jarl from "@/assets/executives/jarl.webp";
+import kevin from "@/assets/executives/kevin-1.webp";
+import stanley from "@/assets/executives/stanley.webp";
 
-import duke from "@/assets/foreign-affairs/Duke-Liu.png";
-import elden from "@/assets/foreign-affairs/Elden-Tu.png";
-import steven from "@/assets/foreign-affairs/Steven-Lien.png";
-import william from "@/assets/foreign-affairs/William.png";
+import duke from "@/assets/foreign-affairs/Duke-Liu.webp";
+import elden from "@/assets/foreign-affairs/Elden-Tu.webp";
+import steven from "@/assets/foreign-affairs/Steven-Lien.webp";
+import william from "@/assets/foreign-affairs/William.webp";
 
-import fidel from "@/assets/ph-business-associates/fidel-ferrer.png";
+import fidel from "@/assets/ph-business-associates/fidel-ferrer.webp";
 
-import hera from "@/assets/operations-team/Hera.png";
-import gelo from "@/assets/operations-team/Gelo.png";
-import cess from "@/assets/operations-team/Cess.png";
-import jin from "@/assets/operations-team/jin.png";
-import lane from "@/assets/operations-team/Lane.png";
-import lea from "@/assets/operations-team/Lea.png";
+import hera from "@/assets/operations-team/Hera.webp";
+import gelo from "@/assets/operations-team/Gelo.webp";
+import cess from "@/assets/operations-team/Cess.webp";
+import jin from "@/assets/operations-team/jin.webp";
+import lane from "@/assets/operations-team/Lane.webp";
+import lea from "@/assets/operations-team/Lea.webp";
 
-import loveph from "@/assets/banner-slides/Love-Lastly-na.png";
-import rides from "@/assets/banner-slides/last-star.png";
-import terraces from "@/assets/banner-slides/rice-terraces-person.png";
-import festival from "@/assets/banner-slides/festi-finale.png";
-import river from "@/assets/banner-slides/kids-river.png";
-import groupSelfie from "@/assets/banner-slides/gruop-selfie-1.png";
-import vacation from "@/assets/banner-slides/iloilo-person.png";
-import meeting from "@/assets/banner-slides/meeting-final.png";
+import loveph from "@/assets/banner-optimized/Love-Lastly-na.webp";
+import rides from "@/assets/banner-optimized/last-star.webp";
+import terraces from "@/assets/banner-optimized/rice-terraces-person.webp";
+import festival from "@/assets/banner-optimized/festi-finale.webp";
+import river from "@/assets/banner-optimized/kids-river.webp";
+import groupSelfie from "@/assets/banner-optimized/gruop-selfie-1.webp";
+import vacation from "@/assets/banner-optimized/iloilo-person.webp";
+import meeting from "@/assets/banner-optimized/meeting-final.webp";
 
 import type {
   Accordion,

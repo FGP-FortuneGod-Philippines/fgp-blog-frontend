@@ -6,7 +6,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "../ui/navigation-menu";
-import logo from "@/assets/fgp-img.png";
+import logo from "@/assets/fgp-img.webp";
 import { useHandleNavClicks } from "./NavClicks";
 
 const DesktopNav = () => {
