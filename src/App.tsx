@@ -1,20 +1,25 @@
 import { Routes, Route } from "react-router";
-import HomePage from "./pages/HomePage";
 import MainLayout from "./layout/MainLayout";
-import Announcement from "./pages/Announcement";
-import Chairman from "./pages/Chairman";
+import { lazy, Suspense } from "react";
+import LoadingSpinner from "./components/LoadingSpinner";
+
+const HomePage = lazy(() => import("./pages/HomePage"));
+const Chairman = lazy(() => import("./pages/Chairman"));
+const Announcement = lazy(() => import("./pages/Announcement"));
 
 const App = () => {
   return (
     <main>
-      <Routes>
-        {/* Main Layout */}
-        <Route element={<MainLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/chairman" element={<Chairman />} />
-          <Route path="/announcement" element={<Announcement />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<LoadingSpinner className="size-6" />}>
+        <Routes>
+          {/* Main Layout */}
+          <Route element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/chairman" element={<Chairman />} />
+            <Route path="/announcement" element={<Announcement />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </main>
   );
 };

@@ -1,5 +1,6 @@
 import mission from "@/assets/missionVision/mission.png";
 import vision from "@/assets/missionVision/vision.png";
+import LazyImage from "@/components/LazyImage";
 
 const MissionVision = () => {
   return (
@@ -7,7 +8,7 @@ const MissionVision = () => {
       {/* Mission */}
       <div className="max-w-[70.5rem] w-full h-auto flex max-md:flex-col justify-center items-center gap-5">
         <div className="w-full h-[20.25rem] max-md:h-[15.25rem]">
-          <img
+          <LazyImage
             src={mission}
             alt="mission img"
             className="w-full h-full object-cover rounded-lg"
@@ -39,7 +40,7 @@ const MissionVision = () => {
         </div>
 
         <div className="w-full h-[20.25rem] max-md:h-[15.25rem]">
-          <img
+          <LazyImage
             src={vision}
             alt="mission img"
             className="w-full h-full object-cover rounded-lg"
