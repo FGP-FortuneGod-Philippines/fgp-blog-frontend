@@ -15,6 +15,15 @@ export interface OfferCards {
   src: string;
   alt: string;
   label: string;
+
+  banner: string;
+  bannerAlt: string;
+  featImg: string;
+  featImgAlt: string;
+  title: string;
+  description: string;
+
+  extension?: boolean;
 }
 
 export interface CoreValues {
