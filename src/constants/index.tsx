@@ -31,6 +31,15 @@ import groupSelfie from "@/assets/banner-optimized/gruop-selfie-1.webp";
 import vacation from "@/assets/banner-optimized/iloilo-person.webp";
 import meeting from "@/assets/banner-optimized/meeting-final.webp";
 
+import spBanner from "@/assets/modal-offers/ShoPilipinas-Logo.webp";
+import spFeatImg from "@/assets/modal-offers/sp-office.webp";
+import tradeBanner from "@/assets/modal-offers/plant-1.webp";
+import tradeFeat from "@/assets/modal-offers/plant-2.webp";
+import projectBanner from "@/assets/modal-offers/plant-3.webp";
+import projectFeat from "@/assets/modal-offers/plant-4.webp";
+import operationBanner from "@/assets/modal-offers/plant-5.webp";
+import operationFeat from "@/assets/modal-offers/plant-6.webp";
+
 import type {
   Accordion,
   BannerSlidesProps,
@@ -96,17 +105,59 @@ export const coreValues: CoreValues[] = [
 ];
 
 export const cards: OfferCards[] = [
-  { src: ecommerce, alt: "Ecommerce Illustration", label: "Ecommerce" },
-  { src: trade, alt: "Trade Illustration", label: "International Trade" },
+  {
+    src: ecommerce,
+    alt: "Ecommerce Illustration",
+    label: "Ecommerce",
+    banner: spBanner,
+    bannerAlt: "ShoPilipinas Banner",
+    featImg: spFeatImg,
+    featImgAlt: "FGP Office",
+    title: "E-Commerce Operations",
+    description: `
+    B2C: ShoPilipinas.com localized online marketplace that empowers Philippine sellers with tools and logistics.
+    B2B: Wholesale distribution and offline integration connecting local businesses with global buyers.  
+    
+    FortuneGod Group of Companies aims to revolutionize the Philippine e-commerce landscape by integrating AI-driven technology, the localized independent platform ShoPilipinas.com, live-e-commerce, and a multi-tied matrix operational strategy. This innovative ecosystem is designed to streamline operations, enhance consumer experience, and maximize market reach.`,
+    extension: true,
+  },
+  {
+    src: trade,
+    alt: "Trade Illustration",
+    label: "International Trade",
+    banner: tradeBanner,
+    bannerAlt: "ShoPilipinas Banner",
+    featImg: tradeFeat,
+    featImgAlt: "FGP Office",
+    title: "International Trade",
+    description: `Import & export of bulk commodities such as petroleum products, minerals, and essential consumer goods`,
+  },
   {
     src: project,
     alt: "Project Illustration",
     label: "Projects",
+    banner: projectBanner,
+    bannerAlt: "ShoPilipinas Banner",
+    featImg: projectFeat,
+    featImgAlt: "FGP Office",
+    title: "Project Development & Investment",
+    description: `– Renewable Energy Projects: solar PV, wind, and hydropower.
+      – WTE (Waste-to-Energy): advanced solutions to convert urban waste into power.
+      – Infrastructure: solar streetlighting, water resource management, and smart city initiatives.`,
   },
   {
     src: operation,
     alt: "Operation Illustration",
     label: "Turn Key Operation",
+    banner: operationBanner,
+    bannerAlt: "ShoPilipinas Banner",
+    featImg: operationFeat,
+    featImgAlt: "FGP Office",
+    title: "Turnkey Market Entry for Global Brands",
+    description: `
+    – End-to-end solutions: from onboarding to operations.
+    – Marketing, logistics, payments, and after-sales – all under one roof.
+    – Helping international brands localize with minimal risks and maximize ROI in the Philippines.`,
   },
 ];
 
