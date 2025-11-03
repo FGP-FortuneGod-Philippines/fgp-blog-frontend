@@ -32,7 +32,7 @@ import vacation from "@/assets/banner-optimized/iloilo-person.webp";
 import meeting from "@/assets/banner-optimized/meeting-final.webp";
 
 import spBanner from "@/assets/modal-offers/ShoPilipinas-Logo.webp";
-import spFeatImg from "@/assets/modal-offers/sp-office.webp";
+import spFeatImg from "@/assets/modal-offers/sp-background.webp";
 import tradeBanner from "@/assets/modal-offers/plant-1.webp";
 import tradeFeat from "@/assets/modal-offers/plant-2.webp";
 import projectBanner from "@/assets/modal-offers/plant-3.webp";

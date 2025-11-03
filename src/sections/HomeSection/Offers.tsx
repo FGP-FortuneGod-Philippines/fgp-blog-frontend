@@ -30,31 +30,34 @@ const Offers = () => {
                 trigger="Learn More"
                 triggerIcon={<LuArrowRight />}
                 close="Close"
-                classNameBtn="w-fit"
               >
-                <div className="flex flex-col w-full h-auto gap-3">
+                <div className="flex flex-col justify-center items-center w-full h-auto gap-3">
                   {/* Banner */}
-                  <div className="w-full h-[8rem] mt-5">
-                    <LazyImage
-                      src={card.banner}
-                      alt={card.bannerAlt}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  {/* Main Contents */}
-                  <div className="w-full h-auto flex justify-start items-start max-lg:flex-col gap-3">
-                    <div className="w-full h-auto">
+                  <div className="w-full flex flex-col gap-3">
+                    <div className="w-full h-[15rem]">
                       <LazyImage
-                        src={card.featImg}
-                        alt={card.featImgAlt}
-                        className="w-full max-h-[20rem] h-auto object-cover"
+                        src={card.banner}
+                        alt={card.bannerAlt}
+                        className={`w-full h-full ${
+                          card.extension ? "object-contain" : "object-cover"
+                        }`}
                       />
                     </div>
 
-                    <div className="w-full flex flex-col gap-5">
-                      <h3 className="text-start">{card.title}</h3>
-                      <p>{card.description}</p>
+                    {/* Main Contents */}
+                    <div className="w-full h-auto flex justify-start items-start max-lg:flex-col gap-5">
+                      <div className="w-full h-[15rem] aspect-square">
+                        <LazyImage
+                          src={card.featImg}
+                          alt={card.featImgAlt}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+
+                      <div className="w-full flex flex-col">
+                        <h3 className="text-start">{card.title}</h3>
+                        <p className="text-justify">{card.description}</p>
+                      </div>
                     </div>
                   </div>
 

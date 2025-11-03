@@ -69,7 +69,7 @@ const BaseDialog = ({
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="lg:max-w-[60rem] sm:max-w-[40rem] w-full h-[50rem] overflow-auto">
+      <DialogContent className="max-w-[80rem] w-11/12 max-h-[40rem] h-auto overflow-auto scrollbar-hide max-sm:p-3">
         {header ? (
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
