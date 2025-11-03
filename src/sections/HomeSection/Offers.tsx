@@ -63,7 +63,7 @@ const Offers = () => {
 
                   {/* Extension */}
                   {card.extension && (
-                    <div className="w-full flex flex-col py-5 px-40 max-md:px-30 max-sm:px-20 gap-10 my-10">
+                    <div className="w-full flex flex-col py-5 px-40 max-lg:px-25 max-md:px-20 max-sm:px-2 gap-10 my-10">
                       <div className="w-full h-auto">
                         <h3>Three Core Platforms</h3>
                       </div>

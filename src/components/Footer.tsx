@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
 
           {/* Center and Right Columns */}
-          <div className="flex flex-1 justify-center max-lg:flex-col g:gap-20">
+          <div className="flex flex-1 justify-center max-lg:flex-col gap-20">
             {/* Services */}
             <div className="flex flex-col gap-5 items-start">
               <h4 className="font-semibold">Services</h4>
