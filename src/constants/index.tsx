@@ -43,6 +43,7 @@ import operationFeat from "@/assets/modal-offers/plant-6.webp";
 import type {
   Accordion,
   BannerSlidesProps,
+  BiographyProps,
   CoreValues,
   Engagement,
   MeetTeamProps,
@@ -312,5 +313,29 @@ export const slides: BannerSlidesProps[] = [
     img: meeting,
     description:
       "In every filipino city, progress begins with people and purpose",
+  },
+];
+
+export const bioSlide: BiographyProps[] = [
+  {
+    label: "Director",
+    description: "Taiwan Chamber of Commerce & Industry in the Philippines",
+  },
+  {
+    label: "Director",
+    description: "Taiwan Recyling Energy Development Association",
+  },
+  {
+    label: "Philippine Representative",
+    description: "International Chinese Freemasons Supreme Lodge",
+  },
+  {
+    label: "Chairman",
+    description: "Philippine Ecommerce Association",
+  },
+  {
+    label: "Presidential ",
+    description:
+      "The Fraternal Order of Eagles - Philippine Eagles, Inc. Metro Elite Eagles Club ",
   },
 ];
