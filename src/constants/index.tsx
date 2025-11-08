@@ -50,6 +50,7 @@ import type {
   MeetTeamProps,
   NavLink,
   OfferCards,
+  QualificationProps,
 } from "@/interfaces";
 
 import {
@@ -371,5 +372,35 @@ export const awardsCard: AwardsProps[] = [
     label: "IIIC International Innovation & Invention Competition",
     description:
       "Honored with a Silver Medal at the IIIC International Innovation & Invention Competition in Taiwan 2019",
+  },
+];
+
+export const qualifications: QualificationProps[] = [
+  {
+    title: "Deputy Dean of Research Institute",
+    description:
+      "Huizhou Zhongkai High-tech Zone ZongHua Battery Indusrty Research Institute, China",
+  },
+  {
+    title: "Distinguished Member",
+    description: "The Filipino Inventors Society (FIS）-",
+  },
+  {
+    title: "Philippines Country Representative / Development Director",
+    description:
+      "Social Impact Investment and Procurement Foundation（SIIP) & S.T.A.R.S. Foundation",
+  },
+  {
+    title: "Special lecturer",
+    description: "Taiwan Academy of Banking and Finance",
+  },
+  {
+    title: "Senior Consultant",
+    description: "IntelliBenefit Technology Co., Ltd. (IBCO)",
+  },
+  {
+    title:
+      "Associate Professor Level/International Strategic Management and Resource Integration Expert Teacher, School of Mechanical and Resource Engineering",
+    description: "Guangxi Wuzhou University",
   },
 ];
