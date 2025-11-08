@@ -1,3 +1,4 @@
+import Awards from "@/sections/ChairmanSection/Awards";
 import ChairBio from "@/sections/ChairmanSection/ChairBio";
 import ChairHero from "@/sections/ChairmanSection/ChairHero";
 
@@ -7,6 +8,8 @@ const Chairman = () => {
       <ChairHero />
 
       <ChairBio />
+
+      <Awards />
     </div>
   );
 };

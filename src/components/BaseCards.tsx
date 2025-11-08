@@ -3,10 +3,12 @@ const BaseCards = ({
   className,
 }: {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }) => {
   return (
-    <div className={`rounded-md p-6 shadow-md ${className}`}>{children}</div>
+    <div className={`relative rounded-md p-6 shadow-md ${className}`}>
+      {children}
+    </div>
   );
 };
 

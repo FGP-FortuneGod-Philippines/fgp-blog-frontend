@@ -42,6 +42,7 @@ import operationFeat from "@/assets/modal-offers/plant-6.webp";
 
 import type {
   Accordion,
+  AwardsProps,
   BannerSlidesProps,
   BiographyProps,
   CoreValues,
@@ -337,5 +338,38 @@ export const bioSlide: BiographyProps[] = [
     label: "Presidential ",
     description:
       "The Fraternal Order of Eagles - Philippine Eagles, Inc. Metro Elite Eagles Club ",
+  },
+];
+
+export const awardsCard: AwardsProps[] = [
+  {
+    label: "74th Nuremberg International Invention Exhibition",
+    description:
+      "Once again ranked First Internationally, receiving the Gold Medal Award at the 74th iENA Germany reaffirming global leadership in innovation.",
+  },
+  {
+    label: "73rd Nuremberg International Invention Exhibition",
+    description:
+      "Achieved First International Ranking and a Gold Medal Award at the 73rd iENA Germany, one of the world’s most prestigious invention exhibitions.",
+  },
+  {
+    label: "12th IIIC Taiwan International Innovation & Invention Competition",
+    description:
+      "Awarded the Gold Medal at the 12th IIIC Taiwan Competition, celebrating cutting-edge innovation and outstanding impact.",
+  },
+  {
+    label: "International Nobel Prize for Outstanding Inventors",
+    description:
+      "Recognized by the Republic of China Outstanding Inventors Association awarded",
+  },
+  {
+    label: "National Invention Exhibition",
+    description:
+      "Received the Gold Award for Invention and Entrepreneurship at the 23rd National Invention Exhibition, part of the Belt and Road & BRICS Skills Development and Technology Innovation Competition organized by the China Invention Association.",
+  },
+  {
+    label: "IIIC International Innovation & Invention Competition",
+    description:
+      "Honored with a Silver Medal at the IIIC International Innovation & Invention Competition in Taiwan 2019",
   },
 ];
