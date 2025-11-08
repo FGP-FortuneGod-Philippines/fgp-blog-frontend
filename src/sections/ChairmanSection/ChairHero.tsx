@@ -2,7 +2,7 @@ import chairman from "@/assets/chairman.png";
 
 const ChairHero = () => {
   return (
-    <div className="w-full flex justify-between items-center max-md:flex-col gap-5 my-10">
+    <div className="w-full flex justify-between items-center max-md:flex-col gap-5 my-10 max-md:my-5">
       <div className="w-full h-auto flex items-center justify-center">
         <img
           src={chairman}

@@ -51,3 +51,8 @@ export interface BannerSlidesProps {
   img: string;
   description?: string;
 }
+
+export interface BiographyProps {
+  label: string;
+  description: string;
+}
