@@ -61,3 +61,8 @@ export interface AwardsProps {
   label: string;
   description: string;
 }
+
+export interface QualificationProps {
+  title: string;
+  description: string;
+}
