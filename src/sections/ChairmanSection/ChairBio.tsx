@@ -12,10 +12,8 @@ const ChairBio = () => {
       className="basis-full md:basis-1/3 sm:basis-1/2"
     >
       <Card className="border-none shadow-none">
-        <CardContent className="text-start">
-          <span>
-            <RiDoubleQuotesR />
-          </span>
+        <CardContent className="text-start max-sm:text-center">
+          <RiDoubleQuotesR />
           <h4 className="text-sm mt-3">{data.label}</h4>
           <p className="text-xs leading-4">{data.description}</p>
         </CardContent>
@@ -38,13 +36,12 @@ const ChairBio = () => {
         </p>
       </div>
 
-      <div className="w-full h-auto ">
+      <div className="w-full h-auto my-10 max-md:my-5">
         <section className="w-full h-auto ">
           <BaseSlider
             opts={{ loop: true }}
             plugins={[Autoplay({ delay: 2000 })]}
             slides={slides}
-            arrows={true}
           />
         </section>
       </div>
