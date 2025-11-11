@@ -66,3 +66,8 @@ export interface QualificationProps {
   title: string;
   description: string;
 }
+
+export interface TimelineProps {
+  title: string;
+  description: string;
+}
