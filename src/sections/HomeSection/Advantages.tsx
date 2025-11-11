@@ -8,7 +8,7 @@ import { keyAdvantage, whyFgp } from "@/constants";
 
 const Advantages = () => {
   return (
-    <div className="wrapper flex flex-col items-center gap-5 my-10 max-md:my-5">
+    <div className="wrapper flex flex-col items-center gap-5 my-10">
       <div className="flex flex-col gap-5 max-md:gap-2 items-center my-10 max-md:my-0">
         <h3>Our Platforms & Advantages</h3>
         <div className="max-w-[10rem] w-full border-b border-[var(--gray-border)]" />
