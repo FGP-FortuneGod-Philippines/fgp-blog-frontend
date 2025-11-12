@@ -67,6 +67,7 @@ export const navLinks: NavLink[] = [
   { path: "/", label: "About", scrollTo: "about" },
   { path: "/chairman", label: "Chairman" },
   { path: "/announcement", label: "Announcement" },
+  { path: "/news", label: "News" },
 ];
 
 export const engagementStats: Engagement[] = [
