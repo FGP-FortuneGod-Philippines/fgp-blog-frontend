@@ -71,3 +71,14 @@ export interface TimelineProps {
   title: string;
   description: string;
 }
+
+export interface AnnouncementProps {
+  id: number;
+  title: string;
+  description: string;
+  author: string;
+  created_at: string;
+  tags: string[];
+  slug: string;
+  image: string;
+}
