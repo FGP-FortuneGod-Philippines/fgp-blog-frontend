@@ -40,8 +40,15 @@ import projectFeat from "@/assets/modal-offers/plant-4.webp";
 import operationBanner from "@/assets/modal-offers/plant-5.webp";
 import operationFeat from "@/assets/modal-offers/plant-6.webp";
 
+import envelope from "@/assets/announcement-img/envelope.webp";
+import gift from "@/assets/announcement-img/gift.webp";
+import shop from "@/assets/announcement-img/shop-online.jpg";
+import taiwan from "@/assets/announcement-img/taiwan.webp";
+import yehey from "@/assets/announcement-img/yehey.webp";
+
 import type {
   Accordion,
+  AnnouncementProps,
   AwardsProps,
   BannerSlidesProps,
   BiographyProps,
@@ -435,5 +442,85 @@ export const timeline: TimelineProps[] = [
   {
     title: "Chief Investment Officer (Philippines)",
     description: "Axciona Energy",
+  },
+];
+
+export const announcementData: AnnouncementProps[] = [
+  {
+    id: 1,
+    title: "Taiwan Excellence Expo 2025",
+    description:
+      "Stay updated from checkout to delivery. Our new tracking feature keeps you informed every step of the way.",
+    author: "FgpPh",
+    created_at: "September 9, 2025",
+    tags: ["ecommerce", "shopilipinas"],
+    slug: "track-orders",
+    image: taiwan,
+  },
+  {
+    id: 2,
+    title: "New Arrivals Just Dropped",
+    description:
+      "Discover our latest collection designed to match your lifestyle. Fresh styles and must-have items are waiting for you.",
+    author: "FgpPh",
+    created_at: "October 14, 2025",
+    tags: ["ecommerce", "shopilipinas", "fgp"],
+    slug: "new-arrival",
+    image: gift,
+  },
+  {
+    id: 3,
+    title: "Members-Only Rewards",
+    description:
+      "Sign up today and unlock exclusive perks. Earn points every time you shop and redeem them for exciting rewards.",
+    author: "FgpPh",
+    created_at: "October 14, 2025",
+    tags: ["ecommerce", "shopilipinas", "fgp"],
+    slug: "members-award",
+    image: gift,
+  },
+  {
+    id: 4,
+    title: "Secure & Easy Checkout",
+    description:
+      "We’ve made shopping safer and faster for you. Enjoy smooth payments and complete peace of mind with every order.",
+    author: "FgpPh",
+    created_at: "September 9, 2025",
+    tags: ["ecommerce", "shopilipinas"],
+    slug: "secure-checkout",
+    image: envelope,
+  },
+  {
+    id: 5,
+    title: "Limited-Time Flash Sale",
+    description:
+      "Hurry! Grab your favorites with up to 50% off. This offer won’t last long, so shop now before stocks run out.",
+    author: "FgpPh",
+    created_at: "September 9, 2025",
+    tags: ["ecommerce", "shopilipinas"],
+    slug: "flash-sale",
+    image: yehey,
+  },
+  {
+    id: 6,
+    title: "Free Shipping Weekend",
+    description:
+      "For a limited time, all orders come with free nationwide shipping buy now!!",
+    author: "FgpPh",
+    created_at: "September 9, 2025",
+    tags: ["ecommerce", "shopilipinas"],
+    slug: "free-shipping-weekend",
+    image: yehey,
+  },
+  {
+    id: 7,
+    title: "Big Savings Await!",
+    description:
+      "Enjoy exclusive discounts across our store. Shop your favorite products at unbeatable prices and grab the best deals before they’re gone. ",
+    author: "FgpPh",
+    created_at: "September 4, 2025",
+    tags: ["ecommerce", "shopilipinas"],
+    slug: "big-savings",
+    image: shop,
   },
 ];
