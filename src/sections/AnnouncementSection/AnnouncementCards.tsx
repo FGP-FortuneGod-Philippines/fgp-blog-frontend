@@ -12,10 +12,10 @@ const AnnouncementCards = () => {
           ? announcementData.map((data) => (
               <div
                 key={data.id}
-                className="w-full h-auto flex flex-col gap-3 border"
+                className="w-full h-auto flex flex-col gap-3 justify-between border"
               >
                 {/* image */}
-                <div className="w-full h-3/5">
+                <div className="w-full h-[18rem]">
                   <img
                     src={data.image}
                     alt={data.slug}
