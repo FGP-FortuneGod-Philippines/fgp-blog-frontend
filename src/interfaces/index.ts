@@ -82,3 +82,17 @@ export interface AnnouncementProps {
   slug: string;
   image: string;
 }
+
+export interface NewsSource {
+  name: string;
+}
+
+export interface NewsProps {
+  id: string;
+  // image: string;
+  title: string;
+  description: string;
+  url: string;
+  publishedAt: string;
+  source: NewsSource;
+}

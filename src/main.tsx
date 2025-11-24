@@ -6,10 +6,17 @@ import App from "./App.tsx";
 // React Router Config
 import { BrowserRouter } from "react-router";
 
+// Tanstack Query
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+
+const useQueryClient = new QueryClient();
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <QueryClientProvider client={useQueryClient}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </QueryClientProvider>
   </StrictMode>
 );

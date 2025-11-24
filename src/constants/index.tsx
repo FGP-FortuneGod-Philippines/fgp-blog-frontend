@@ -56,6 +56,7 @@ import type {
   Engagement,
   MeetTeamProps,
   NavLink,
+  NewsProps,
   OfferCards,
   QualificationProps,
   TimelineProps,
@@ -522,5 +523,98 @@ export const announcementData: AnnouncementProps[] = [
     tags: ["ecommerce", "shopilipinas"],
     slug: "big-savings",
     image: shop,
+  },
+];
+
+export const newsData: NewsProps[] = [
+  {
+    id: "1",
+    title: "Tech Giants Announce New AI Partnership",
+    description:
+      "Several major technology companies have formed a strategic partnership to advance AI research and safety protocols.",
+    url: envelope,
+    publishedAt: "2025-11-20T10:30:00Z",
+    source: { name: "TechCrunch" },
+  },
+  {
+    id: "2",
+    title: "Global Markets See Record Growth",
+    description:
+      "Stock markets across the world experienced significant gains amid strong economic indicators.",
+    url: envelope,
+    publishedAt: "2025-11-19T08:15:00Z",
+    source: { name: "Bloomberg" },
+  },
+  {
+    id: "3",
+    title: "New Smartphone Model Breaks Sales Records",
+    description:
+      "The latest smartphone release has sold over 5 million units within its first week.",
+    url: envelope,
+    publishedAt: "2025-11-18T14:00:00Z",
+    source: { name: "The Verge" },
+  },
+  {
+    id: "4",
+    title: "Scientists Discover Possible New Exoplanet",
+    description:
+      "Astronomers may have discovered a new Earth-like exoplanet capable of supporting life.",
+    url: envelope,
+    publishedAt: "2025-11-17T12:45:00Z",
+    source: { name: "NASA" },
+  },
+  {
+    id: "5",
+    title: "Healthcare System Introduces Digital Records Upgrade",
+    description:
+      "A nationwide rollout of an improved digital health record system is set to begin next year.",
+    url: envelope,
+    publishedAt: "2025-11-16T09:00:00Z",
+    source: { name: "BBC News" },
+  },
+  {
+    id: "6",
+    title: "New Electric Vehicle Charging Stations Announced",
+    description:
+      "Government plans to install 10,000 new EV charging stations across the country.",
+    url: envelope,
+    publishedAt: "2025-11-15T16:20:00Z",
+    source: { name: "Reuters" },
+  },
+  {
+    id: "7",
+    title: "Breakthrough in Renewable Energy Storage",
+    description:
+      "Researchers have developed a more efficient battery that could transform renewable energy storage.",
+    url: envelope,
+    publishedAt: "2025-11-14T07:40:00Z",
+    source: { name: "CNN" },
+  },
+  {
+    id: "8",
+    title: "Major Sports League Announces Season Expansion",
+    description:
+      "The league confirmed that the upcoming season will include 5 additional teams.",
+    url: envelope,
+    publishedAt: "2025-11-13T13:10:00Z",
+    source: { name: "ESPN" },
+  },
+  {
+    id: "9",
+    title: "Breakthrough Medication Approved for Public Use",
+    description:
+      "A groundbreaking medication for chronic pain has received medical approval.",
+    url: envelope,
+    publishedAt: "2025-11-12T11:25:00Z",
+    source: { name: "Medical News Today" },
+  },
+  {
+    id: "10",
+    title: "New Study Reveals Impact of Remote Work on Productivity",
+    description:
+      "A comprehensive study shows remote workers may be significantly more productive than office-based employees.",
+    url: envelope,
+    publishedAt: "2025-11-11T15:50:00Z",
+    source: { name: "Forbes" },
   },
 ];
