@@ -89,7 +89,7 @@ export interface NewsSource {
 
 export interface NewsProps {
   id: string;
-  // image: string;
+  image: string;
   title: string;
   description: string;
   url: string;

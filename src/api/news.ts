@@ -1,8 +1,6 @@
 import axios from "axios";
 
 export const fetchNews = async () => {
-  const res = await axios.get(
-    "https://gnews.io/api/v4/top-headlines?country=ph&category=general&apikey=7cadcb2cfbb5babca4d79f9eb720714a"
-  );
+  const res = await axios.get(import.meta.env.VITE_NEWS_API);
   return res.data;
 };
