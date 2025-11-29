@@ -1,9 +1,9 @@
-import NewsCards from "@/sections/NewsSection/NewsCards";
+import NewsSection from "@/sections/NewsSection/NewsSection";
 
 const News = () => {
   return (
     <div className="wrapper h-auto flex flex-col items-center">
-      <NewsCards />
+      <NewsSection />
     </div>
   );
 };

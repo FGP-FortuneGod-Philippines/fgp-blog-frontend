@@ -96,3 +96,7 @@ export interface NewsProps {
   publishedAt: string;
   source: NewsSource;
 }
+
+export interface NewsApiResponse {
+  articles: NewsProps[];
+}
