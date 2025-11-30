@@ -1,5 +1,5 @@
 import { operationsTeam } from "@/constants";
-import BaseSlider from "../BaseSlider";
+import BaseSlider from "../base-components/BaseSlider";
 import TeamLayout from "./TeamLayout";
 import Autoplay from "embla-carousel-autoplay";
 

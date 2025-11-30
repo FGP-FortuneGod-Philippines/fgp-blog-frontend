@@ -4,7 +4,7 @@ import {
   CarouselContent,
   CarouselNext,
   CarouselPrevious,
-} from "./ui/carousel";
+} from "../ui/carousel";
 
 interface BaseSliderProps {
   slides: React.ReactNode[];

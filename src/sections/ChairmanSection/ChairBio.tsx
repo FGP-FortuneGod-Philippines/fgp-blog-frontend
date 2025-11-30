@@ -1,4 +1,4 @@
-import BaseSlider from "@/components/BaseSlider";
+import BaseSlider from "@/components/base-components/BaseSlider";
 import { Card, CardContent } from "@/components/ui/card";
 import { CarouselItem } from "@/components/ui/carousel";
 import { bioSlide } from "@/constants";
