@@ -1,8 +1,2 @@
 test file for development
 
-
-2nd test for development
-
-3rd test for work mail
-
-4th test branch rule
