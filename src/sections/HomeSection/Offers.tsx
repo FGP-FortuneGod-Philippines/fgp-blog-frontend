@@ -3,7 +3,9 @@ import { cards } from "@/constants";
 import { lazy } from "react";
 import { LuArrowRight } from "react-icons/lu";
 
-const BaseDialog = lazy(() => import("@/components/BaseDialog"));
+const BaseDialog = lazy(
+  () => import("@/components/base-components/BaseDialog")
+);
 
 const Offers = () => {
   return (

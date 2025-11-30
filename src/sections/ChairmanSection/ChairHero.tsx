@@ -1,10 +1,11 @@
 import chairman from "@/assets/chairman.png";
+import LazyImage from "@/components/LazyImage";
 
 const ChairHero = () => {
   return (
     <div className="w-full flex justify-between items-center max-md:flex-col gap-5 my-10 max-md:my-5">
       <div className="w-full h-auto flex items-center justify-center">
-        <img
+        <LazyImage
           src={chairman}
           alt="chairman profile picture"
           className="w-100 h-100 max-lg:w-70 max-lg:h-70 max-md:w-50 max-md:h-50 max-xs:w-40 max-xs:h-40 object-cover rounded-full"

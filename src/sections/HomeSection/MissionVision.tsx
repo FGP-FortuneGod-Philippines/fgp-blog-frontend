@@ -1,6 +1,7 @@
 import mission from "@/assets/missionVision/mission.webp";
 import vision from "@/assets/missionVision/vision.webp";
 import LazyImage from "@/components/LazyImage";
+import { missionVissionContent } from "@/constants/contents";
 
 const MissionVision = () => {
   return (
@@ -17,15 +18,7 @@ const MissionVision = () => {
         </div>
         <div className="w-full h-auto flex flex-col gap-3">
           <h3>Mission</h3>
-          <p className="text-justify">
-            Integration: Develop a complete supply chain ecosystem from B2C to
-            B2B, maximizing value creation. Innovation: Harness AI, live
-            commerce, and matrix strategies to redefine shopping experiences.
-            Sustainability: Advance green growth with renewable energy,
-            waste-to-energy (WTE), and water resource projects Collaboration:
-            Act as a strategic bridge connecting Taiwan, the Philippines, and
-            global partners
-          </p>
+          <p className="text-justify">{missionVissionContent.mission}</p>
         </div>
       </div>
 
@@ -33,11 +26,7 @@ const MissionVision = () => {
       <div className="max-w-[70.5rem] w-full h-auto flex max-md:flex-col-reverse justify-center items-center gap-5">
         <div className="w-full h-auto flex flex-col gap-3">
           <h3>Vision</h3>
-          <p className="text-justify">
-            To be Asia-Pacific’s most trusted innovator in cross-border trade
-            and e-commerce, driving prosperity and modernization through
-            technology, localization, and sustainability.
-          </p>
+          <p className="text-justify">{missionVissionContent.vission}</p>
         </div>
 
         <div className="w-full h-[20.25rem] max-md:h-[15.25rem]">

@@ -1,5 +1,5 @@
 import { phBusinessAssociates } from "@/constants";
-import BaseSlider from "../BaseSlider";
+import BaseSlider from "../base-components/BaseSlider";
 import TeamLayout from "./TeamLayout";
 
 const PhBusinessAssociate = () => {

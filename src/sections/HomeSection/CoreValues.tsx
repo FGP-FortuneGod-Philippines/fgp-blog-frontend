@@ -1,4 +1,4 @@
-import BaseCards from "@/components/BaseCards";
+import BaseCards from "@/components/base-components/BaseCards";
 import { coreValues } from "@/constants";
 
 const CoreValues = () => {

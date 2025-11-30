@@ -1,4 +1,4 @@
-import BaseCards from "@/components/BaseCards";
+import BaseCards from "@/components/base-components/BaseCards";
 import { engagementStats } from "@/constants";
 
 const Engagements = () => {

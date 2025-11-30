@@ -1,4 +1,4 @@
-import BaseSlider from "../BaseSlider";
+import BaseSlider from "../base-components/BaseSlider";
 import { executiveTeam } from "@/constants";
 import Autoplay from "embla-carousel-autoplay";
 import TeamLayout from "./TeamLayout";

@@ -9,6 +9,7 @@ import Hero from "@/sections/HomeSection/Hero";
 import MeetOurTeam from "@/sections/HomeSection/MeetOurTeam";
 import MissionVision from "@/sections/HomeSection/MissionVision";
 import Offers from "@/sections/HomeSection/Offers";
+import Overview from "@/sections/HomeSection/Overview";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,8 @@ const HomePage = () => {
       <Offers />
 
       <About />
+
+      <Overview />
 
       <MissionVision />
 

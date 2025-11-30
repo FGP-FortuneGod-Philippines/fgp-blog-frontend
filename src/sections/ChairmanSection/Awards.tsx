@@ -1,4 +1,4 @@
-import BaseCards from "@/components/BaseCards";
+import BaseCards from "@/components/base-components/BaseCards";
 import awardIcon from "@/assets/awardsFGP-1.png";
 import { awardsCard } from "@/constants";
 
