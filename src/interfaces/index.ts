@@ -67,11 +67,6 @@ export interface QualificationProps {
   description: string;
 }
 
-export interface TimelineProps {
-  title: string;
-  description: string;
-}
-
 export interface AnnouncementProps {
   id: number;
   title: string;
