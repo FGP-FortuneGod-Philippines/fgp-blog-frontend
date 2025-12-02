@@ -58,7 +58,6 @@ import type {
   NavLink,
   OfferCards,
   QualificationProps,
-  TimelineProps,
 } from "@/interfaces";
 
 import {
@@ -411,37 +410,6 @@ export const qualifications: QualificationProps[] = [
     title:
       "Associate Professor Level/International Strategic Management and Resource Integration Expert Teacher, School of Mechanical and Resource Engineering",
     description: "Guangxi Wuzhou University",
-  },
-];
-
-export const timeline: TimelineProps[] = [
-  {
-    title: "President (Philippines)",
-    description: "Royal Global Business Center (RGBC) Corporation",
-  },
-  {
-    title: "Executive Director (Hong Kong)",
-    description: "MetaGod Holding Limited",
-  },
-  {
-    title: "Executive Director (Hong Kong)",
-    description: "MetaGod Asset Management Co., Ltd.",
-  },
-  {
-    title: "Chairman (Taiwan)",
-    description: "FortuneGod International Trade Co., Ltd.",
-  },
-  {
-    title: "Chairman (Philippines)",
-    description: "FGP FortuneGod Philippines Trading Inc.",
-  },
-  {
-    title: "Chairman (Philippines)",
-    description: "ShoPilipinas E-Commerce Corporations",
-  },
-  {
-    title: "Chief Investment Officer (Philippines)",
-    description: "Axciona Energy",
   },
 ];
 

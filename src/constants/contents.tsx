@@ -3,6 +3,7 @@ import type {
   BusinessModelProps,
   ContentProps,
   MissionVissionProps,
+  TimelineItemsProps,
 } from "@/interfaces/contents";
 
 export const aboutContent: AboutProps = {
@@ -84,3 +85,48 @@ export const businessModelContent: BusinessModelProps = {
     Earn Continuously” cycle.    
   `,
 };
+
+export const timelineData: TimelineItemsProps[] = [
+  {
+    id: 1,
+    title: "President (Philippines)",
+    organization: "Royal Global Business Center (RGBC) Corporation",
+    position: "bottom",
+  },
+  {
+    id: 2,
+    title: "Executive Director (Hong Kong)",
+    organization: "MetaGod Holding Limited",
+    position: "top",
+  },
+  {
+    id: 3,
+    title: "Executive Director (Hong Kong)",
+    organization: "MetaGod Asset Management Co., Ltd.",
+    position: "bottom",
+  },
+  {
+    id: 4,
+    title: "Chairman (Taiwan)",
+    organization: "FortuneGod International Trade Co., Ltd.",
+    position: "top",
+  },
+  {
+    id: 5,
+    title: "Chairman (Philippines)",
+    organization: "FGP FortuneGod Philippines Trading Inc.",
+    position: "bottom",
+  },
+  {
+    id: 6,
+    title: "Executive Director (Hong Kong)",
+    organization: "ShoPilipinas E-Commerce Corporations",
+    position: "top",
+  },
+  {
+    id: 7,
+    title: "Chief Investment Officer (Philippines)",
+    organization: "Axciona Energy",
+    position: "bottom",
+  },
+];

@@ -1,84 +1,112 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { timeline } from "@/constants";
+import { timelineData } from "@/constants/contents";
+import diamond from "../assets/diamond.png";
+import TimelineItem from "./timeline/TimelineItem";
+import TimelineItemBottom from "./timeline/TimelineItemBottom";
+import { Button } from "./ui/button";
+import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
+import type { TimelineProps } from "@/interfaces/contents";
 
-interface ScrollProps {
-  scroll: (direction: "left" | "right") => void;
-  scrollRef: React.RefObject<HTMLUListElement | null>;
-}
-
-const Timeline = ({ scroll, scrollRef }: ScrollProps) => {
+const Timeline = ({
+  handlePrev,
+  handleNext,
+  translateX,
+  itemWidth,
+  currentIndex,
+  setCurrentIndex,
+  maxIndex,
+  itemsPerPage,
+}: TimelineProps) => {
   return (
-    <div className="relative w-full">
-      {/* Arrows */}
-      <button
-        onClick={() => scroll("left")}
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-primary/10 z-10"
-      >
-        <ChevronLeft className="w-5 h-5 text-primary" />
-      </button>
+    <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Wrapper */}
+      <div className="relative">
+        {/* Left Button */}
+        <Button
+          onClick={handlePrev}
+          disabled={currentIndex === 0}
+          aria-label="Previous"
+          className="absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-10 
+          bg-trasparent text-[#584910] hover:bg-transparent"
+        >
+          <LuArrowLeft className="text-2xl size-auto" />
+        </Button>
 
-      <button
-        onClick={() => scroll("right")}
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full hover:bg-primary/10 z-10"
-      >
-        <ChevronRight className="w-5 h-5 text-primary" />
-      </button>
+        {/* Right Button */}
+        <Button
+          onClick={handleNext}
+          disabled={currentIndex >= maxIndex}
+          aria-label="Next"
+          className="absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-10
+          bg-trasparent text-[#584910] hover:bg-transparent"
+        >
+          <LuArrowRight className="text-2xl size-auto" />
+        </Button>
 
-      {/* Timeline */}
-      <ul
-        ref={scrollRef}
-        className="timeline timeline-horizontal overflow-x-auto scrollbar-hide scroll-smooth px-10"
-      >
-        {timeline.map((item, index) => (
-          <li key={index} className="flex-none w-full sm:w-1/2 lg:w-1/3">
-            <hr className="bg-primary" />
-            {index % 2 === 0 ? (
-              <>
-                <div className="timeline-middle">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="text-primary h-5 w-5"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+        {/* TOP CONTENT */}
+        <div className="overflow-hidden">
+          <div
+            className="flex mb-6 sm:mb-8 transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(${translateX}%)` }}
+          >
+            {timelineData.map((item) => (
+              <TimelineItem key={item.id} item={item} width={itemWidth} />
+            ))}
+          </div>
+
+          {/* LINE + DOTS */}
+          <div className="relative">
+            <div
+              className="absolute top-1/2 left-0 -translate-y-1/2 h-0.5 bg-[#584910]"
+              style={{
+                width: `${(100 / itemsPerPage) * timelineData.length}%`,
+              }}
+            />
+
+            <div
+              className="flex items-center transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(${translateX}%)` }}
+            >
+              {timelineData.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex-shrink-0 flex justify-center"
+                  style={{ width: itemWidth }}
+                >
+                  <div className="w-7 h-7 rounded-full bg-[#584910] flex items-center justify-center">
+                    <img src={diamond} alt="diamond icon" />
+                  </div>
                 </div>
-                <div className="timeline-end timeline-box bg-white border-0 shadow-none text-center">
-                  <h4 className="font-semibold">{item.title}</h4>
-                  <p className="text-xs text-gray-600">{item.description}</p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="timeline-start timeline-box bg-white border-0 shadow-none text-center">
-                  <h4 className="font-semibold">{item.title}</h4>
-                  <p className="text-xs text-gray-600">{item.description}</p>
-                </div>
-                <div className="timeline-middle">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="text-primary h-5 w-5"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </>
-            )}
-            <hr className="bg-primary" />
-          </li>
+              ))}
+            </div>
+          </div>
+
+          {/* BOTTOM CONTENT */}
+          <div
+            className="flex mt-6 sm:mt-8 transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(${translateX}%)` }}
+          >
+            {timelineData.map((item) => (
+              <TimelineItemBottom key={item.id} item={item} width={itemWidth} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* PAGINATION */}
+      <div className="flex justify-center gap-2 mt-6 sm:mt-8">
+        {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+          <button
+            key={index}
+            aria-label={`Go to slide ${index + 1}`}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-all ${
+              currentIndex === index
+                ? "bg-[#584910] w-6"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -18,3 +18,21 @@ export interface BusinessModelProps {
   contentList: string[];
   contentFooter: string;
 }
+
+export interface TimelineItemsProps {
+  id: number;
+  title: string;
+  organization: string;
+  position: "top" | "bottom";
+}
+
+export interface TimelineProps {
+  handlePrev: () => void;
+  handleNext: () => void;
+  translateX: number;
+  itemWidth: string;
+  currentIndex: number;
+  setCurrentIndex: (index: number) => void;
+  maxIndex: number;
+  itemsPerPage: number;
+}

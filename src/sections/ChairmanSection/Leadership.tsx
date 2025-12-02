@@ -1,23 +1,39 @@
-import { useRef } from "react";
 import Timeline from "@/components/Timeline";
+import { timelineData } from "@/constants/contents";
+import { useItemsPerPage } from "@/hooks/useItemsPerPage";
+import { useMemo, useState } from "react";
 
 const Leadership = () => {
-  const scrollRef = useRef<HTMLUListElement>(null);
+  const itemsPerPage = useItemsPerPage();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current) return;
-    const scrollAmount = scrollRef.current.clientWidth;
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
-      behavior: "smooth",
-    });
-  };
+  const maxIndex = timelineData.length - itemsPerPage;
+
+  const handlePrev = () => setCurrentIndex((prev) => Math.max(0, prev - 1));
+  const handleNext = () =>
+    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+
+  const translateX = useMemo(
+    () => -(currentIndex * (100 / itemsPerPage)),
+    [currentIndex, itemsPerPage]
+  );
+
+  const itemWidth = `${100 / itemsPerPage}%`;
 
   return (
     <div className="w-full h-auto flex flex-col items-center">
-      <h3 className="mb-10 text-2xl font-semibold">Leadership Roles</h3>
+      <h3 className="mb-10">Leadership Roles</h3>
 
-      <Timeline scroll={scroll} scrollRef={scrollRef} />
+      <Timeline
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        translateX={translateX}
+        itemWidth={itemWidth}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        maxIndex={maxIndex}
+        itemsPerPage={itemsPerPage}
+      />
     </div>
   );
 };
