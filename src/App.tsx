@@ -3,6 +3,8 @@ import MainLayout from "./layout/MainLayout";
 import { lazy, Suspense } from "react";
 import LoadingSpinner from "./components/LoadingSpinner";
 import News from "./pages/News";
+import TrustedPartners from "./pages/TrustedPartners";
+import ContactUs from "./pages/ContactUs";
 import { NotFound } from "./pages/NotFound";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -20,6 +22,8 @@ const App = () => {
             <Route path="/chairman" element={<Chairman />} />
             <Route path="/announcement" element={<Announcement />} />
             <Route path="/news" element={<News />} />
+            <Route path="/partners" element={<TrustedPartners />} />
+            <Route path="/contact-us" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

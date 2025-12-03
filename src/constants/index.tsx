@@ -74,6 +74,7 @@ export const navLinks: NavLink[] = [
   { path: "/chairman", label: "Chairman" },
   { path: "/announcement", label: "Announcement" },
   { path: "/news", label: "News" },
+  { path: "/partners", label: "Trusted Partners" },
 ];
 
 export const engagementStats: Engagement[] = [

@@ -8,9 +8,15 @@ import {
 } from "../ui/navigation-menu";
 import logo from "@/assets/fgp-img.webp";
 import { useHandleNavClicks } from "./NavClicks";
+import { useNavigate } from "react-router";
 
 const DesktopNav = () => {
   const { handleNavClick } = useHandleNavClicks();
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/contact-us");
+  };
 
   return (
     <header className="wrapper h-[5rem] flex justify-between items-center max-md:hidden">
@@ -49,7 +55,7 @@ const DesktopNav = () => {
 
       {/* CTC */}
       <div>
-        <Button>Contact Us</Button>
+        <Button onClick={handleContactClick}>Contact Us</Button>
       </div>
     </header>
   );
