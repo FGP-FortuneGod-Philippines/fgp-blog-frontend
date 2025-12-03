@@ -30,25 +30,24 @@ const Advantages = () => {
             className="flex-1 w-full"
             defaultValue="item-1"
           >
-            {whyFgp &&
-              whyFgp.map((item) => (
-                <AccordionItem
-                  key={item.title}
-                  value={`item-${item.item}`}
-                  className="border-none "
-                >
-                  <AccordionTrigger className="font-semibold text-base max-md:text-sm">
-                    {item.title}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p>{item.description}</p>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
+            {whyFgp.map((item, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${item.item}`}
+                className="border-none "
+              >
+                <AccordionTrigger className="font-semibold text-base max-md:text-sm">
+                  {item.title}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p>{item.description}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
 
-        {/* Left Accord */}
+        {/* Right Accord */}
         <div className="w-full flex flex-col items-center justify-center gap-5">
           <h3>Key Market Advantages</h3>
 
@@ -58,21 +57,20 @@ const Advantages = () => {
             className="flex-1 w-full"
             defaultValue="item-1"
           >
-            {keyAdvantage &&
-              keyAdvantage.map((item) => (
-                <AccordionItem
-                  key={item.title}
-                  value={`item-${item.item}`}
-                  className="border-none "
-                >
-                  <AccordionTrigger className="font-semibold text-base max-md:text-sm">
-                    {item.title}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p>{item.description}</p>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
+            {keyAdvantage.map((item, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${item.item}`}
+                className="border-none "
+              >
+                <AccordionTrigger className="font-semibold text-base max-md:text-sm">
+                  {item.title}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p>{item.description}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
       </div>
