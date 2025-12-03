@@ -5,6 +5,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import News from "./pages/News";
 import TrustedPartners from "./pages/TrustedPartners";
 import ContactUs from "./pages/ContactUs";
+import { NotFound } from "./pages/NotFound";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Chairman = lazy(() => import("./pages/Chairman"));
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/news" element={<News />} />
             <Route path="/partners" element={<TrustedPartners />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </Suspense>
