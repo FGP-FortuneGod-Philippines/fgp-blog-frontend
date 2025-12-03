@@ -15,12 +15,22 @@ const AnnouncementCards = () => {
                 className="w-full h-auto flex flex-col gap-3 justify-between border"
               >
                 {/* image */}
-                <div className="w-full h-[18rem]">
+                <div className="w-full h-[18rem] cursor-pointer relative">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <LuClock4 className="text-lg text-[var(--white-text)]" />
+                  </div>
+
                   <img
                     src={data.image}
                     alt={data.slug}
                     className="w-full h-full object-cover"
                   />
+
+                  <div className="absolute p-5 bg-black inset-0 opacity-75">
+                    <p className="text-[var(--white-text)] text-sm">
+                      Hello World
+                    </p>
+                  </div>
                 </div>
 
                 {/* details */}
