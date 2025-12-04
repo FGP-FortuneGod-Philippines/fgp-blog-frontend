@@ -68,7 +68,7 @@ export interface QualificationProps {
 }
 
 export interface AnnouncementProps {
-  id: number;
+  id: string;
   title: string;
   description: string;
   author: string;

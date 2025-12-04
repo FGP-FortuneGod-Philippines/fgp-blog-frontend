@@ -11,7 +11,7 @@ const Advantages = () => {
     <div className="wrapper flex flex-col items-center gap-5 my-10">
       <div className="flex flex-col gap-5 max-md:gap-2 items-center my-10 max-md:my-0">
         <h3>Our Platforms & Advantages</h3>
-        <div className="max-w-[10rem] w-full border-b border-[var(--gray-border)]" />
+        <div className="max-w-[10rem] w-full border-b border-[var(--olive-border)]" />
         <p className="text-center">
           Learn about our core platforms and the unique business value we bring
           to customers and partners.
