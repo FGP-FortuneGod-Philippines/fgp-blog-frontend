@@ -230,14 +230,20 @@
 
   h3 {
     @apply font-semibold text-center text-3xl max-md:text-2xl max-xs:text-lg tracking-wide;
+
+    font-family: var(--font-sans);
   }
 
   h4 {
     @apply text-xl max-md:text-lg font-semibold max-sm:tracking-normal max-xs:text-sm;
+
+    font-family: var(--font-sans);
   }
 
   p {
     @apply text-base tracking-normal leading-7 max-sm:text-sm max-xs:text-xs;
+
+    font-family: var(--font-sans);
   }
 
   ::-webkit-scrollbar-thumb {

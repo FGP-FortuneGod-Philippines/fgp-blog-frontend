@@ -418,7 +418,8 @@ export const announcementData: AnnouncementProps[] = [
   {
     id: "1",
     title: "Taiwan Excellence Expo 2025",
-    description: "Stay updated from checkout to delivery. ",
+    description:
+      "Stay updated from checkout to delivery. We are proud to represent FortuneGod Philippines at the prestigious Taiwan Excellence Expo 2025, held at the SMX Convention Center Manila. This marks a significant milestone for our company as we step onto the global stage, showcasing our commitment to innovation, collaboration, and service excellence.",
     author: "FgpPh",
     created_at: "September 9, 2025",
     tags: ["ecommerce", "shopilipinas"],
