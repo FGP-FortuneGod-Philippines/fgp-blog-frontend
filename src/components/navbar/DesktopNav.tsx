@@ -32,7 +32,7 @@ const DesktopNav = () => {
       {/* Navigation Menu */}
       <div className="flex flex-1 justify-center items-center">
         <NavigationMenu>
-          <NavigationMenuList className="gap-10">
+          <NavigationMenuList className="gap-3">
             {navLinks &&
               navLinks.map((link) => (
                 <NavigationMenuItem key={link.label}>
