@@ -8,10 +8,10 @@ const AnnouncementPosts = () => {
   );
   return (
     <div className="w-full h-auto flex flex-col items-center">
-      <h3>Announcement</h3>
+      <h3 className="max-md:mt-15">Announcement</h3>
 
       <Suspense fallback={<LoadingSpinner />}>
-        <section className="w-full h-auto grid grid-cols-3 gap-5 py-5 px-20 my-5">
+        <section className="w-full h-auto grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-5 py-5 px-10 max-md:py-0 max-md:px-0 my-5">
           {announcementData.map((data) => (
             <AnnouncementCards key={data.id} data={data} />
           ))}

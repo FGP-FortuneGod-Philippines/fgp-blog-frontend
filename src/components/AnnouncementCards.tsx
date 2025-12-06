@@ -33,7 +33,7 @@ const AnnouncementCards = ({ data }: { data: AnnouncementProps }) => {
         <div className="w-full flex flex-col gap-5 mb-5 ">
           <Link
             to={`/announcement/${data.slug}/${data.id}`}
-            className="cursor-pointer font-semibold hover:text-[var(--hover-olive-text)]"
+            className="cursor-pointer font-semibold hover:text-[var(--hover-olive-text)] line-clamp-1"
           >
             {data.title}
           </Link>
@@ -61,7 +61,7 @@ const AnnouncementCards = ({ data }: { data: AnnouncementProps }) => {
 
         {data.tags && (
           <p className="text-xs text-[var(--gray-text)] leading-3">
-            <span className="flex gap-2 justify-start items-center">
+            <span className="flex gap-2 justify-start items-start">
               <LuFolderOpen className="text-sm" />
               {data.tags.join(" // ")}
             </span>
