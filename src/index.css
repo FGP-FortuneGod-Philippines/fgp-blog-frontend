@@ -16,6 +16,7 @@
   --white-text: #ffffff;
   --gray-text: #8a8a8a;
   --blue-text: #244cdd;
+  --red-text: #fb2c36;
 
   /* Hover Texts */
   --hover-blue-text: #617cdc;
@@ -26,6 +27,7 @@
   --olive-bg: #584910;
 
   --olive-border: #584910;
+  --gray-border: #e1e3e5;
 
   --primary-ctc: #ebb653;
   --secondary-ctc: #f5dba9;
@@ -261,6 +263,14 @@
 
   .blockquote {
     @apply italic text-sm tracking-tighter max-md:tracking-tight max-md:text-[10px];
+  }
+
+  .label {
+    @apply text-base tracking-normal leading-7 max-sm:text-sm max-xs:text-xs;
+  }
+
+  .input {
+    @apply border-2 py-1 px-2 rounded-md border-[var(--gray-border)] text-sm;
   }
 
   button:not(:disabled),
