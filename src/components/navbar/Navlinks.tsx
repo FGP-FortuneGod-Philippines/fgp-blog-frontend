@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 import { navLinks } from "@/constants";
 import {
   NavigationMenuItem,
@@ -16,7 +16,7 @@ const Navlinks = () => {
               asChild
               className="font-medium tracking-wide text-sm"
             >
-              <Link to={link.path}>{link.label}</Link>
+              <NavLink to={link.path}>{link.label}</NavLink>
             </NavigationMenuLink>
           </NavigationMenuItem>
         ))}

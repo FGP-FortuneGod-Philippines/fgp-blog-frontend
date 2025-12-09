@@ -1,13 +1,17 @@
 import { Routes, Route } from "react-router";
-import MainLayout from "./layout/MainLayout";
 import { lazy, Suspense } from "react";
+
+import MainLayout from "./layout/MainLayout";
 import LoadingSpinner from "./components/LoadingSpinner";
-import News from "./pages/News";
-import { NotFound } from "./pages/NotFound";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Chairman = lazy(() => import("./pages/Chairman"));
 const Announcement = lazy(() => import("./pages/Announcement"));
+const AnnouncementDetails = lazy(() => import("./pages/AnnouncementDetails"));
+const News = lazy(() => import("./pages/News"));
+const TrustedPartners = lazy(() => import("./pages/TrustedPartners"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
   return (
@@ -19,7 +23,13 @@ const App = () => {
             <Route index element={<HomePage />} />
             <Route path="/chairman" element={<Chairman />} />
             <Route path="/announcement" element={<Announcement />} />
+            <Route
+              path="/announcement/:slug/:id"
+              element={<AnnouncementDetails />}
+            />
             <Route path="/news" element={<News />} />
+            <Route path="/partners" element={<TrustedPartners />} />
+            <Route path="/contact-us" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

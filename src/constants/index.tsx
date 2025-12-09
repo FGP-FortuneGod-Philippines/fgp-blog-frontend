@@ -70,10 +70,10 @@ import {
 
 export const navLinks: NavLink[] = [
   { path: "/", label: "Home" },
-  { path: "/", label: "About", scrollTo: "about" },
   { path: "/chairman", label: "Chairman" },
   { path: "/announcement", label: "Announcement" },
   { path: "/news", label: "News" },
+  { path: "/partners", label: "Trusted Partners" },
 ];
 
 export const engagementStats: Engagement[] = [
@@ -415,10 +415,10 @@ export const qualifications: QualificationProps[] = [
 
 export const announcementData: AnnouncementProps[] = [
   {
-    id: 1,
+    id: "1",
     title: "Taiwan Excellence Expo 2025",
     description:
-      "Stay updated from checkout to delivery. Our new tracking feature keeps you informed every step of the way.",
+      "Stay updated from checkout to delivery. We are proud to represent FortuneGod Philippines at the prestigious Taiwan Excellence Expo 2025, held at the SMX Convention Center Manila. This marks a significant milestone for our company as we step onto the global stage, showcasing our commitment to innovation, collaboration, and service excellence.",
     author: "FgpPh",
     created_at: "September 9, 2025",
     tags: ["ecommerce", "shopilipinas"],
@@ -426,7 +426,7 @@ export const announcementData: AnnouncementProps[] = [
     image: taiwan,
   },
   {
-    id: 2,
+    id: "2",
     title: "New Arrivals Just Dropped",
     description:
       "Discover our latest collection designed to match your lifestyle. Fresh styles and must-have items are waiting for you.",
@@ -437,7 +437,7 @@ export const announcementData: AnnouncementProps[] = [
     image: gift,
   },
   {
-    id: 3,
+    id: "3",
     title: "Members-Only Rewards",
     description:
       "Sign up today and unlock exclusive perks. Earn points every time you shop and redeem them for exciting rewards.",
@@ -448,7 +448,7 @@ export const announcementData: AnnouncementProps[] = [
     image: gift,
   },
   {
-    id: 4,
+    id: "4",
     title: "Secure & Easy Checkout",
     description:
       "We’ve made shopping safer and faster for you. Enjoy smooth payments and complete peace of mind with every order.",
@@ -459,7 +459,7 @@ export const announcementData: AnnouncementProps[] = [
     image: envelope,
   },
   {
-    id: 5,
+    id: "5",
     title: "Limited-Time Flash Sale",
     description:
       "Hurry! Grab your favorites with up to 50% off. This offer won’t last long, so shop now before stocks run out.",
@@ -470,7 +470,7 @@ export const announcementData: AnnouncementProps[] = [
     image: yehey,
   },
   {
-    id: 6,
+    id: "6",
     title: "Free Shipping Weekend",
     description:
       "For a limited time, all orders come with free nationwide shipping buy now!!",
@@ -481,7 +481,7 @@ export const announcementData: AnnouncementProps[] = [
     image: yehey,
   },
   {
-    id: 7,
+    id: "7",
     title: "Big Savings Await!",
     description:
       "Enjoy exclusive discounts across our store. Shop your favorite products at unbeatable prices and grab the best deals before they’re gone. ",
