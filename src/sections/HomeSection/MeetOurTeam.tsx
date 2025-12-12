@@ -9,7 +9,7 @@ const MeetOurTeam = () => {
     <div className="w-full h-auto flex flex-col items-start gap-5 max-md:gap-3 mt-10 space-y-5">
       {/* Title */}
       <div className="w-full h-auto flex flex-col justify-center items-center">
-        <h3 className="text-5xl md:text-8xl font-light text-center leading-tight">
+        <h3 className="text-4xl md:text-6xl lg:text-8xl font-light text-center leading-tight">
           Meet Our{" "}
           <TextType
             text={["Team"]}
