@@ -2,6 +2,7 @@ import ExecutiveSlider from "@/components/meet-team/ExecutiveSlider";
 import ForeignSlider from "@/components/meet-team/ForeignSlider";
 import OperationsTeam from "@/components/meet-team/OperationsTeam";
 import PhBusinessAssociate from "@/components/meet-team/PhBusinessAssociate";
+import { useEffect, useState } from "react";
 
 const MeetOurTeam = () => {
   return (
