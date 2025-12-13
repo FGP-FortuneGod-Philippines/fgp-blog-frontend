@@ -3,24 +3,24 @@ import trade from "@/assets/offer/International trade-rafiki.webp";
 import operation from "@/assets/offer/Operating system upgrade-amico (1).webp";
 import project from "@/assets/offer/Projections-bro.webp";
 
-import ceo from "@/assets/executives/CEO.webp";
-import jarl from "@/assets/executives/jarl.webp";
-import kevin from "@/assets/executives/kevin-1.webp";
-import stanley from "@/assets/executives/stanley.webp";
+import ceo from "@/assets/executives/CEO(no border).webp";
+import jarl from "@/assets/executives/jarl(no border).webp";
+import kevin from "@/assets/executives/kevin(no border).webp";
+import stanley from "@/assets/executives/stanley(no border).webp";
 
-import duke from "@/assets/foreign-affairs/Duke-Liu.webp";
-import elden from "@/assets/foreign-affairs/Elden-Tu.webp";
-import steven from "@/assets/foreign-affairs/Steven-Lien.webp";
-import william from "@/assets/foreign-affairs/William.webp";
+import duke from "@/assets/foreign-affairs/Duke-Liu(no border).webp";
+import elden from "@/assets/foreign-affairs/Elden-Tu(no border).webp";
+import steven from "@/assets/foreign-affairs/Steven-Lien(no border).webp";
+import william from "@/assets/foreign-affairs/William(no border).webp";
 
 import fidel from "@/assets/ph-business-associates/fidel-ferrer.webp";
 
-import hera from "@/assets/operations-team/Hera.webp";
-import gelo from "@/assets/operations-team/Gelo.webp";
-import cess from "@/assets/operations-team/Cess.webp";
-import jin from "@/assets/operations-team/jin.webp";
-import lane from "@/assets/operations-team/Lane.webp";
-import lea from "@/assets/operations-team/Lea.webp";
+import hera from "@/assets/operations-team/Hera(no border).webp";
+import gelo from "@/assets/operations-team/Gelo(no border).webp";
+import cess from "@/assets/operations-team/Cess(no border).webp";
+import jin from "@/assets/operations-team/jin(no border).webp";
+import lane from "@/assets/operations-team/Lane(no border).webp";
+import lea from "@/assets/operations-team/Lea(no border).webp";
 
 import loveph from "@/assets/banner-optimized/Love-Lastly-na.webp";
 import rides from "@/assets/banner-optimized/last-star.webp";
