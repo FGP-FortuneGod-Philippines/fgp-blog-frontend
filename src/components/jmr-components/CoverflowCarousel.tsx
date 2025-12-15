@@ -136,7 +136,7 @@ const CoverflowCarousel: React.FC<CoverflowCarouselProps> = ({
     <div className="flex flex-col items-center">
       {/* Carousel Container */}
       <div 
-        className="relative w-full h-72 flex items-center justify-center overflow-hidden touch-pan-y"
+        className="relative w-full h-92 flex items-center justify-center overflow-hidden touch-pan-y"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}

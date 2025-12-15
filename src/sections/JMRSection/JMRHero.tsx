@@ -16,34 +16,36 @@ const JMRHero: React.FC = () => {
   };
 
   return (
-    <div className="text-center mt-18">
+    <div className="text-center mt-18 mx-10">
       <h3 className="text-2xl md:text-4xl font-semibold">
         Your Trusted Customs <br /> Brokerage Partner
       </h3>
       <p className="mt-2 text-lg md:text-xl">Fast. Reliable. Efficient</p>
 
-      {/* Desktop Grid */}
-      <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-4 mt-5 h-120 w-180">
-        <div className="col-span-1 row-span-2 h-full">
-          <img
-            src={chairhero}
-            alt="chairhero"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="col-span-1">
-          <img
-            src={chairhero1}
-            alt="chairhero1"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="col-span-1">
-          <img
-            src={chairhero2}
-            alt="chairhero2"
-            className="h-full w-full object-cover"
-          />
+      {/* Desktop Grid - Centered */}
+      <div className="hidden md:flex justify-center mt-5">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 h-120 w-180">
+          <div className="col-span-1 row-span-2 h-full">
+            <img
+              src={chairhero}
+              alt="chairhero"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="col-span-1">
+            <img
+              src={chairhero1}
+              alt="chairhero1"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="col-span-1">
+            <img
+              src={chairhero2}
+              alt="chairhero2"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
 
