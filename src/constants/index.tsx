@@ -83,6 +83,9 @@ import gallery31 from "@/assets/image-gallery/gallery-31.jpg";
 import gallery32 from "@/assets/image-gallery/gallery-32.jpg";
 import gallery33 from "@/assets/image-gallery/gallery-33.jpg";
 
+import jmr from "@/assets/partnerships/jmr.png";
+import more from "@/assets/partnerships/more-partnership.png";
+
 import type {
   Accordion,
   AnnouncementProps,
@@ -565,4 +568,11 @@ export const galleryImg = [
   { src: gallery31, category: "ShoPilipinas" },
   { src: gallery32, category: "ShoPilipinas" },
   { src: gallery33, category: "ShoPilipinas" },
+];
+
+export const partnerships = [
+  { label: "JMR", src: jmr, path: "/jmr" },
+  { label: "More", src: more },
+  { label: "More", src: more },
+  { label: "More", src: more },
 ];
