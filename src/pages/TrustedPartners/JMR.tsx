@@ -4,6 +4,7 @@ import DedicatedProfessionals from "@/sections/JMRSection/DedicatedProfessionals
 import ClientBase from "@/sections/JMRSection/ClientBase"
 import MissionVision from "@/sections/JMRSection/MissionVision"
 import CoreValues from "@/sections/JMRSection/CoreValues"
+import Commitment from "@/sections/JMRSection/Commitment"
 
 const JMR = () => {
   return (
@@ -14,6 +15,7 @@ const JMR = () => {
       <ClientBase/>
       <MissionVision/>
       <CoreValues/>
+      <Commitment/>
     </div>
   )
 }
