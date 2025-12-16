@@ -290,3 +290,28 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+
+/* marquee animation */
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft var(--marquee-speed, 40s) linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scrollRight var(--marquee-speed, 40s) linear infinite;
+}
+
+.scroll-container:hover .animate-scroll-left,
+.scroll-container:hover .animate-scroll-right {
+  animation-play-state: paused;
+}

@@ -1,6 +1,7 @@
 import JMRHero from "@/sections/JMRSection/JMRHero"
 import WhyChooseUs from "@/sections/JMRSection/WhyChooseUs"
 import DedicatedProfessionals from "@/sections/JMRSection/DedicatedProfessionals"
+import ClientBase from "@/sections/JMRSection/ClientBase"
 
 const JMR = () => {
   return (
@@ -8,6 +9,7 @@ const JMR = () => {
       <JMRHero/>
       <WhyChooseUs/>
       <DedicatedProfessionals/>
+      <ClientBase/>
     </div>
   )
 }

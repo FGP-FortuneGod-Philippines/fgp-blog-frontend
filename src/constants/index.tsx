@@ -83,6 +83,35 @@ import gallery31 from "@/assets/image-gallery/gallery-31.jpg";
 import gallery32 from "@/assets/image-gallery/gallery-32.jpg";
 import gallery33 from "@/assets/image-gallery/gallery-33.jpg";
 
+//client base - marquee1
+import airRich from "@/assets/client-base/marquee1/Air-Rich-1.png";
+import cedc from "@/assets/client-base/marquee1/Cedc.png";
+import converge from "@/assets/client-base/marquee1/Converge-2.png";
+import evogen from "@/assets/client-base/marquee1/Evogen-1.png";
+import fiberRex from "@/assets/client-base/marquee1/Fiber-Rex-1.png";
+import fukuda from "@/assets/client-base/marquee1/Fukuda-1.png";
+import ingco from "@/assets/client-base/marquee1/INGCO-1.png";
+import meralcoGreen from "@/assets/client-base/marquee1/Meralco-Green.png";
+import meralcoTerraSolar from "@/assets/client-base/marquee1/Meralco-Terra-Solar.png";
+import nouveaulab from "@/assets/client-base/marquee1/Noveaulab-1.png";
+import powerChina from "@/assets/client-base/marquee1/Power-China.png";
+import promega from "@/assets/client-base/marquee1/Promega-1.png";
+import shakeys from "@/assets/client-base/marquee1/Shakeys-3.png";
+import sumec from "@/assets/client-base/marquee1/Sumec.png";
+import taiheiyoCement from "@/assets/client-base/marquee1/Taiheiyo-Cement-1.png";
+import touchDog from "@/assets/client-base/marquee1/Touch-Dog-1.png";
+import venaEnergy from "@/assets/client-base/marquee1/Vena-Energy-1.png";
+import xiaomi from "@/assets/client-base/marquee1/Xiaomi-2.png";
+
+// client base - marquee2
+import Bison from "@/assets/client-base/marquee2/Bison.png";
+import Decakia from "@/assets/client-base/marquee2/Decakila-1.png";
+import Jollibee from "@/assets/client-base/marquee2/Jollibee-1.png";
+import Klass from "@/assets/client-base/marquee2/Klass-1.png";
+import PrimeInfra from "@/assets/client-base/marquee2/Prime-Infra-1.png";
+import Starbucks from "@/assets/client-base/marquee2/Stabucks-2.png";
+import WilconDepot from "@/assets/client-base/marquee2/Wilcon-Depot-1.png";
+
 import jmr from "@/assets/partnerships/jmr.png";
 import more from "@/assets/partnerships/more-partnership.png";
 
@@ -575,4 +604,35 @@ export const partnerships = [
   { label: "More", src: more },
   { label: "More", src: more },
   { label: "More", src: more },
+];
+
+export const marquee1 = [
+  { label: "Air Rich", src: airRich },
+  { label: "Cedc", src: cedc },
+  { label: "Converge", src: converge },
+  { label: "Evogen", src: evogen },
+  { label: "Fiber Rex", src: fiberRex },
+  { label: "Fukuda", src: fukuda },
+  { label: "INGCO", src: ingco },
+  { label: "Meralco Green", src: meralcoGreen },
+  { label: "Meralco Terra Solar", src: meralcoTerraSolar },
+  { label: "Noveaulab", src: nouveaulab },
+  { label: "Power China", src: powerChina },
+  { label: "Promega", src: promega },
+  { label: "Shakeys", src: shakeys },
+  { label: "Sumec", src: sumec },
+  { label: "Taiheiyo Cement", src: taiheiyoCement },
+  { label: "Touch Dog", src: touchDog },
+  { label: "Vena Energy", src: venaEnergy },
+  { label: "Xiaomi", src: xiaomi }
+];
+
+export const marquee2 = [
+  { label: "Bison", src: Bison },
+  { label: "Decakia", src: Decakia },
+  { label: "Jollibee", src: Jollibee },
+  { label: "Klass", src: Klass },
+  { label: "Prime Infra", src: PrimeInfra },
+  { label: "Starbucks", src: Starbucks },
+  { label: "Wilcon Depot", src: WilconDepot }
 ];
