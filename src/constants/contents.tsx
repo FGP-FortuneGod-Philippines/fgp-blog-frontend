@@ -187,3 +187,21 @@ export const chairmanMessage = {
     Asia-Pacific.
   `,
 };
+
+export const JRMMissionVisionContent: MissionVissionProps = {
+  mission: `
+    Our Mission is to Facilitate, Assist and Represent our clients on Customs
+    procedures by ensuring to meet applicable laws as well as compliance on payment 
+    of duties and taxes We, provide tailored solutions to achieve delivery targets and 
+    move products FAST and EFFICIENT to our clients. We set the highest level of professionalism
+    and established best business practices and relationship with our clients. This article offers 
+    free shipping on qualified Face mask products, or buy online and pick up in store today at 
+    Medical Department. 
+  `,
+
+  vission: `
+    To be recognized as one of the most admired companies in our industry 
+    because of our commitment to clients, employees and business partners. 
+    Orioles are known for their pleasant singing. 
+  `,
+};
