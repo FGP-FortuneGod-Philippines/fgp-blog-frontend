@@ -4,8 +4,6 @@ import LazyImage from "./LazyImage";
 import { Link } from "react-router";
 
 const NewsCards = ({ data }: { data: NewsProps }) => {
-  console.log(data);
-
   return (
     <div
       key={data.id}
