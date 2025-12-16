@@ -9,7 +9,7 @@ const CoreValues = () => {
           value.icon && value.description ? (
             <BaseCards
               key={value.title}
-              className="flex flex-col justify-start gap-2"
+              className="flex flex-col justify-start gap-2 transition-transform duration-300 ease-out hover:-translate-y-3"
             >
               <value.icon className="text-4xl max-md:text-lg" />
               <h4>{value.title}</h4>

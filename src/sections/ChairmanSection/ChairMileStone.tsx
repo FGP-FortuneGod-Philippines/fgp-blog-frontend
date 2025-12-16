@@ -70,7 +70,7 @@ const ChairMileStone = () => {
             <img
               src={img.src}
               alt={`gallery-${index}`}
-              className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-110"
+              className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-110 "
             />
           </div>
         ))}

@@ -23,7 +23,10 @@ const NewsSection = () => {
       )}
 
       <section className="w-full h-auto grid grid-cols-3 gap-5 py-5 px-20 my-5">
-        {news && news.map((data: NewsProps) => <NewsCards data={data} />)}
+        {news &&
+          news.map((data: NewsProps) => (
+            <NewsCards key={data.id} data={data} />
+          ))}
       </section>
     </div>
   );
