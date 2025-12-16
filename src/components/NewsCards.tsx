@@ -1,12 +1,15 @@
 import type { NewsProps } from "@/interfaces";
 import { formatDate } from "@/utils/formatDate";
 import LazyImage from "./LazyImage";
+import { Link } from "react-router";
 
 const NewsCards = ({ data }: { data: NewsProps }) => {
+  console.log(data);
+
   return (
     <div
       key={data.id}
-      className="w-full h-auto flex flex-col gap-3 justify-between border rounded-md p-5"
+      className="w-full h-auto flex flex-col gap-3 justify-between shadow-2xl rounded-md p-5 transition-transform duration-300 ease-out hover:-translate-y-3"
     >
       {/* image */}
       <div className="w-full h-[13rem]">
@@ -19,7 +22,12 @@ const NewsCards = ({ data }: { data: NewsProps }) => {
 
       {/* details */}
       <div className="flex flex-col p-4">
-        <h6 className="mb-5 line-clamp-2 text-lg">{data.title}</h6>
+        <Link
+          to={data.url}
+          className="mb-5 line-clamp-2 text-lg font-semibold hover:text-[var(--hover-olive-text)]"
+        >
+          {data.title}
+        </Link>
         <p className="text-sm leading-5 line-clamp-2 mb-5">
           {data.description}
         </p>
