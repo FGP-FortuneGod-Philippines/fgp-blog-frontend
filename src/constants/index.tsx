@@ -636,3 +636,41 @@ export const marquee2 = [
   { label: "Starbucks", src: Starbucks },
   { label: "Wilcon Depot", src: WilconDepot }
 ];
+
+export const jmrCoreValues: Accordion[] = [
+  {
+    title: "Client Focus",
+    description:
+      "We listen to our clients and align our collective goals in order to achieve as well as exceed expectations.",
+    item: "1",
+  },
+  {
+    title: "Commitment",
+    description:
+      `We pledge to improve and stay reliable in cargo delivery. "We commit, We deliver".`,
+    item: "2",
+  },
+  {
+    title: "Continuous Improvement",
+    description:
+      "We nurture continuous professional education, dedication to compliance and safety awareness.",
+    item: "3",
+  },
+  {
+    title: "Accountability",
+    description: "We believe that accountability to each and to our clients is paramount for success.",
+    item: "4",
+  },
+  {
+    title: "Integrity",
+    description:
+      "We conduct ourselves with the highest levels of trust, honesty and ethical standards.",
+    item: "5",
+  },
+  {
+    title: "Teamwork",
+    description:
+      "We support and respect our team members in order to promote a positive environment and results.",
+    item: "6",
+  },
+];
