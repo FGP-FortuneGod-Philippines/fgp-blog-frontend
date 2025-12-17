@@ -59,13 +59,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                         {images.map((img, idx) => (
                           <div
                             key={idx}
-                            className="rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                            className="
+                              overflow-hidden
+                              rounded-lg
+                              border
+                              border-gray-200
+                              bg-background
+                              shadow-lg
+                              hover:-translate-y-1
+                              transition-all
+                              duration-300
+                            "
                           >
                             <LazyImage
                               src={img}
                               alt={`${title} image ${idx + 1}`}
                               effect="blur"
-                              className="w-full h-56 md:h-64 object-contain rounded-xl hover:scale-105 transition-transform duration-500 ease-out bg-gray-100"
+                              className="
+                                w-full
+                                h-48
+                                sm:h-56
+                                md:h-64
+                                object-contain
+                                bg-gray-100
+                              "
                             />
                           </div>
                         ))}
@@ -110,12 +127,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                       {images.map((img, idx) => (
                         <div
                           key={idx}
-                          className="rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                          className="
+                            overflow-hidden
+                            rounded-lg
+                            border
+                            border-gray-200
+                            bg-background
+                            shadow-lg
+                            hover:-translate-y-1
+                            transition-all
+                            duration-300
+                          "
                         >
-                          <img
+                          <LazyImage
                             src={img}
                             alt={`${title} image ${idx + 1}`}
-                            className="w-full h-56 md:h-64 object-contain rounded-xl hover:scale-105 transition-transform duration-500 ease-out bg-gray-100"
+                            effect="blur"
+                            className="
+                              w-full
+                              h-48
+                              sm:h-56
+                              md:h-64
+                              object-contain
+                              bg-gray-100
+                            "
                           />
                         </div>
                       ))}
