@@ -4,7 +4,7 @@ import { marquee1, marquee2 } from "@/constants";
 const ClientBase = () => {
   return (
     <div className="w-full py-16 overflow-hidden">
-      <h3 className='text-center mb-8'>
+      <h3 className="text-center text-xl md:text-2xl lg:text-3xl font-semibold mb-6 md:mb-8">
         Our Client Base
       </h3>
       
