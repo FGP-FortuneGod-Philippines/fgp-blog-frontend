@@ -112,6 +112,23 @@ import PrimeInfra from "@/assets/client-base/marquee2/Prime-Infra-1.png";
 import Starbucks from "@/assets/client-base/marquee2/Stabucks-2.png";
 import WilconDepot from "@/assets/client-base/marquee2/Wilcon-Depot-1.png";
 
+//vena projects
+import vena1 from "@/assets/JMR/vena-projects/vena1.png"
+import vena2 from "@/assets/JMR/vena-projects/vena2.png"
+
+//nsec projects
+import nsec1 from "@/assets/JMR/nsec-projects/nsec1.png"
+import nsec2 from "@/assets/JMR/nsec-projects/nsec2.png"
+
+//taiheiyo projects
+import taiheiyo1 from "@/assets/JMR/taiheiyo-projects/taiheiyo1.png"
+import taiheiyo2 from "@/assets/JMR/taiheiyo-projects/taiheiyo2.png"
+
+//prime projects
+import prime1 from "@/assets/JMR/prime-projects/prime1.png"
+import prime2 from "@/assets/JMR/prime-projects/prime2.png"
+
+
 import jmr from "@/assets/partnerships/jmr.png";
 import more from "@/assets/partnerships/more-partnership.png";
 
@@ -673,4 +690,35 @@ export const jmrCoreValues: Accordion[] = [
       "We support and respect our team members in order to promote a positive environment and results.",
     item: "6",
   },
+];
+
+export const projectSamples = [
+  {
+    category: "Vena Energy",
+    projects: [
+      { name: "Vena Project 1", image: vena1 },
+      { name: "Vena Project 2", image: vena2 }
+    ]
+  },
+  {
+    category: "NSEC Nuevo Solar Energy Corp",
+    projects: [
+      { name: "NSEC Project 1", image: nsec1 },
+      { name: "NSEC Project 2", image: nsec2 }
+    ]
+  },
+  {
+    category: "Taiheiyo Cement",
+    projects: [
+      { name: "Taiheiyo Project 1", image: taiheiyo1 },
+      { name: "Taiheiyo Project 2", image: taiheiyo2 }
+    ]
+  },
+  {
+    category: "Prime Infra",
+    projects: [
+      { name: "Prime Project 1", image: prime1 },
+      { name: "Prime Project 2", image: prime2 }
+    ]
+  }
 ];

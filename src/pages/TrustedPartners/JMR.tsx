@@ -5,6 +5,7 @@ import ClientBase from "@/sections/JMRSection/ClientBase"
 import MissionVision from "@/sections/JMRSection/MissionVision"
 import CoreValues from "@/sections/JMRSection/CoreValues"
 import Commitment from "@/sections/JMRSection/Commitment"
+import OurProjects from "@/sections/JMRSection/OurProjects"
 
 const JMR = () => {
   return (
@@ -16,6 +17,7 @@ const JMR = () => {
       <MissionVision/>
       <CoreValues/>
       <Commitment/>
+      <OurProjects/>
     </div>
   )
 }
