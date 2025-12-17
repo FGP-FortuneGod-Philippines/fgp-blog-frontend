@@ -128,6 +128,28 @@ import taiheiyo2 from "@/assets/JMR/taiheiyo-projects/taiheiyo2.png"
 import prime1 from "@/assets/JMR/prime-projects/prime1.png"
 import prime2 from "@/assets/JMR/prime-projects/prime2.png"
 
+//solar-tanauan
+import tanauan1 from "@/assets/JMR/solar-tanauan/8.png"
+import tanauan2 from "@/assets/JMR/solar-tanauan/9.png"
+import tanauan3 from "@/assets/JMR/solar-tanauan/10.png"
+import tanauan4 from "@/assets/JMR/solar-tanauan/11.png"
+import tanauan5 from "@/assets/JMR/solar-tanauan/12.png"
+import tanauan6 from "@/assets/JMR/solar-tanauan/13.png"
+import tanauan7 from "@/assets/JMR/solar-tanauan/14.png"
+import tanauan8 from "@/assets/JMR/solar-tanauan/15.png"
+
+//greentech
+import greentech1 from "@/assets/JMR/greentech/16.png"
+import greentech2 from "@/assets/JMR/greentech/17.png"
+import greentech3 from "@/assets/JMR/greentech/18.png"
+import greentech4 from "@/assets/JMR/greentech/19.png"
+import greentech5 from "@/assets/JMR/greentech/20.png"
+
+//tph-feedmill
+import tph1 from "@/assets/JMR/tph-feedmill/21.png"
+import tph2 from "@/assets/JMR/tph-feedmill/22.png"
+import tph3 from "@/assets/JMR/tph-feedmill/23.png"
+import tph4 from "@/assets/JMR/tph-feedmill/24.png"
 
 import jmr from "@/assets/partnerships/jmr.png";
 import more from "@/assets/partnerships/more-partnership.png";
@@ -721,4 +743,31 @@ export const projectSamples = [
       { name: "Prime Project 2", image: prime2 }
     ]
   }
+];
+
+export const jmrProjects = [
+  {
+    title: "SOLAR TANAUAN",
+    subtitle: "18.75MW Bongabon Solar Farm",
+    description:
+      "Supply and installation of 20ft and 40ft containers to support onsite operations, equipment housing, and storage requirements for the solar power facility.",
+    align: "left",
+    images: [tanauan1, tanauan2, tanauan3, tanauan4, tanauan5, tanauan6, tanauan7, tanauan8],
+  },
+  {
+    title: "Greentech Solar Energy Corp.",
+    subtitle: "20ft & 40ft Container Delivery and Breakbulk Transformer Transport",
+    description:
+      "Delivery of 20ft and 40ft containers, including breakbulk transport of two (2) transformer units with a total weight of 58.0 MT delivered to Tanauan, Batangas and 58.0 MT delivered to Maragondon, Cavite.",
+    align: "right",
+    images: [greentech1, greentech2, greentech3, greentech4, greentech5],
+  },
+  {
+    title: "New 120 TPH FeedMill - Mabini, Batangas",
+    subtitle: "B-MEG, BCDC, San Miguel Foods, Inc.",
+    description:
+      "Construction of the Feedmill Tower and Raw Materials Warehouse, supporting high-capacity production and efficient storage operations for feed manufacturing.",
+    align: "left",
+    images: [tph1, tph2, tph3, tph4],
+  },
 ];

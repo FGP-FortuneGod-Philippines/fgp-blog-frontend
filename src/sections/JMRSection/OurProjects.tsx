@@ -5,6 +5,9 @@ import {
   TabsContent,
 } from "@/components/ui/tabs";
 import { projectSamples } from "@/constants";
+import ProjectCard from "@/components/jmr-components/ProjectCards";
+import { jmrProjects } from "@/constants";
+import LazyImage from "@/components/LazyImage";
 
 const tabTriggerClass = `
   h-full
@@ -97,7 +100,7 @@ const OurProjects = () => {
                           duration-300
                         "
                       >
-                        <img
+                        <LazyImage
                           src={project.image}
                           alt={project.name}
                           className="
@@ -107,6 +110,7 @@ const OurProjects = () => {
                             md:h-64
                             object-cover
                           "
+                          effect="blur"
                         />
                       </div>
                     ))}
@@ -115,6 +119,18 @@ const OurProjects = () => {
               );
             })}
         </Tabs>
+        <div className="mt-10 md:mt-40 px-4 space-y-35">
+          {jmrProjects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              subtitle={project.subtitle}
+              description={project.description}
+              images={project.images}
+              align={project.align as "left" | "right"}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
