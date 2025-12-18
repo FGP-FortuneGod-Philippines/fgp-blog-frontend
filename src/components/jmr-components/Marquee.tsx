@@ -25,13 +25,20 @@ const Marquee: React.FC<MarqueeProps> = ({
   imageClassName = 'w-full h-full object-contain opacity-100 hover:opacity-70 transition-opacity duration-300',
 }) => {
   return (
-    <div className={`relative overflow-hidden ${pauseOnHover ? 'scroll-container' : ''} ${className}`}>
+    <div className={`relative overflow-hidden ${className}`}>
       <div 
-        className={`flex ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}
+        className="flex"
         style={{ 
-          '--marquee-speed': `${speed}s`,
+          animation: `${direction === 'left' ? 'scroll-left' : 'scroll-right'} ${speed}s linear infinite`,
+          animationPlayState: 'running',
           width: 'max-content',
         } as React.CSSProperties}
+        onMouseEnter={pauseOnHover ? (e) => {
+          e.currentTarget.style.animationPlayState = 'paused';
+        } : undefined}
+        onMouseLeave={pauseOnHover ? (e) => {
+          e.currentTarget.style.animationPlayState = 'running';
+        } : undefined}
       >
         {[...clients, ...clients].map((client, index) => (
           <div 
@@ -47,6 +54,18 @@ const Marquee: React.FC<MarqueeProps> = ({
           </div>
         ))}
       </div>
+      
+      {/* Add global styles - this will apply to entire page */}
+      <style>{`
+        @keyframes scroll-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-50%)); }
+        }
+        @keyframes scroll-right {
+          0% { transform: translateX(calc(-50%)); }
+          100% { transform: translateX(0); }
+        }
+      `}</style>
     </div>
   );
 };
