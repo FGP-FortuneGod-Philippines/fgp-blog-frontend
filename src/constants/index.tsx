@@ -151,6 +151,13 @@ import tph2 from "@/assets/JMR/tph-feedmill/22.png"
 import tph3 from "@/assets/JMR/tph-feedmill/23.png"
 import tph4 from "@/assets/JMR/tph-feedmill/24.png"
 
+//jmr-icons
+import rocket from "@/assets/JMR/jmr-icons/rocket.png"
+import lightning from "@/assets/JMR/jmr-icons/lightning.png"
+import heart from "@/assets/JMR/jmr-icons/heart.png"
+import globe from "@/assets/JMR/jmr-icons/globe.png"
+
+
 import jmr from "@/assets/partnerships/jmr.png";
 import more from "@/assets/partnerships/more-partnership.png";
 
@@ -771,3 +778,26 @@ export const jmrProjects = [
     images: [tph1, tph2, tph3, tph4],
   },
 ];
+
+export const whyChooseUs = [
+    {
+      icon: rocket,
+      title: "Unparalleled Expertise",
+      description: "Our team boasts years of experience and expertise in customs clearance."
+    },
+    {
+      icon: heart,
+      title: "Customer Centric Approach",
+      description: "We prioritize your needs and offer personalized solutions."
+    },
+    {
+      icon: lightning,
+      title: "Efficiency and Accuracy",
+      description: "We ensure your shipments are processed smoothly, avoiding costly delays."
+    },
+    {
+      icon: globe,
+      title: "Global Reach",
+      description: "We handle customs clearances across international borders."
+    }
+]
