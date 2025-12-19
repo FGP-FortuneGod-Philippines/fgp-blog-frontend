@@ -1,3 +1,2 @@
 1. Test branch rule set 
-1. Test branch
-1. asdasdas
+2. Test again
