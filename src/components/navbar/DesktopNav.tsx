@@ -21,7 +21,7 @@ const DesktopNav = () => {
   return (
     <header className="wrapper h-[5rem] flex justify-between items-center max-md:hidden">
       {/* Logo */}
-      <div className="w-20 h-20">
+      <div className="w-20 h-20 max-lg:w-15 max-lg:h-15">
         <img
           src={logo}
           alt="fpg-logo"
@@ -32,13 +32,13 @@ const DesktopNav = () => {
       {/* Navigation Menu */}
       <div className="flex flex-1 justify-center items-center">
         <NavigationMenu>
-          <NavigationMenuList className="gap-10">
+          <NavigationMenuList className="gap-3">
             {navLinks &&
               navLinks.map((link) => (
                 <NavigationMenuItem key={link.label}>
                   <NavigationMenuLink
                     asChild
-                    className="font-medium tracking-wide text-sm"
+                    className="font-medium tracking-wide text-sm max-lg:text-xs"
                   >
                     <span
                       className="cursor-pointer"
@@ -54,9 +54,12 @@ const DesktopNav = () => {
       </div>
 
       {/* CTC */}
-      <div>
-        <Button onClick={handleContactClick}>Contact Us</Button>
-      </div>
+      <Button
+        onClick={handleContactClick}
+        className="max-lg:text-xs max-lg:py-0 max-lg:px-4 max-lg:h-8"
+      >
+        Contact Us
+      </Button>
     </header>
   );
 };

@@ -11,7 +11,7 @@ const Awards = () => {
         {awardsCard.map((award) => (
           <BaseCards
             key={award.label}
-            className="flex flex-col items-center gap-2 p-10 hover:bg-[#E9D291] transition-colors duration-300"
+            className="flex flex-col items-center gap-2 p-10 transition-transform duration-300 ease-out hover:bg-[#E9D291] hover:-translate-y-3"
           >
             <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-30 h-30">
               <img

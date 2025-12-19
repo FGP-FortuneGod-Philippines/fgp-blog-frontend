@@ -3,8 +3,8 @@ import BaseSlider from "../base-components/BaseSlider";
 import TeamLayout from "./TeamLayout";
 
 const PhBusinessAssociate = () => {
-  const slides = phBusinessAssociates.map((data) => (
-    <TeamLayout key={data.name} data={data} />
+  const slides = phBusinessAssociates.map((data, index) => (
+    <TeamLayout key={index} data={data} />
   ));
 
   return (

@@ -11,15 +11,23 @@
   --font-sans: "Poppins", sans-serif;
   --font-title: "Cormorant Garamond", serif;
 
+  --olive-text: #584910;
   --black-text: #222222;
   --white-text: #ffffff;
   --gray-text: #8a8a8a;
+  --blue-text: #244cdd;
+  --red-text: #fb2c36;
+
+  /* Hover Texts */
+  --hover-blue-text: #617cdc;
+  --hover-olive-text: #89762d;
 
   --gray-bg: #e1e3e5;
   --white-bg: #ffffff;
-  --olive-bg: #584910
+  --olive-bg: #584910;
 
-  --gray-border: #584910;
+  --olive-border: #584910;
+  --gray-border: #e1e3e5;
 
   --primary-ctc: #ebb653;
   --secondary-ctc: #f5dba9;
@@ -35,7 +43,7 @@
   --card-foreground: #584910;
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.8062 0.1305 80.5909);
+  --primary: #ebb653;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.9541 0.0789 97.508);
   --secondary-foreground: oklch(0.205 0 0);
@@ -224,14 +232,20 @@
 
   h3 {
     @apply font-semibold text-center text-3xl max-md:text-2xl max-xs:text-lg tracking-wide;
+
+    font-family: var(--font-sans);
   }
 
   h4 {
     @apply text-xl max-md:text-lg font-semibold max-sm:tracking-normal max-xs:text-sm;
+
+    font-family: var(--font-sans);
   }
 
   p {
     @apply text-base tracking-normal leading-7 max-sm:text-sm max-xs:text-xs;
+
+    font-family: var(--font-sans);
   }
 
   ::-webkit-scrollbar-thumb {
@@ -251,6 +265,14 @@
     @apply italic text-sm tracking-tighter max-md:tracking-tight max-md:text-[10px];
   }
 
+  .label {
+    @apply text-base tracking-normal leading-7 max-sm:text-sm max-xs:text-xs;
+  }
+
+  .input {
+    @apply border-2 py-1 px-2 rounded-md border-[var(--gray-border)] text-sm;
+  }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
@@ -268,3 +290,4 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+

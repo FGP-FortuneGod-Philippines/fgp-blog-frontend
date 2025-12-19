@@ -4,12 +4,8 @@ import Autoplay from "embla-carousel-autoplay";
 import TeamLayout from "./TeamLayout";
 
 const ExecutiveSlider = () => {
-  const slides = executiveTeam.map((data) => (
-    <TeamLayout
-      key={data.name}
-      data={data}
-      className="md:basis-1/3 sm:basis-1/2"
-    />
+  const slides = executiveTeam.map((data, index) => (
+    <TeamLayout key={index} data={data} className="md:basis-1/3 sm:basis-1/2" />
   ));
 
   return (
