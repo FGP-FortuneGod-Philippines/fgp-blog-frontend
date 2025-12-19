@@ -21,7 +21,7 @@ const Marquee: React.FC<MarqueeProps> = ({
   speed = 40,
   pauseOnHover = true,
   className = '',
-  itemClassName = 'mx-8 w-48 h-32',
+  itemClassName = 'mx-4 md:mx-8 w-32 h-24 md:w-48 md:h-32',
   imageClassName = 'w-full h-full object-contain opacity-100 hover:opacity-70 transition-opacity duration-300',
 }) => {
   return (
