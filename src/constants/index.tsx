@@ -83,6 +83,84 @@ import gallery31 from "@/assets/image-gallery/gallery-31.jpg";
 import gallery32 from "@/assets/image-gallery/gallery-32.jpg";
 import gallery33 from "@/assets/image-gallery/gallery-33.jpg";
 
+//client base - marquee1
+import airRich from "@/assets/client-base/marquee1/Air-Rich-1.png";
+import cedc from "@/assets/client-base/marquee1/Cedc.png";
+import converge from "@/assets/client-base/marquee1/Converge-2.png";
+import evogen from "@/assets/client-base/marquee1/Evogen-1.png";
+import fiberRex from "@/assets/client-base/marquee1/Fiber-Rex-1.png";
+import fukuda from "@/assets/client-base/marquee1/Fukuda-1.png";
+import ingco from "@/assets/client-base/marquee1/INGCO-1.png";
+import meralcoGreen from "@/assets/client-base/marquee1/Meralco-Green.png";
+import meralcoTerraSolar from "@/assets/client-base/marquee1/Meralco-Terra-Solar.png";
+import nouveaulab from "@/assets/client-base/marquee1/Noveaulab-1.png";
+import powerChina from "@/assets/client-base/marquee1/Power-China.png";
+import promega from "@/assets/client-base/marquee1/Promega-1.png";
+import shakeys from "@/assets/client-base/marquee1/Shakeys-3.png";
+import sumec from "@/assets/client-base/marquee1/Sumec.png";
+import taiheiyoCement from "@/assets/client-base/marquee1/Taiheiyo-Cement-1.png";
+import touchDog from "@/assets/client-base/marquee1/Touch-Dog-1.png";
+import venaEnergy from "@/assets/client-base/marquee1/Vena-Energy-1.png";
+import xiaomi from "@/assets/client-base/marquee1/Xiaomi-2.png";
+
+// client base - marquee2
+import Bison from "@/assets/client-base/marquee2/Bison.png";
+import Decakia from "@/assets/client-base/marquee2/Decakila-1.png";
+import Jollibee from "@/assets/client-base/marquee2/Jollibee-1.png";
+import Klass from "@/assets/client-base/marquee2/Klass-1.png";
+import PrimeInfra from "@/assets/client-base/marquee2/Prime-Infra-1.png";
+import Starbucks from "@/assets/client-base/marquee2/Stabucks-2.png";
+import WilconDepot from "@/assets/client-base/marquee2/Wilcon-Depot-1.png";
+
+//vena projects
+import vena1 from "@/assets/JMR/vena-projects/vena1.png"
+import vena2 from "@/assets/JMR/vena-projects/vena2.png"
+
+//nsec projects
+import nsec1 from "@/assets/JMR/nsec-projects/nsec1.png"
+import nsec2 from "@/assets/JMR/nsec-projects/nsec2.png"
+
+//taiheiyo projects
+import taiheiyo1 from "@/assets/JMR/taiheiyo-projects/taiheiyo1.png"
+import taiheiyo2 from "@/assets/JMR/taiheiyo-projects/taiheiyo2.png"
+
+//prime projects
+import prime1 from "@/assets/JMR/prime-projects/prime1.png"
+import prime2 from "@/assets/JMR/prime-projects/prime2.png"
+
+//solar-tanauan
+import tanauan1 from "@/assets/JMR/solar-tanauan/8.png"
+import tanauan2 from "@/assets/JMR/solar-tanauan/9.png"
+import tanauan3 from "@/assets/JMR/solar-tanauan/10.png"
+import tanauan4 from "@/assets/JMR/solar-tanauan/11.png"
+import tanauan5 from "@/assets/JMR/solar-tanauan/12.png"
+import tanauan6 from "@/assets/JMR/solar-tanauan/13.png"
+import tanauan7 from "@/assets/JMR/solar-tanauan/14.png"
+import tanauan8 from "@/assets/JMR/solar-tanauan/15.png"
+
+//greentech
+import greentech1 from "@/assets/JMR/greentech/16.png"
+import greentech2 from "@/assets/JMR/greentech/17.png"
+import greentech3 from "@/assets/JMR/greentech/18.png"
+import greentech4 from "@/assets/JMR/greentech/19.png"
+import greentech5 from "@/assets/JMR/greentech/20.png"
+
+//tph-feedmill
+import tph1 from "@/assets/JMR/tph-feedmill/21.png"
+import tph2 from "@/assets/JMR/tph-feedmill/22.png"
+import tph3 from "@/assets/JMR/tph-feedmill/23.png"
+import tph4 from "@/assets/JMR/tph-feedmill/24.png"
+
+//jmr-icons
+import rocket from "@/assets/JMR/jmr-icons/rocket.png"
+import lightning from "@/assets/JMR/jmr-icons/lightning.png"
+import heart from "@/assets/JMR/jmr-icons/heart.png"
+import globe from "@/assets/JMR/jmr-icons/globe.png"
+
+
+import jmr from "@/assets/partnerships/jmr.png";
+import more from "@/assets/partnerships/more-partnership.png";
+
 import type {
   Accordion,
   AnnouncementProps,
@@ -566,3 +644,160 @@ export const galleryImg = [
   { src: gallery32, category: "ShoPilipinas" },
   { src: gallery33, category: "ShoPilipinas" },
 ];
+
+export const partnerships = [
+  { label: "JMR", src: jmr, path: "/jmr" },
+  { label: "More", src: more },
+  { label: "More", src: more },
+  { label: "More", src: more },
+];
+
+export const marquee1 = [
+  { label: "Air Rich", src: airRich },
+  { label: "Cedc", src: cedc },
+  { label: "Converge", src: converge },
+  { label: "Evogen", src: evogen },
+  { label: "Fiber Rex", src: fiberRex },
+  { label: "Fukuda", src: fukuda },
+  { label: "INGCO", src: ingco },
+  { label: "Meralco Green", src: meralcoGreen },
+  { label: "Meralco Terra Solar", src: meralcoTerraSolar },
+  { label: "Noveaulab", src: nouveaulab },
+  { label: "Power China", src: powerChina },
+  { label: "Promega", src: promega },
+  { label: "Shakeys", src: shakeys },
+  { label: "Sumec", src: sumec },
+  { label: "Taiheiyo Cement", src: taiheiyoCement },
+  { label: "Touch Dog", src: touchDog },
+  { label: "Vena Energy", src: venaEnergy },
+  { label: "Xiaomi", src: xiaomi }
+];
+
+export const marquee2 = [
+  { label: "Bison", src: Bison },
+  { label: "Decakia", src: Decakia },
+  { label: "Jollibee", src: Jollibee },
+  { label: "Klass", src: Klass },
+  { label: "Prime Infra", src: PrimeInfra },
+  { label: "Starbucks", src: Starbucks },
+  { label: "Wilcon Depot", src: WilconDepot }
+];
+
+export const jmrCoreValues: Accordion[] = [
+  {
+    title: "Client Focus",
+    description:
+      "We listen to our clients and align our collective goals in order to achieve as well as exceed expectations.",
+    item: "1",
+  },
+  {
+    title: "Commitment",
+    description:
+      `We pledge to improve and stay reliable in cargo delivery. "We commit, We deliver".`,
+    item: "2",
+  },
+  {
+    title: "Continuous Improvement",
+    description:
+      "We nurture continuous professional education, dedication to compliance and safety awareness.",
+    item: "3",
+  },
+  {
+    title: "Accountability",
+    description: "We believe that accountability to each and to our clients is paramount for success.",
+    item: "4",
+  },
+  {
+    title: "Integrity",
+    description:
+      "We conduct ourselves with the highest levels of trust, honesty and ethical standards.",
+    item: "5",
+  },
+  {
+    title: "Teamwork",
+    description:
+      "We support and respect our team members in order to promote a positive environment and results.",
+    item: "6",
+  },
+];
+
+export const projectSamples = [
+  {
+    category: "Vena Energy",
+    projects: [
+      { name: "Vena Project 1", image: vena1 },
+      { name: "Vena Project 2", image: vena2 }
+    ]
+  },
+  {
+    category: "NSEC Nuevo Solar Energy Corp",
+    projects: [
+      { name: "NSEC Project 1", image: nsec1 },
+      { name: "NSEC Project 2", image: nsec2 }
+    ]
+  },
+  {
+    category: "Taiheiyo Cement",
+    projects: [
+      { name: "Taiheiyo Project 1", image: taiheiyo1 },
+      { name: "Taiheiyo Project 2", image: taiheiyo2 }
+    ]
+  },
+  {
+    category: "Prime Infra",
+    projects: [
+      { name: "Prime Project 1", image: prime1 },
+      { name: "Prime Project 2", image: prime2 }
+    ]
+  }
+];
+
+export const jmrProjects = [
+  {
+    title: "SOLAR TANAUAN",
+    subtitle: "18.75MW Bongabon Solar Farm",
+    description:
+      "Supply and installation of 20ft and 40ft containers to support onsite operations, equipment housing, and storage requirements for the solar power facility.",
+    align: "left",
+    images: [tanauan1, tanauan2, tanauan3, tanauan4, tanauan5, tanauan6, tanauan7, tanauan8],
+  },
+  {
+    title: "Greentech Solar Energy Corp.",
+    subtitle: "20ft & 40ft Container Delivery and Breakbulk Transformer Transport",
+    description:
+      "Delivery of 20ft and 40ft containers, including breakbulk transport of two (2) transformer units with a total weight of 58.0 MT delivered to Tanauan, Batangas and 58.0 MT delivered to Maragondon, Cavite.",
+    align: "right",
+    images: [greentech1, greentech2, greentech3, greentech4, greentech5],
+  },
+  {
+    title: "New 120 TPH FeedMill - Mabini, Batangas",
+    subtitle: "B-MEG, BCDC, San Miguel Foods, Inc.",
+    description:
+      "Construction of the Feedmill Tower and Raw Materials Warehouse, supporting high-capacity production and efficient storage operations for feed manufacturing.",
+    align: "left",
+    images: [tph1, tph2, tph3, tph4],
+  },
+];
+
+export const whyChooseUs = [
+    {
+      icon: rocket,
+      title: "Unparalleled Expertise",
+      description: "Our team boasts years of experience and expertise in customs clearance."
+    },
+    {
+      icon: heart,
+      title: "Customer Centric Approach",
+      description: "We prioritize your needs and offer personalized solutions."
+    },
+    {
+      icon: lightning,
+      title: "Efficiency and Accuracy",
+      description: "We ensure your shipments are processed smoothly, avoiding costly delays."
+    },
+    {
+      icon: globe,
+      title: "Global Reach",
+      description: "We handle customs clearances across international borders."
+    }
+]

@@ -187,3 +187,41 @@ export const chairmanMessage = {
     Asia-Pacific.
   `,
 };
+
+export const JRMMissionVisionContent: MissionVissionProps = {
+  mission: `
+    Our Mission is to Facilitate, Assist and Represent our clients on Customs
+    procedures by ensuring to meet applicable laws as well as compliance on payment 
+    of duties and taxes We, provide tailored solutions to achieve delivery targets and 
+    move products FAST and EFFICIENT to our clients. We set the highest level of professionalism
+    and established best business practices and relationship with our clients. This article offers 
+    free shipping on qualified Face mask products, or buy online and pick up in store today at 
+    Medical Department. 
+  `,
+
+  vission: `
+    To be recognized as one of the most admired companies in our industry 
+    because of our commitment to clients, employees and business partners. 
+    Orioles are known for their pleasant singing. 
+  `,
+};
+
+export const JMRCommitment = {
+  paragraph1: `
+    JMR Customs Brokerage is more than a service provider We’re a committed 
+    partner in your trade success. We understand the pivotal role customs 
+    clearance plays in your supply chain, and our unwavering commitment is 
+    to make it as efficient and worry-free as possible, saving you valuable 
+    time. Our approach is not one-size-fits-all; we offer tailored solutions 
+    that perfectly fit your unique business needs.
+  `,
+  paragraph2: `
+    With a deep understanding of international trade regulations, we ensure 
+    that your customs clearance process is smooth, reliable, and completed in a 
+    timely manner. Trust us to navigate the complexities of customs compliance, 
+    providing transparent communication and expert guidance throughout. When you 
+    choose JMR Customs Brokerage, you choose a dedicated partner that shares your 
+    commitment to successful international trade, helping your business thrive and 
+    grow with efficient customs clearance.
+  `
+}
