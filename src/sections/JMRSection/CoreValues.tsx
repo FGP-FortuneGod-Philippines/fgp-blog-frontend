@@ -29,6 +29,7 @@ const CoreValues = () => {
               <AccordionTrigger className="font-semibold text-base sm:text-xl">
                 {item.title}
               </AccordionTrigger>
+
               <AccordionContent className="text-sm md:text-base lg:text-lg leading-relaxed">
                 <p>{item.description}</p>
               </AccordionContent>

@@ -1,6 +1,7 @@
 import type {
   AboutProps,
   BusinessModelProps,
+  ChairmanMessageProps,
   ContentProps,
   MissionVissionProps,
   TimelineItemsProps,
@@ -131,7 +132,7 @@ export const timelineData: TimelineItemsProps[] = [
   },
 ];
 
-export const chairmanMessage = {
+export const chairmanMessage: ChairmanMessageProps = {
   message: `
   Chairman’s Message
 
@@ -223,5 +224,5 @@ export const JMRCommitment = {
     choose JMR Customs Brokerage, you choose a dedicated partner that shares your 
     commitment to successful international trade, helping your business thrive and 
     grow with efficient customs clearance.
-  `
-}
+  `,
+};

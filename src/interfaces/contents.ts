@@ -36,3 +36,9 @@ export interface TimelineProps {
   maxIndex: number;
   itemsPerPage: number;
 }
+
+export interface ChairmanMessageProps {
+  message: string;
+  chairFooter: string;
+  chairFooterDescription: string;
+}
