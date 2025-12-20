@@ -12,7 +12,7 @@ const News = lazy(() => import("./pages/News"));
 const TrustedPartners = lazy(() => import("./pages/TrustedPartners"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const JMR = lazy(() => import("./pages/TrustedPartners/JMR") )
+const JMR = lazy(() => import("./pages/TrustedPartners/JMR"));
 
 const App = () => {
   return (
@@ -34,7 +34,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
 
             {/* Trusted Partners */}
-            <Route path="/jmr" element={<JMR/>}/>
+            <Route path="/jmr" element={<JMR />} />
           </Route>
         </Routes>
       </Suspense>

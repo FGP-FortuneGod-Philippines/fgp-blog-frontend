@@ -8,7 +8,7 @@ const JMRHero: React.FC = () => {
   const images = [
     { src: chairhero, alt: "chairhero" },
     { src: chairhero1, alt: "chairhero1" },
-    { src: chairhero2, alt: "chairhero2" }
+    { src: chairhero2, alt: "chairhero2" },
   ];
 
   const handleSlideChange = (index: number) => {
@@ -21,41 +21,28 @@ const JMRHero: React.FC = () => {
       <h3 className="text-2xl md:text-4xl font-semibold">
         Your Trusted Customs <br /> Brokerage Partner
       </h3>
-      <p className="mt-2 text-sm md:text-base"> <i>Fast. Reliable. Efficient</i></p>
+      <p className="mt-2 text-sm md:text-base">
+        <i>Fast. Reliable. Efficient</i>
+      </p>
 
       {/* Desktop Grid - Centered */}
       <div className="hidden md:flex justify-center mt-5">
         <div className="grid grid-cols-2 grid-rows-2 gap-4 h-120 w-180">
           <div className="col-span-1 row-span-2 h-full">
-            <LazyImage
-              src={chairhero}
-              alt="chairhero"
-              effect="blur"
-            />
+            <LazyImage src={chairhero} alt="chairhero" effect="blur" />
           </div>
           <div className="col-span-1">
-            <LazyImage
-              src={chairhero1}
-              alt="chairhero1"
-              effect="blur"
-            />
+            <LazyImage src={chairhero1} alt="chairhero1" effect="blur" />
           </div>
           <div className="col-span-1">
-            <LazyImage
-              src={chairhero2}
-              alt="chairhero2"
-              effect="blur"
-            />
+            <LazyImage src={chairhero2} alt="chairhero2" effect="blur" />
           </div>
         </div>
       </div>
 
       {/* Mobile Coverflow Carousel */}
       <div className="block md:hidden mt-8 relative">
-        <CoverflowCarousel 
-          startIndex={1}
-          onSlideChange={handleSlideChange}
-        >
+        <CoverflowCarousel startIndex={1} onSlideChange={handleSlideChange}>
           {images.map((image, index) => (
             <img
               key={index}

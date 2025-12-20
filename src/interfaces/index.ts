@@ -95,3 +95,10 @@ export interface NewsProps {
 export interface NewsApiResponse {
   articles: NewsProps[];
 }
+
+export interface PartnershipProps {
+  label: string;
+  src: string;
+  path: string;
+  alt: string;
+}

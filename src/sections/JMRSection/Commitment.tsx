@@ -1,4 +1,4 @@
-import { JMRCommitment } from "@/constants/contents"
+import { JMRCommitment } from "@/constants/contents";
 
 const Commitment = () => {
   return (
@@ -19,7 +19,7 @@ const Commitment = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Commitment
+export default Commitment;

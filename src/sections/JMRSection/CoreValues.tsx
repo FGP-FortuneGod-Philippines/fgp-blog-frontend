@@ -4,13 +4,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { jmrCoreValues } from "@/constants"
+import { jmrCoreValues } from "@/constants";
 
 const CoreValues = () => {
   return (
     <div className="flex justify-center px-4 py-8">
       <div className="w-full max-w-[70.5rem] flex flex-col items-center">
-        <h3 className="text-center text-xl md:text-2xl lg:text-3xl font-semibold mb-6 md:mb-8">Core Values</h3>
+        <h3 className="text-center text-xl md:text-2xl lg:text-3xl font-semibold mb-6 md:mb-8">
+          Core Values
+        </h3>
 
         <Accordion
           type="single"
@@ -35,7 +37,7 @@ const CoreValues = () => {
         </Accordion>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CoreValues
+export default CoreValues;

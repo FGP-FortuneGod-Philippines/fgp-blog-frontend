@@ -1,9 +1,4 @@
-import {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent,
-} from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { projectSamples } from "@/constants";
 import ProjectCard from "@/components/jmr-components/ProjectCards";
 import { jmrProjects } from "@/constants";
@@ -71,24 +66,24 @@ const OurProjects = () => {
           </TabsList>
 
           {/* Tab Contents */}
-            {projectSamples.map((group) => {
-              const tabValue = group.category.split(" ")[0].toLowerCase();
+          {projectSamples.map((group) => {
+            const tabValue = group.category.split(" ")[0].toLowerCase();
 
-              return (
-                <TabsContent
-                  key={group.category}
-                  value={tabValue}
-                  className="pt-8"
-                >
-                  <h4 className="text-xl md:text-2xl font-semibold mb-6">
-                    {group.category} Projects
-                  </h4>
+            return (
+              <TabsContent
+                key={group.category}
+                value={tabValue}
+                className="pt-8"
+              >
+                <h4 className="text-xl md:text-2xl font-semibold mb-6">
+                  {group.category} Projects
+                </h4>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {group.projects.map((project) => (
-                      <div
-                        key={project.name}
-                        className="
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {group.projects.map((project) => (
+                    <div
+                      key={project.name}
+                      className="
                           overflow-hidden
                           rounded-lg
                           border
@@ -99,25 +94,25 @@ const OurProjects = () => {
                           transition-all
                           duration-300
                         "
-                      >
-                        <LazyImage
-                          src={project.image}
-                          alt={project.name}
-                          className="
+                    >
+                      <LazyImage
+                        src={project.image}
+                        alt={project.name}
+                        className="
                             w-full
                             h-48
                             sm:h-56
                             md:h-64
                             object-cover
                           "
-                          effect="blur"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </TabsContent>
-              );
-            })}
+                        effect="blur"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </TabsContent>
+            );
+          })}
         </Tabs>
         <div className="mt-10 md:mt-40 px-4 space-y-35">
           {jmrProjects.map((project, index) => (

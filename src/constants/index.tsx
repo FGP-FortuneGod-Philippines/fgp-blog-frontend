@@ -113,53 +113,51 @@ import Starbucks from "@/assets/client-base/marquee2/Stabucks-2.png";
 import WilconDepot from "@/assets/client-base/marquee2/Wilcon-Depot-1.png";
 
 //vena projects
-import vena1 from "@/assets/JMR/vena-projects/vena1.png"
-import vena2 from "@/assets/JMR/vena-projects/vena2.png"
+import vena1 from "@/assets/JMR/vena-projects/vena1.png";
+import vena2 from "@/assets/JMR/vena-projects/vena2.png";
 
 //nsec projects
-import nsec1 from "@/assets/JMR/nsec-projects/nsec1.png"
-import nsec2 from "@/assets/JMR/nsec-projects/nsec2.png"
+import nsec1 from "@/assets/JMR/nsec-projects/nsec1.png";
+import nsec2 from "@/assets/JMR/nsec-projects/nsec2.png";
 
 //taiheiyo projects
-import taiheiyo1 from "@/assets/JMR/taiheiyo-projects/taiheiyo1.png"
-import taiheiyo2 from "@/assets/JMR/taiheiyo-projects/taiheiyo2.png"
+import taiheiyo1 from "@/assets/JMR/taiheiyo-projects/taiheiyo1.png";
+import taiheiyo2 from "@/assets/JMR/taiheiyo-projects/taiheiyo2.png";
 
 //prime projects
-import prime1 from "@/assets/JMR/prime-projects/prime1.png"
-import prime2 from "@/assets/JMR/prime-projects/prime2.png"
+import prime1 from "@/assets/JMR/prime-projects/prime1.png";
+import prime2 from "@/assets/JMR/prime-projects/prime2.png";
 
 //solar-tanauan
-import tanauan1 from "@/assets/JMR/solar-tanauan/8.png"
-import tanauan2 from "@/assets/JMR/solar-tanauan/9.png"
-import tanauan3 from "@/assets/JMR/solar-tanauan/10.png"
-import tanauan4 from "@/assets/JMR/solar-tanauan/11.png"
-import tanauan5 from "@/assets/JMR/solar-tanauan/12.png"
-import tanauan6 from "@/assets/JMR/solar-tanauan/13.png"
-import tanauan7 from "@/assets/JMR/solar-tanauan/14.png"
-import tanauan8 from "@/assets/JMR/solar-tanauan/15.png"
+import tanauan1 from "@/assets/JMR/solar-tanauan/8.png";
+import tanauan2 from "@/assets/JMR/solar-tanauan/9.png";
+import tanauan3 from "@/assets/JMR/solar-tanauan/10.png";
+import tanauan4 from "@/assets/JMR/solar-tanauan/11.png";
+import tanauan5 from "@/assets/JMR/solar-tanauan/12.png";
+import tanauan6 from "@/assets/JMR/solar-tanauan/13.png";
+import tanauan7 from "@/assets/JMR/solar-tanauan/14.png";
+import tanauan8 from "@/assets/JMR/solar-tanauan/15.png";
 
 //greentech
-import greentech1 from "@/assets/JMR/greentech/16.png"
-import greentech2 from "@/assets/JMR/greentech/17.png"
-import greentech3 from "@/assets/JMR/greentech/18.png"
-import greentech4 from "@/assets/JMR/greentech/19.png"
-import greentech5 from "@/assets/JMR/greentech/20.png"
+import greentech1 from "@/assets/JMR/greentech/16.png";
+import greentech2 from "@/assets/JMR/greentech/17.png";
+import greentech3 from "@/assets/JMR/greentech/18.png";
+import greentech4 from "@/assets/JMR/greentech/19.png";
+import greentech5 from "@/assets/JMR/greentech/20.png";
 
 //tph-feedmill
-import tph1 from "@/assets/JMR/tph-feedmill/21.png"
-import tph2 from "@/assets/JMR/tph-feedmill/22.png"
-import tph3 from "@/assets/JMR/tph-feedmill/23.png"
-import tph4 from "@/assets/JMR/tph-feedmill/24.png"
+import tph1 from "@/assets/JMR/tph-feedmill/21.png";
+import tph2 from "@/assets/JMR/tph-feedmill/22.png";
+import tph3 from "@/assets/JMR/tph-feedmill/23.png";
+import tph4 from "@/assets/JMR/tph-feedmill/24.png";
 
 //jmr-icons
-import rocket from "@/assets/JMR/jmr-icons/rocket.png"
-import lightning from "@/assets/JMR/jmr-icons/lightning.png"
-import heart from "@/assets/JMR/jmr-icons/heart.png"
-import globe from "@/assets/JMR/jmr-icons/globe.png"
-
+import rocket from "@/assets/JMR/jmr-icons/rocket.png";
+import lightning from "@/assets/JMR/jmr-icons/lightning.png";
+import heart from "@/assets/JMR/jmr-icons/heart.png";
+import globe from "@/assets/JMR/jmr-icons/globe.png";
 
 import jmr from "@/assets/partnerships/jmr.png";
-import more from "@/assets/partnerships/more-partnership.png";
 
 import type {
   Accordion,
@@ -172,6 +170,7 @@ import type {
   MeetTeamProps,
   NavLink,
   OfferCards,
+  PartnershipProps,
   QualificationProps,
 } from "@/interfaces";
 
@@ -645,11 +644,8 @@ export const galleryImg = [
   { src: gallery33, category: "ShoPilipinas" },
 ];
 
-export const partnerships = [
-  { label: "JMR", src: jmr, path: "/jmr" },
-  { label: "More", src: more },
-  { label: "More", src: more },
-  { label: "More", src: more },
+export const partnerships: PartnershipProps[] = [
+  { label: "JMR", src: jmr, alt: "JMR logo banner", path: "/jmr" },
 ];
 
 export const marquee1 = [
@@ -670,7 +666,7 @@ export const marquee1 = [
   { label: "Taiheiyo Cement", src: taiheiyoCement },
   { label: "Touch Dog", src: touchDog },
   { label: "Vena Energy", src: venaEnergy },
-  { label: "Xiaomi", src: xiaomi }
+  { label: "Xiaomi", src: xiaomi },
 ];
 
 export const marquee2 = [
@@ -680,7 +676,7 @@ export const marquee2 = [
   { label: "Klass", src: Klass },
   { label: "Prime Infra", src: PrimeInfra },
   { label: "Starbucks", src: Starbucks },
-  { label: "Wilcon Depot", src: WilconDepot }
+  { label: "Wilcon Depot", src: WilconDepot },
 ];
 
 export const jmrCoreValues: Accordion[] = [
@@ -692,8 +688,7 @@ export const jmrCoreValues: Accordion[] = [
   },
   {
     title: "Commitment",
-    description:
-      `We pledge to improve and stay reliable in cargo delivery. "We commit, We deliver".`,
+    description: `We pledge to improve and stay reliable in cargo delivery. "We commit, We deliver".`,
     item: "2",
   },
   {
@@ -704,7 +699,8 @@ export const jmrCoreValues: Accordion[] = [
   },
   {
     title: "Accountability",
-    description: "We believe that accountability to each and to our clients is paramount for success.",
+    description:
+      "We believe that accountability to each and to our clients is paramount for success.",
     item: "4",
   },
   {
@@ -726,30 +722,30 @@ export const projectSamples = [
     category: "Vena Energy",
     projects: [
       { name: "Vena Project 1", image: vena1 },
-      { name: "Vena Project 2", image: vena2 }
-    ]
+      { name: "Vena Project 2", image: vena2 },
+    ],
   },
   {
     category: "NSEC Nuevo Solar Energy Corp",
     projects: [
       { name: "NSEC Project 1", image: nsec1 },
-      { name: "NSEC Project 2", image: nsec2 }
-    ]
+      { name: "NSEC Project 2", image: nsec2 },
+    ],
   },
   {
     category: "Taiheiyo Cement",
     projects: [
       { name: "Taiheiyo Project 1", image: taiheiyo1 },
-      { name: "Taiheiyo Project 2", image: taiheiyo2 }
-    ]
+      { name: "Taiheiyo Project 2", image: taiheiyo2 },
+    ],
   },
   {
     category: "Prime Infra",
     projects: [
       { name: "Prime Project 1", image: prime1 },
-      { name: "Prime Project 2", image: prime2 }
-    ]
-  }
+      { name: "Prime Project 2", image: prime2 },
+    ],
+  },
 ];
 
 export const jmrProjects = [
@@ -759,11 +755,21 @@ export const jmrProjects = [
     description:
       "Supply and installation of 20ft and 40ft containers to support onsite operations, equipment housing, and storage requirements for the solar power facility.",
     align: "left",
-    images: [tanauan1, tanauan2, tanauan3, tanauan4, tanauan5, tanauan6, tanauan7, tanauan8],
+    images: [
+      tanauan1,
+      tanauan2,
+      tanauan3,
+      tanauan4,
+      tanauan5,
+      tanauan6,
+      tanauan7,
+      tanauan8,
+    ],
   },
   {
     title: "Greentech Solar Energy Corp.",
-    subtitle: "20ft & 40ft Container Delivery and Breakbulk Transformer Transport",
+    subtitle:
+      "20ft & 40ft Container Delivery and Breakbulk Transformer Transport",
     description:
       "Delivery of 20ft and 40ft containers, including breakbulk transport of two (2) transformer units with a total weight of 58.0 MT delivered to Tanauan, Batangas and 58.0 MT delivered to Maragondon, Cavite.",
     align: "right",
@@ -780,24 +786,26 @@ export const jmrProjects = [
 ];
 
 export const whyChooseUs = [
-    {
-      icon: rocket,
-      title: "Unparalleled Expertise",
-      description: "Our team boasts years of experience and expertise in customs clearance."
-    },
-    {
-      icon: heart,
-      title: "Customer Centric Approach",
-      description: "We prioritize your needs and offer personalized solutions."
-    },
-    {
-      icon: lightning,
-      title: "Efficiency and Accuracy",
-      description: "We ensure your shipments are processed smoothly, avoiding costly delays."
-    },
-    {
-      icon: globe,
-      title: "Global Reach",
-      description: "We handle customs clearances across international borders."
-    }
-]
+  {
+    icon: rocket,
+    title: "Unparalleled Expertise",
+    description:
+      "Our team boasts years of experience and expertise in customs clearance.",
+  },
+  {
+    icon: heart,
+    title: "Customer Centric Approach",
+    description: "We prioritize your needs and offer personalized solutions.",
+  },
+  {
+    icon: lightning,
+    title: "Efficiency and Accuracy",
+    description:
+      "We ensure your shipments are processed smoothly, avoiding costly delays.",
+  },
+  {
+    icon: globe,
+    title: "Global Reach",
+    description: "We handle customs clearances across international borders.",
+  },
+];
