@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: fgp-blog-web
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_NEWS_API=${VITE_NEWS_API}
+    restart: unless-stopped
