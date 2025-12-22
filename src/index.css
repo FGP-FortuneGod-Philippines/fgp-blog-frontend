@@ -291,3 +291,37 @@
   scrollbar-width: none; /* Firefox */
 }
 
+/* Use pure CSS outside @layer components */
+.tab-trigger-custom {
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.tab-trigger-custom:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.tab-trigger-custom:hover {
+  color: var(--foreground);
+}
+
+.tab-trigger-custom[data-state="active"] {
+  background-color: var(--primary);
+  color: white;
+}
