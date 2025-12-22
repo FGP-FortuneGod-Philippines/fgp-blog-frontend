@@ -159,6 +159,11 @@ import globe from "@/assets/JMR/jmr-icons/globe.png";
 
 import jmr from "@/assets/partnerships/jmr.png";
 
+//jmr hero section
+import chairhero from "@/assets/JMR/hero-section/chairhero.png";
+import chairhero1 from "@/assets/JMR/hero-section/chairhero-1.png";
+import chairhero2 from "@/assets/JMR/hero-section/chairhero-2.png";
+
 import type {
   Accordion,
   AnnouncementProps,
@@ -809,3 +814,9 @@ export const whyChooseUs = [
     description: "We handle customs clearances across international borders.",
   },
 ];
+
+export const JMRHeroImages = [
+    { src: chairhero, alt: "chairhero" },
+    { src: chairhero1, alt: "chairhero1" },
+    { src: chairhero2, alt: "chairhero2" },
+]

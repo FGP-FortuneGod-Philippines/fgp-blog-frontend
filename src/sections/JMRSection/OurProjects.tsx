@@ -4,39 +4,40 @@ import ProjectCard from "@/components/jmr-components/ProjectCards";
 import { jmrProjects } from "@/constants";
 import LazyImage from "@/components/LazyImage";
 
-const tabTriggerClass = `
-  h-full
-  px-4
-  md:px-6
-  flex
-  items-center
-  justify-center
-  text-sm
-  md:text-base
-  font-medium
-  text-muted-foreground
-  rounded-none
-  border-none
-  focus-visible:ring-0
-  focus-visible:ring-offset-0
-  hover:text-foreground
-  data-[state=active]:bg-[#D8A34A]
-  data-[state=active]:text-white
-  w-full
-  py-3
-  md:py-0
-`;
-
+/**
+ * OurProjects Component
+ * 
+ * This component displays a section of projects categorized into tabs
+ * and showcases individual project cards with images and descriptions.
+ * 
+ * Features:
+ * - Tab navigation for project categories.
+ * - Dynamic project rendering per category.
+ * - Responsive grid layout for project images.
+ * - Lazy loading of project images for better performance.
+ * - Separate section displaying detailed project cards.
+ * 
+ * Component Structure:
+ * 1. Tabs Header - Displays categories as tabs.
+ * 2. Tabs Content - Displays projects corresponding to the selected tab.
+ * 3. Project Cards - Shows detailed project cards below the tabs.
+ */
 const OurProjects = () => {
   return (
     <section className="px-4 py-12">
       <div className="max-w-[70.5rem] mx-auto space-y-8">
+        
+        {/* Section Heading */}
         <h3 className="text-center text-xl md:text-2xl lg:text-3xl font-semibold mb-6 md:mb-8">
           Our Projects
         </h3>
 
-        <Tabs defaultValue="vena" className="w-full">
-          {/* Tabs Header - Original style, responsive */}
+        {/* Tabs Component */}
+        <Tabs 
+          defaultValue={projectSamples[0].category.split(" ")[0].toLowerCase()} 
+          className="w-full"
+        >
+          {/* Tabs Header - Loops through projectSamples to create tab triggers */}
           <TabsList
             className="
               w-full
@@ -51,34 +52,37 @@ const OurProjects = () => {
               md:divide-x
             "
           >
-            <TabsTrigger value="vena" className={tabTriggerClass}>
-              Vena Energy
-            </TabsTrigger>
-            <TabsTrigger value="nsec" className={tabTriggerClass}>
-              NSEC Nuevo Solar Energy Corp
-            </TabsTrigger>
-            <TabsTrigger value="taiheiyo" className={tabTriggerClass}>
-              Taiheiyo Cement
-            </TabsTrigger>
-            <TabsTrigger value="prime" className={tabTriggerClass}>
-              Prime Infra
-            </TabsTrigger>
+            {projectSamples.map((group) => {
+              const tabValue = group.category.split(" ")[0].toLowerCase();
+              
+              return (
+                <TabsTrigger 
+                  key={tabValue}
+                  value={tabValue} 
+                  className="tab-trigger-custom"
+                >
+                  {group.category}
+                </TabsTrigger>
+              );
+            })}
           </TabsList>
 
-          {/* Tab Contents */}
+          {/* Tabs Content - Loops through projectSamples to render projects for each tab */}
           {projectSamples.map((group) => {
             const tabValue = group.category.split(" ")[0].toLowerCase();
 
             return (
               <TabsContent
-                key={group.category}
+                key={tabValue}
                 value={tabValue}
                 className="pt-8"
               >
+                {/* Subheading for tab content */}
                 <h4 className="text-xl md:text-2xl font-semibold mb-6">
                   {group.category} Projects
                 </h4>
 
+                {/* Grid of project images */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {group.projects.map((project) => (
                     <div
@@ -95,6 +99,7 @@ const OurProjects = () => {
                           duration-300
                         "
                     >
+                      {/* Lazy loading project image */}
                       <LazyImage
                         src={project.image}
                         alt={project.name}
@@ -114,6 +119,8 @@ const OurProjects = () => {
             );
           })}
         </Tabs>
+        
+        {/* Detailed Project Cards Section */}
         <div className="mt-10 md:mt-40 px-4 space-y-35">
           {jmrProjects.map((project, index) => (
             <ProjectCard
