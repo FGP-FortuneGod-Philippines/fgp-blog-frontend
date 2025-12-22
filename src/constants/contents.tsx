@@ -5,6 +5,7 @@ import type {
   ContentProps,
   MissionVissionProps,
   TimelineItemsProps,
+  DedicatedProfessionalsProps
 } from "@/interfaces/contents";
 
 export const aboutContent: AboutProps = {
@@ -207,22 +208,24 @@ export const JRMMissionVisionContent: MissionVissionProps = {
   `,
 };
 
-export const JMRCommitment = {
+export const JMRCommitment: DedicatedProfessionalsProps = {
+  heading: `A Team of Experienced, Dedicated Professionals`,
   paragraph1: `
-    JMR Customs Brokerage is more than a service provider We’re a committed 
-    partner in your trade success. We understand the pivotal role customs 
-    clearance plays in your supply chain, and our unwavering commitment is 
-    to make it as efficient and worry-free as possible, saving you valuable 
-    time. Our approach is not one-size-fits-all; we offer tailored solutions 
-    that perfectly fit your unique business needs.
+    JMR CUSTOMS BROKERAGE INC is a Customs Brokerage Firm established year 2012. 
+    JMR is engaged on delivering professional services in customs, tariff, 
+    international trade, logistics and consultancy services. JMR provides services 
+    on facilitation of Importation, Exportation of goods, Processing and Handling 
+    of cargoes, Compliance on Customs requisites and computation of Duties and Taxes.  
   `,
   paragraph2: `
-    With a deep understanding of international trade regulations, we ensure 
-    that your customs clearance process is smooth, reliable, and completed in a 
-    timely manner. Trust us to navigate the complexities of customs compliance, 
-    providing transparent communication and expert guidance throughout. When you 
-    choose JMR Customs Brokerage, you choose a dedicated partner that shares your 
-    commitment to successful international trade, helping your business thrive and 
-    grow with efficient customs clearance.
+    JMR offers consultation on Import/ Export entry declaration and other articles for 
+    Importation, Exportation, Warehousing and PEZA. The company represents business 
+    interest of foreign shipping, importers, exporters and manufacturers.
   `,
+  paragraph3: `
+    Our Major services are cargo handling (In government and private sectors), Brokerage, 
+    shipping agencies, forwarding and other port related services. JMR, as it is known today, 
+    remains steadfast on its commitment to deliver more possibilities whether through land, air, 
+    or sea with only the highest ethical and professional standards set to achieve.
+  `
 };

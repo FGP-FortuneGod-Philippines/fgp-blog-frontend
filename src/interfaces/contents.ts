@@ -42,3 +42,10 @@ export interface ChairmanMessageProps {
   chairFooter: string;
   chairFooterDescription: string;
 }
+
+export interface DedicatedProfessionalsProps {
+  heading: string,
+  paragraph1: string,
+  paragraph2: string,
+  paragraph3: string,
+}
