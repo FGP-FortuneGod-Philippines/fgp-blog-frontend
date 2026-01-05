@@ -170,13 +170,18 @@ import type {
   AwardsProps,
   BannerSlidesProps,
   BiographyProps,
+    ChairmanMilestonesProps,
   CoreValues,
   Engagement,
+  JMRProjectCardProps,
+  JMRProjectCategory,
+  LogoMarqueeProps,
   MeetTeamProps,
   NavLink,
   OfferCards,
   PartnershipProps,
   QualificationProps,
+  WhyChooseUsProps,
 } from "@/interfaces";
 
 import {
@@ -612,77 +617,78 @@ export const announcementData: AnnouncementProps[] = [
   },
 ];
 
-export const galleryImg = [
-  { src: gallery1, category: "FortuneGod" },
-  { src: gallery2, category: "FortuneGod" },
-  { src: gallery3, category: "FortuneGod" },
-  { src: gallery4, category: "FortuneGod" },
-  { src: gallery5, category: "FortuneGod" },
-  { src: gallery6, category: "FortuneGod" },
-  { src: gallery7, category: "FortuneGod" },
-  { src: gallery8, category: "FortuneGod" },
-  { src: gallery9, category: "FortuneGod" },
-  { src: gallery10, category: "FortuneGod" },
-  { src: gallery11, category: "FortuneGod" },
-  { src: gallery12, category: "FortuneGod" },
-  { src: gallery13, category: "FortuneGod" },
-  { src: gallery14, category: "FortuneGod" },
-  { src: gallery15, category: "FortuneGod" },
+export const galleryImg: ChairmanMilestonesProps[] = [
+  { src: gallery1, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery2, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery3, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery4, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery5, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery6, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery7, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery8, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery9, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery10, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery11, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery12, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery13, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery14, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  { src: gallery15, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
 
-  { src: gallery16, category: "ShoPilipinas" },
-  { src: gallery17, category: "ShoPilipinas" },
-  { src: gallery18, category: "ShoPilipinas" },
-  { src: gallery19, category: "ShoPilipinas" },
-  { src: gallery20, category: "ShoPilipinas" },
-  { src: gallery21, category: "ShoPilipinas" },
-  { src: gallery22, category: "ShoPilipinas" },
-  { src: gallery23, category: "ShoPilipinas" },
-  { src: gallery24, category: "ShoPilipinas" },
-  { src: gallery25, category: "ShoPilipinas" },
-  { src: gallery26, category: "ShoPilipinas" },
-  { src: gallery27, category: "ShoPilipinas" },
-  { src: gallery28, category: "ShoPilipinas" },
-  { src: gallery29, category: "ShoPilipinas" },
-  { src: gallery30, category: "ShoPilipinas" },
-  { src: gallery31, category: "ShoPilipinas" },
-  { src: gallery32, category: "ShoPilipinas" },
-  { src: gallery33, category: "ShoPilipinas" },
+  { src: gallery16, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery17, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery18, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery19, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery20, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery21, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery22, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery23, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery24, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery25, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery26, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery27, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery28, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery29, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery30, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery31, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery32, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  { src: gallery33, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
 ];
 
 export const partnerships: PartnershipProps[] = [
   { label: "JMR", src: jmr, alt: "JMR logo banner", path: "/jmr" },
 ];
 
-export const marquee1 = [
-  { label: "Air Rich", src: airRich },
-  { label: "Cedc", src: cedc },
-  { label: "Converge", src: converge },
-  { label: "Evogen", src: evogen },
-  { label: "Fiber Rex", src: fiberRex },
-  { label: "Fukuda", src: fukuda },
-  { label: "INGCO", src: ingco },
-  { label: "Meralco Green", src: meralcoGreen },
-  { label: "Meralco Terra Solar", src: meralcoTerraSolar },
-  { label: "Noveaulab", src: nouveaulab },
-  { label: "Power China", src: powerChina },
-  { label: "Promega", src: promega },
-  { label: "Shakeys", src: shakeys },
-  { label: "Sumec", src: sumec },
-  { label: "Taiheiyo Cement", src: taiheiyoCement },
-  { label: "Touch Dog", src: touchDog },
-  { label: "Vena Energy", src: venaEnergy },
-  { label: "Xiaomi", src: xiaomi },
+export const marquee1: LogoMarqueeProps[] = [
+  { label: "Air Rich", src: airRich, alt: "Air Rich logo" },
+  { label: "Cedc", src: cedc, alt: "CEDC logo" },
+  { label: "Converge", src: converge, alt: "Converge logo" },
+  { label: "Evogen", src: evogen, alt: "Evogen logo" },
+  { label: "Fiber Rex", src: fiberRex, alt: "Fiber Rex logo" },
+  { label: "Fukuda", src: fukuda, alt: "Fukuda logo" },
+  { label: "INGCO", src: ingco, alt: "INGCO logo" },
+  { label: "Meralco Green", src: meralcoGreen, alt: "Meralco Green logo" },
+  { label: "Meralco Terra Solar", src: meralcoTerraSolar, alt: "Meralco Terra Solar logo" },
+  { label: "Noveaulab", src: nouveaulab, alt: "Noveaulab logo" },
+  { label: "Power China", src: powerChina, alt: "Power China logo" },
+  { label: "Promega", src: promega, alt: "Promega logo" },
+  { label: "Shakeys", src: shakeys, alt: "Shakey’s logo" },
+  { label: "Sumec", src: sumec, alt: "SUMEC logo" },
+  { label: "Taiheiyo Cement", src: taiheiyoCement, alt: "Taiheiyo Cement logo" },
+  { label: "Touch Dog", src: touchDog, alt: "Touch Dog logo" },
+  { label: "Vena Energy", src: venaEnergy, alt: "Vena Energy logo" },
+  { label: "Xiaomi", src: xiaomi, alt: "Xiaomi logo" },
 ];
 
-export const marquee2 = [
-  { label: "Bison", src: Bison },
-  { label: "Decakia", src: Decakia },
-  { label: "Jollibee", src: Jollibee },
-  { label: "Klass", src: Klass },
-  { label: "Prime Infra", src: PrimeInfra },
-  { label: "Starbucks", src: Starbucks },
-  { label: "Wilcon Depot", src: WilconDepot },
+export const marquee2: LogoMarqueeProps[] = [
+  { label: "Bison", src: Bison, alt: "Bison logo" },
+  { label: "Decakia", src: Decakia, alt: "Decakia logo" },
+  { label: "Jollibee", src: Jollibee, alt: "Jollibee logo" },
+  { label: "Klass", src: Klass, alt: "Klass logo" },
+  { label: "Prime Infra", src: PrimeInfra, alt: "Prime Infra logo" },
+  { label: "Starbucks", src: Starbucks, alt: "Starbucks logo" },
+  { label: "Wilcon Depot", src: WilconDepot, alt: "Wilcon Depot logo" },
 ];
+
 
 export const jmrCoreValues: Accordion[] = [
   {
@@ -722,7 +728,7 @@ export const jmrCoreValues: Accordion[] = [
   },
 ];
 
-export const projectSamples = [
+export const projectSamples: JMRProjectCategory[] = [
   {
     category: "Vena Energy",
     projects: [
@@ -753,7 +759,7 @@ export const projectSamples = [
   },
 ];
 
-export const jmrProjects = [
+export const jmrProjects: JMRProjectCardProps[] = [
   {
     title: "SOLAR TANAUAN",
     subtitle: "18.75MW Bongabon Solar Farm",
@@ -790,7 +796,7 @@ export const jmrProjects = [
   },
 ];
 
-export const whyChooseUs = [
+export const whyChooseUs : WhyChooseUsProps[] = [
   {
     icon: rocket,
     title: "Unparalleled Expertise",
