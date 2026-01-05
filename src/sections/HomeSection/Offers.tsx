@@ -32,6 +32,7 @@ const Offers = () => {
                 trigger="Learn More"
                 triggerIcon={<LuArrowRight />}
                 close="Close"
+                classNameBtn="max-sm:text-xs"
               >
                 <div className="flex flex-col justify-center items-center w-full h-auto gap-3">
                   {/* Banner */}

@@ -3,11 +3,12 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,html}"],
   theme: {
-    fontFamily: {
-      // Ensure Tailwind's preflight and `font-sans` use Poppins
-      sans: ['"Poppins"', "ui-sans-serif", "system-ui", "sans-serif"],
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "system-ui", "sans-serif"],
+        serif: ["Times New Roman", "Times", "serif"],
+      },
     },
-    extend: {},
   },
   plugins: [],
 };

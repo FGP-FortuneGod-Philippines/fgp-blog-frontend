@@ -38,7 +38,7 @@ const DesktopNav = () => {
                 <NavigationMenuItem key={link.label}>
                   <NavigationMenuLink
                     asChild
-                    className="font-medium tracking-wide text-sm max-lg:text-xs"
+                    className="font-poppins font-semibold tracking-wide text-sm max-lg:text-xs"
                   >
                     <span
                       className="cursor-pointer"
