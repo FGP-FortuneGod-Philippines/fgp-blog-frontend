@@ -732,29 +732,29 @@ export const projectSamples: JMRProjectCategory[] = [
   {
     category: "Vena Energy",
     projects: [
-      { name: "Vena Project 1", image: vena1 },
-      { name: "Vena Project 2", image: vena2 },
+      { name: "Vena Project 1", image: vena1, alt: "Vena Energy milestone project" },
+      { name: "Vena Project 2", image: vena2, alt: "Vena Energy milestone project" },
     ],
   },
   {
     category: "NSEC Nuevo Solar Energy Corp",
     projects: [
-      { name: "NSEC Project 1", image: nsec1 },
-      { name: "NSEC Project 2", image: nsec2 },
+      { name: "NSEC Project 1", image: nsec1, alt: "NSEC solar energy milestone" },
+      { name: "NSEC Project 2", image: nsec2, alt: "NSEC solar energy milestone" },
     ],
   },
   {
     category: "Taiheiyo Cement",
     projects: [
-      { name: "Taiheiyo Project 1", image: taiheiyo1 },
-      { name: "Taiheiyo Project 2", image: taiheiyo2 },
+      { name: "Taiheiyo Project 1", image: taiheiyo1, alt: "Taiheiyo Cement milestone project" },
+      { name: "Taiheiyo Project 2", image: taiheiyo2, alt: "Taiheiyo Cement milestone project" },
     ],
   },
   {
     category: "Prime Infra",
     projects: [
-      { name: "Prime Project 1", image: prime1 },
-      { name: "Prime Project 2", image: prime2 },
+      { name: "Prime Project 1", image: prime1, alt: "Prime Infra milestone project" },
+      { name: "Prime Project 2", image: prime2, alt: "Prime Infra milestone project" },
     ],
   },
 ];
@@ -767,32 +767,42 @@ export const jmrProjects: JMRProjectCardProps[] = [
       "Supply and installation of 20ft and 40ft containers to support onsite operations, equipment housing, and storage requirements for the solar power facility.",
     align: "left",
     images: [
-      tanauan1,
-      tanauan2,
-      tanauan3,
-      tanauan4,
-      tanauan5,
-      tanauan6,
-      tanauan7,
-      tanauan8,
+      { src: tanauan1, alt: "Solar Tanauan project milestone" },
+      { src: tanauan2, alt: "Solar Tanauan project milestone" },
+      { src: tanauan3, alt: "Solar Tanauan project milestone" },
+      { src: tanauan4, alt: "Solar Tanauan project milestone" },
+      { src: tanauan5, alt: "Solar Tanauan project milestone" },
+      { src: tanauan6, alt: "Solar Tanauan project milestone" },
+      { src: tanauan7, alt: "Solar Tanauan project milestone" },
+      { src: tanauan8, alt: "Solar Tanauan project milestone" },
     ],
   },
   {
     title: "Greentech Solar Energy Corp.",
-    subtitle:
-      "20ft & 40ft Container Delivery and Breakbulk Transformer Transport",
+    subtitle: "20ft & 40ft Container Delivery and Breakbulk Transformer Transport",
     description:
-      "Delivery of 20ft and 40ft containers, including breakbulk transport of two (2) transformer units with a total weight of 58.0 MT delivered to Tanauan, Batangas and 58.0 MT delivered to Maragondon, Cavite.",
+      "Delivery of 20ft and 40ft containers, including breakbulk transport of two (2) transformer units.",
     align: "right",
-    images: [greentech1, greentech2, greentech3, greentech4, greentech5],
+    images: [
+      { src: greentech1, alt: "Greentech solar logistics milestone" },
+      { src: greentech2, alt: "Greentech solar logistics milestone" },
+      { src: greentech3, alt: "Greentech solar logistics milestone" },
+      { src: greentech4, alt: "Greentech solar logistics milestone" },
+      { src: greentech5, alt: "Greentech solar logistics milestone" },
+    ],
   },
   {
     title: "New 120 TPH FeedMill - Mabini, Batangas",
     subtitle: "B-MEG, BCDC, San Miguel Foods, Inc.",
     description:
-      "Construction of the Feedmill Tower and Raw Materials Warehouse, supporting high-capacity production and efficient storage operations for feed manufacturing.",
+      "Construction of the Feedmill Tower and Raw Materials Warehouse.",
     align: "left",
-    images: [tph1, tph2, tph3, tph4],
+    images: [
+      { src: tph1, alt: "Feedmill construction milestone" },
+      { src: tph2, alt: "Feedmill construction milestone" },
+      { src: tph3, alt: "Feedmill construction milestone" },
+      { src: tph4, alt: "Feedmill construction milestone" },
+    ],
   },
 ];
 

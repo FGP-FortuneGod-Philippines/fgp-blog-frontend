@@ -124,19 +124,26 @@ export interface ChairmanMilestonesProps {
   category: string;
 }
 
+//project card image
+export interface JMRProjectImage {
+  src: string;
+  alt: string;
+}
+
 //interface for the project cards
 export interface JMRProjectCardProps {
   title: string;
   subtitle: string;
   description: string;
-  images: string[];
-  align?: "left" | "right";
+  align: "left" | "right";
+  images: JMRProjectImage[];
 }
 
 // Interface for individual project
 export interface JMRProject {
   name: string;
   image: string;
+  alt: string;
 }
 
 // Interface for project category
