@@ -22,6 +22,7 @@ import LazyImage from "@/components/LazyImage";
  * 2. Tabs Content - Displays projects corresponding to the selected tab.
  * 3. Project Cards - Shows detailed project cards below the tabs.
  */
+
 const OurProjects = () => {
   return (
     <section className="px-4 py-12">

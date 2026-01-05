@@ -6,6 +6,13 @@ import {
 } from "@/components/ui/accordion";
 import { jmrCoreValues } from "@/constants";
 
+/**
+ * CoreValues
+ *
+ * Renders the "Core Values" section using an accordion layout to present
+ * each value with a title and expandable description, sourced from constants.
+ */
+
 const CoreValues = () => {
   return (
     <div className="flex justify-center px-4 py-8">

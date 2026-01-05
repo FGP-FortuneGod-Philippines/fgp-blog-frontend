@@ -1,7 +1,14 @@
 import { whyChooseUs } from "@/constants";
-import type { FC } from "react";
 
-const WhyChooseUs: FC = () => {
+/**
+ * WhyChooseUs
+ *
+ * Renders the "Why Choose Us?" section as a responsive grid of feature cards.
+ * Each card displays an icon, a title, and a brief description, highlighting
+ * key reasons for choosing the service or company.
+ */
+
+const WhyChooseUs = () => {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8">
       <h3 className="mt-8 text-center text-2xl sm:text-3xl font-semibold">
