@@ -5,7 +5,7 @@ import axios from "axios";
 export const fetchNews = async (): Promise<NewsProps[]> => {
   try {
     const response = await axiosClient.get<NewsApiResponse>("");
-    return response.data.articles;
+    return response.data.data;
   } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
       console.error("Axios error fetching news: ", error.message);

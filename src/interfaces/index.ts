@@ -93,7 +93,7 @@ export interface NewsProps {
 }
 
 export interface NewsApiResponse {
-  articles: NewsProps[];
+  data: NewsProps[];
 }
 
 export interface PartnershipProps {
@@ -106,7 +106,7 @@ export interface PartnershipProps {
 //why choose us section interface
 export interface WhyChooseUsProps {
   icon: string;
-  title: string; 
+  title: string;
   description: string;
 }
 
