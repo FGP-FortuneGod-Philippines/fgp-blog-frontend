@@ -65,8 +65,8 @@ const ProjectCard: React.FC<JMRProjectCardProps> = ({
                             "
                           >
                             <LazyImage
-                              src={img}
-                              alt={`${title} image ${idx + 1}`}
+                              src={img.src}
+                              alt={img.alt}
                               effect="blur"
                               className="
                                 w-full
@@ -133,8 +133,8 @@ const ProjectCard: React.FC<JMRProjectCardProps> = ({
                           "
                         >
                           <LazyImage
-                            src={img}
-                            alt={`${title} image ${idx + 1}`}
+                            src={img.src}
+                            alt={img.alt}
                             effect="blur"
                             className="
                               w-full
