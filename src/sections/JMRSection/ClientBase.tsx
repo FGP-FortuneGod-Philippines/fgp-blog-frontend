@@ -1,6 +1,13 @@
 import Marquee from "@/components/jmr-components/Marquee";
 import { marquee1, marquee2 } from "@/constants";
 
+/**
+ * ClientBase
+ *
+ * Renders the "Our Client Base" section using two horizontally scrolling marquee rows
+ * to showcase client logos, with opposite scroll directions for visual balance.
+ */
+
 const ClientBase = () => {
   return (
     <div className="flex justify-center px-4 py-8">
@@ -9,7 +16,7 @@ const ClientBase = () => {
           Our Client Base
         </h3>
 
-        {/* Top row - scrolls from right to left */}
+        {/* Top row marquee - scrolls from right to left */}
         <div className="w-full mb-8">
           <Marquee
             clients={marquee1}
@@ -19,7 +26,7 @@ const ClientBase = () => {
           />
         </div>
 
-        {/* Bottom row - scrolls from left to right */}
+        {/* Bottom row marquee - scrolls from left to right */}
         <div className="w-full">
           <Marquee
             clients={marquee2}

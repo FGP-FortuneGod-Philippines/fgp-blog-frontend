@@ -102,3 +102,52 @@ export interface PartnershipProps {
   path: string;
   alt: string;
 }
+
+//why choose us section interface
+export interface WhyChooseUsProps {
+  icon: string;
+  title: string; 
+  description: string;
+}
+
+//logo marquee interface
+export interface LogoMarqueeProps {
+  label: string;
+  src: string;
+  alt: string;
+}
+
+//chairman milestone gallery interface
+export interface ChairmanMilestonesProps {
+  src: string;
+  alt: string;
+  category: string;
+}
+
+//project card image
+export interface JMRProjectImage {
+  src: string;
+  alt: string;
+}
+
+//interface for the project cards
+export interface JMRProjectCardProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  align: "left" | "right";
+  images: JMRProjectImage[];
+}
+
+// Interface for individual project
+export interface JMRProject {
+  name: string;
+  image: string;
+  alt: string;
+}
+
+// Interface for project category
+export interface JMRProjectCategory {
+  category: string;
+  projects: JMRProject[];
+}

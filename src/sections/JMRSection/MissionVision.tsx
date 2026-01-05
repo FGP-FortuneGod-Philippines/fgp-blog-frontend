@@ -3,6 +3,13 @@ import vision from "@/assets/JMR/missionVision/vision.jpg";
 import LazyImage from "@/components/LazyImage";
 import { JRMMissionVisionContent } from "@/constants/contents";
 
+/**
+ * MissionVision
+ *
+ * Renders the "Our Vision" and "Our Mission" sections in a responsive
+ * two-column layout, pairing descriptive text with supporting imagery
+ * and adapting gracefully for smaller screen sizes.
+ */
 const MissionVision = () => {
   return (
     <div className="w-full h-auto flex flex-col justify-center items-center gap-5 my-10 max-md:my-0 px-4">

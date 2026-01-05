@@ -1,5 +1,12 @@
 import { JMRCommitment } from "@/constants/contents";
 
+/**
+ * Commitment
+ *
+ * Displays the "Our Commitment" section, presenting structured descriptive content
+ * sourced from constants and rendered with responsive typography for readability.
+ */
+
 const Commitment = () => {
   return (
     <div className="flex items-center justify-center py-8">

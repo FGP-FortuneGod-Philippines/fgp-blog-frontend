@@ -1,19 +1,12 @@
 import { lazy } from "react";
+import type { JMRProjectCardProps } from "@/interfaces";
 
 const BaseDialog = lazy(
   () => import("@/components/base-components/BaseDialog")
 );
 import LazyImage from "../LazyImage";
 
-interface ProjectCardProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  images: string[];
-  align?: "left" | "right";
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard: React.FC<JMRProjectCardProps> = ({
   title,
   subtitle,
   description,
@@ -72,8 +65,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                             "
                           >
                             <LazyImage
-                              src={img}
-                              alt={`${title} image ${idx + 1}`}
+                              src={img.src}
+                              alt={img.alt}
                               effect="blur"
                               className="
                                 w-full
@@ -140,8 +133,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                           "
                         >
                           <LazyImage
-                            src={img}
-                            alt={`${title} image ${idx + 1}`}
+                            src={img.src}
+                            alt={img.alt}
                             effect="blur"
                             className="
                               w-full

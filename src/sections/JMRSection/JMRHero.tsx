@@ -3,17 +3,22 @@ import CoverflowCarousel from "@/components/jmr-components/CoverflowCarousel";
 import LazyImage from "@/components/LazyImage";
 import { JMRHeroImages } from "@/constants";
 
-const JMRHero: React.FC = () => {
+/**
+ * JMRHero
+ *
+ * Renders the hero section of the page, displaying a responsive layout with
+ * a static image grid on desktop and a coverflow-style carousel on mobile.
+ * Manages active slide state to visually highlight the current image.
+ */
+
+const JMRHero = () => {
   // State to track the currently active slide in the mobile carousel
   const [activeIndex, setActiveIndex] = useState(1);
 
-  
-  //  Updates the activeIndex when the carousel slide changes. 
+  // Updates the activeIndex when the carousel slide changes.
   const handleSlideChange = (index: number) => {
     setActiveIndex(index);
   };
-
-  // Keep track of which slide is active so we can hihlight or apply styles
 
   return (
     <div className="text-center mt-18 mx-10">
@@ -34,8 +39,8 @@ const JMRHero: React.FC = () => {
             // Determine grid positioning: first image spans 2 rows
             const className =
               index === 0
-                ? "col-span-1 row-span-2 h-full" // large image
-                : "col-span-1 h-full";           // smaller images
+                ? "col-span-1 row-span-2 h-full"
+                : "col-span-1 h-full";
 
             return (
               <div key={index} className={className}>
