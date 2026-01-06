@@ -18,7 +18,9 @@ const NewsSection = () => {
 
       {error && (
         <div className="flex justify-center items-center w-full h-[50vh]">
-          Error: {(error as Error).message}
+          <p>We can't get some news right now, please try again later.</p>
+
+          {/* Create seperate error handling illustrations for much better user experience */}
         </div>
       )}
 
