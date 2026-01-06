@@ -3,11 +3,12 @@ import { Link, useParams } from "react-router";
 import { Button } from "@/components/ui/button";
 import { LuArrowLeft } from "react-icons/lu";
 import { lazy, Suspense } from "react";
-import NotFoundAnnouncement from "./NotFoundAnnouncement";
 import LoadingSpinner from "@/components/LoadingSpinner";
+
 const AnnouncementDetailsViews = lazy(
   () => import("@/components/AnnouncementDetailsViews")
 );
+const NotFoundAnnouncement = lazy(() => import("./NotFoundAnnouncement"));
 
 const AnnouncementDetails = () => {
   const { slug, id } = useParams();
@@ -27,7 +28,7 @@ const AnnouncementDetails = () => {
   return (
     <div className="wrapper h-auto flex flex-col gap-5">
       {/* Go back to announcement */}
-      <div className="w-full py-4 px-6">
+      <div className="w-full py-4 px-6 max-md:mt-15 max-md:px-0 max-md:py-0">
         <Button variant="link" asChild>
           <Link to="/announcement" className="">
             <LuArrowLeft className="text-sm" /> Go back to announcement

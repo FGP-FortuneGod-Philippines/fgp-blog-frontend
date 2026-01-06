@@ -7,10 +7,10 @@ const AnnouncementDetailsViews = ({
   announcement: AnnouncementProps;
 }) => {
   return (
-    <div className="w-full flex flex-col gap-5 py-4 px-6">
+    <div className="w-full flex flex-col gap-5 py-4 px-6 max-md:px-2 max-md:py-2 max-md:gap-3">
       {/* Announcement Header */}
-      <div className="w-full h-auto flex justify-between items-start gap-5">
-        <div className="w-full flex flex-col gap-5">
+      <div className="w-full h-auto flex justify-between items-start gap-5 max-lg:flex-col-reverse">
+        <div className="w-full flex flex-col">
           <div className="flex flex-col gap-2 p-3">
             {/* Soon to limit text inside this is meant only for title  */}
             <h1 className="text-3xl font-semibold font-sans tex-wrap">
@@ -44,10 +44,10 @@ const AnnouncementDetailsViews = ({
         </div>
 
         {/* Image is 1440 x 400 px */}
-        <div className="w-[90rem] h-[25rem]">
+        <div className="w-full h-[25rem] max-lg:h-[20rem] max-md:h-[15rem]">
           <img
             src={announcement.image}
-            alt=""
+            alt="anouncement image"
             className="w-full h-full object-cover"
           />
         </div>
