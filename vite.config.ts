@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
-import { visualizer } from "rollup-plugin-visualizer";
+// import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,12 +10,11 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    visualizer({
-      open: true, // auto-open browser
-      filename: "stats.html",
-      gzipSize: true,
-      brotliSize: true,
-    }),
+    // visualizer({
+    //   open: true, // auto-open browser
+    //   gzipSize: true,
+    //   brotliSize: true,
+    // }),
   ],
   resolve: {
     alias: {
