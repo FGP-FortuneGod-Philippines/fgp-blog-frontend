@@ -6,11 +6,8 @@ import Autoplay from "embla-carousel-autoplay";
 import { RiDoubleQuotesR } from "react-icons/ri";
 
 const ChairBio = () => {
-  const slides = bioSlide.map((data) => (
-    <CarouselItem
-      key={data.label}
-      className="basis-full md:basis-1/3 sm:basis-1/2"
-    >
+  const slides = bioSlide.map((data, index) => (
+    <CarouselItem key={index} className="basis-full md:basis-1/3 sm:basis-1/2">
       <Card className="border-none shadow-none">
         <CardContent className="text-start max-sm:text-center">
           <RiDoubleQuotesR />

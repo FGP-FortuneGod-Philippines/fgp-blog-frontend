@@ -6,8 +6,6 @@ import NewsCards from "@/components/NewsCards";
 const NewsSection = () => {
   const { data: news, isLoading, error } = useNews();
 
-  console.log(news);
-
   return (
     <div className="w-full h-auto flex flex-col items-center">
       <h3>Latest News</h3>

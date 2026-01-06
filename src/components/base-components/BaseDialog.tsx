@@ -69,10 +69,14 @@ const BaseDialog = ({
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-[80rem] w-11/12 max-h-[40rem] h-auto overflow-auto scrollbar-hide max-sm:p-3">
+      <DialogContent
+        aria-describedby={undefined}
+        className="max-w-[80rem] w-11/12 max-h-[40rem] h-auto overflow-auto scrollbar-hide max-sm:p-3"
+      >
+        <DialogTitle>{title}</DialogTitle>
+
         {header ? (
           <DialogHeader>
-            <DialogTitle>{title}</DialogTitle>
             <DialogDescription>{description}</DialogDescription>
           </DialogHeader>
         ) : null}
