@@ -5,7 +5,7 @@ services:
     build: .
     container_name: fgp-blog-web
     ports:
-      - "3000:80"
+      - "3001:80"
     environment:
       - VITE_BASE_URL=${VITE_NEWS_API}
       - VITE_NEWS_API_KEY=${VITE_NEWS_API_KEY}
