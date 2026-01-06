@@ -8,7 +8,7 @@ const NewsSection = () => {
 
   return (
     <div className="w-full h-auto flex flex-col items-center">
-      <h3>Latest News</h3>
+      <h3 className="max-md:mt-15">Latest News</h3>
 
       {isLoading && (
         <div className="flex justify-center items-center w-full h-[50vh]">
@@ -22,7 +22,7 @@ const NewsSection = () => {
         </div>
       )}
 
-      <section className="w-full h-auto grid grid-cols-3 gap-5 py-5 px-20 my-5">
+      <section className="w-full h-auto grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5 py-5 px-20 my-5 max-lg:px-10 max-md:px-2 max-lg:py-2">
         {news &&
           news.map((data: NewsProps) => (
             <NewsCards key={data.id} data={data} />
