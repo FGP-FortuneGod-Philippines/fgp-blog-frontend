@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router";
 import { lazy, Suspense } from "react";
 
-import MainLayout from "./layout/MainLayout";
 import LoadingSpinner from "./components/LoadingSpinner";
+
+const MainLayout = lazy(() => import("./layout/MainLayout"));
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Chairman = lazy(() => import("./pages/Chairman"));

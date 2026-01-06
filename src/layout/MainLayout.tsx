@@ -1,17 +1,21 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/navbar/Navbar";
-import ScrollToHash from "@/components/ScrollToHash";
-import ScrollToTop from "@/components/ScrollToTop";
+import { lazy, Suspense } from "react";
 import { Outlet } from "react-router";
+
+const ScrollToHash = lazy(() => import("@/components/ScrollToHash"));
+const Navbar = lazy(() => import("@/components/navbar/Navbar"));
+const Footer = lazy(() => import("@/components/Footer"));
+const ScrollToTop = lazy(() => import("@/components/ScrollToTop"));
 
 const MainLayout = () => {
   return (
     <div className="relative flex flex-col justify-center items-center h-auto">
-      <ScrollToHash />
-      <Navbar />
-      <Outlet />
-      <Footer />
-      <ScrollToTop />
+      <Suspense fallback={null}>
+        <ScrollToHash />
+        <Navbar />
+        <Outlet />
+        <Footer />
+        <ScrollToTop />
+      </Suspense>
     </div>
   );
 };
