@@ -43,8 +43,8 @@ These instructions will get you a copy of the project running locally for develo
 ## Installation
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/project-name.git
-cd project-name
+git clone https://github.com/FGP-FortuneGod-Philippines/fgp-blog-frontend.git
+cd fgp-blog-frontend
 ```
 2. Install dependencies:
 ```
