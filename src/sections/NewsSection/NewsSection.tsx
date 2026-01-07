@@ -3,9 +3,12 @@ import type { NewsProps } from "@/interfaces";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import NewsCards from "@/components/NewsCards";
 import illustration from "@/assets/newsIllustration.svg";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router";
 
 const NewsSection = () => {
   const { data: news, isLoading, error } = useNews();
+  const navigate = useNavigate();
 
   if (isLoading) {
     return (
@@ -29,6 +32,11 @@ const NewsSection = () => {
         <p className="text-base sm:text-xl text-muted-foreground">
           We can’t get some news right now. Please try again later.
         </p>
+        <Button
+            onClick={() => navigate(-1)}
+          >
+            Go Back
+        </Button>
       </div>
     );
   }
@@ -53,6 +61,11 @@ const NewsSection = () => {
             <p className="text-base sm:text-xl text-muted-foreground">
               No news available at the moment.
             </p>
+          <Button
+            onClick={() => navigate(-1)}
+          >
+            Go Back
+          </Button>
           </div>
         )}
       </section>
