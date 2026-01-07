@@ -19,16 +19,14 @@ const NewsSection = () => {
     );
   }
 
-  if (error) {
+  if (!error) {
     return (
       <div className="w-full min-h-[60vh] flex flex-col items-center justify-center px-4 text-center space-y-8">
         <h3 className="max-md:mt-15">Latest News</h3>
 
-        <LazyImage
-          src={illustration}
-          alt="Error illustration"
-          className="w-full max-w-sm"
-        />
+        <div className="w-full max-w-sm items-center justify-center">
+          <LazyImage src={illustration} alt="Error illustration" />
+        </div>
 
         <p className="text-base sm:text-xl text-muted-foreground">
           We can’t get some news right now. Please try again later.
