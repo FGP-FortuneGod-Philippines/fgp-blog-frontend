@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { galleryImg } from "@/constants";
+import LazyImage from "@/components/LazyImage";
 
 const ChairMileStone = () => {
   const [filter, setFilter] = useState("All");
@@ -67,7 +68,7 @@ const ChairMileStone = () => {
               shouldAnimate ? "fade-in" : ""
             }`}
           >
-            <img
+            <LazyImage
               src={img.src}
               alt={`gallery-${index}`}
               className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-110 "

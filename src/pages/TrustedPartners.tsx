@@ -1,6 +1,7 @@
 import { partnerships } from "@/constants";
 import { Link } from "react-router";
 import moreImg from "@/assets/partnerships/more-partnership.png";
+import LazyImage from "@/components/LazyImage";
 
 const TrustedPartners = () => {
   return (
@@ -18,7 +19,7 @@ const TrustedPartners = () => {
             to={partner.path}
             className="relative h-[140px] w-full overflow-hidden border hover:shadow-lg transition-shadow duration-300"
           >
-            <img
+            <LazyImage
               src={partner.src}
               alt={partner.alt}
               className="h-full w-full object-cover"
@@ -27,7 +28,7 @@ const TrustedPartners = () => {
         ))}
 
         <div className="relative h-[140px] w-full overflow-hidden border cursor-default">
-          <img
+          <LazyImage
             src={moreImg}
             alt="more partnerships"
             className="h-full w-full object-cover"

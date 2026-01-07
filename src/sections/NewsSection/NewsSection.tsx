@@ -5,6 +5,7 @@ import NewsCards from "@/components/NewsCards";
 import illustration from "@/assets/newsIllustration.svg";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router";
+import LazyImage from "@/components/LazyImage";
 
 const NewsSection = () => {
   const { data: news, isLoading, error } = useNews();
@@ -23,7 +24,7 @@ const NewsSection = () => {
       <div className="w-full min-h-[60vh] flex flex-col items-center justify-center px-4 text-center space-y-8">
         <h3 className="max-md:mt-15">Latest News</h3>
 
-        <img
+        <LazyImage
           src={illustration}
           alt="Error illustration"
           className="w-full max-w-sm"
@@ -46,7 +47,7 @@ const NewsSection = () => {
           news.map((data: NewsProps) => <NewsCards key={data.id} data={data} />)
         ) : (
           <div className="col-span-full flex flex-col items-center justify-center text-center space-y-8 py-10">
-            <img
+            <LazyImage
               src={illustration}
               alt="No news illustration"
               className="w-full max-w-sm"
