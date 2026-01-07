@@ -1,4 +1,5 @@
 import type { IconType } from "react-icons";
+import type { Effect } from "react-lazy-load-image-component";
 
 export interface NavLink {
   path: string;
@@ -92,7 +93,17 @@ export interface NewsProps {
   source: NewsSource;
 }
 
+export interface ImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  wrapperClassName?: string;
+  effect?: Effect; // "blur" | "black-and-white" | "opacity"
+  onError?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void;
+}
+
 export interface NewsApiResponse {
+  status: boolean;
   data: NewsProps[];
 }
 
