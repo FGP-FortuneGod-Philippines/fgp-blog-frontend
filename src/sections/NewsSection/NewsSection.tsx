@@ -19,7 +19,7 @@ const NewsSection = () => {
     );
   }
 
-  if (!error) {
+  if (error) {
     return (
       <div className="w-full min-h-[60vh] flex flex-col items-center justify-center px-4 text-center space-y-8">
         <h3 className="max-md:mt-15">Latest News</h3>
