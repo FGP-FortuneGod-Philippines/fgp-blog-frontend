@@ -32,11 +32,7 @@ const NewsSection = () => {
         <p className="text-base sm:text-xl text-muted-foreground">
           We can’t get some news right now. Please try again later.
         </p>
-        <Button
-            onClick={() => navigate(-1)}
-          >
-            Go Back
-        </Button>
+        <Button onClick={() => navigate(-1)}>Go Back</Button>
       </div>
     );
   }
@@ -47,9 +43,7 @@ const NewsSection = () => {
 
       <section className="w-full grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5 py-5 px-20 my-5 max-lg:px-10 max-md:px-4">
         {news?.length ? (
-          news.map((data: NewsProps) => (
-            <NewsCards key={data.id} data={data} />
-          ))
+          news.map((data: NewsProps) => <NewsCards key={data.id} data={data} />)
         ) : (
           <div className="col-span-full flex flex-col items-center justify-center text-center space-y-8 py-10">
             <img
@@ -61,11 +55,7 @@ const NewsSection = () => {
             <p className="text-base sm:text-xl text-muted-foreground">
               No news available at the moment.
             </p>
-          <Button
-            onClick={() => navigate(-1)}
-          >
-            Go Back
-          </Button>
+            <Button onClick={() => navigate(-1)}>Go Back</Button>
           </div>
         )}
       </section>
