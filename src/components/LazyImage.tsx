@@ -1,13 +1,6 @@
-import { LazyLoadImage, type Effect } from "react-lazy-load-image-component";
+import type { ImageProps } from "@/interfaces";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-
-interface ImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  wrapperClassName?: string;
-  effect?: Effect; // "blur" | "black-and-white" | "opacity"
-}
 
 const LazyImage = ({
   src,
@@ -15,6 +8,7 @@ const LazyImage = ({
   className,
   wrapperClassName,
   effect = "opacity",
+  onError,
 }: ImageProps) => {
   return (
     <LazyLoadImage
@@ -25,6 +19,8 @@ const LazyImage = ({
       wrapperClassName={`w-full h-full block overflow-hidden ${
         wrapperClassName || ""
       }`}
+      onError={onError}
+      referrerPolicy="no-referrer"
     />
   );
 };

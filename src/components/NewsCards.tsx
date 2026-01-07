@@ -2,6 +2,7 @@ import type { NewsProps } from "@/interfaces";
 import { formatDate } from "@/utils/formatDate";
 import LazyImage from "./LazyImage";
 import { Link } from "react-router";
+import noImage from "@/assets/no-image-news.png";
 
 const NewsCards = ({ data }: { data: NewsProps }) => {
   return (
@@ -12,8 +13,12 @@ const NewsCards = ({ data }: { data: NewsProps }) => {
       {/* image */}
       <div className="w-full h-[13rem]">
         <LazyImage
-          src={data.image}
+          src={data.image || noImage}
           alt={data.title}
+          onError={(e) => {
+            const target = e.currentTarget as HTMLImageElement;
+            target.src = noImage;
+          }}
           className="w-full h-full object-cover"
         />
       </div>
