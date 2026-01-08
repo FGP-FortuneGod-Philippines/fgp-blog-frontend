@@ -67,6 +67,7 @@ const ContactUsForm = () => {
       });
 
       setCaptchaToken(null);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       console.error(err?.text || err);
       toast.error("Failed to send message. Please try again.", {
@@ -172,7 +173,6 @@ const ContactUsForm = () => {
           />
         </div>
       </div>
-
 
       <Button
         type="submit"
