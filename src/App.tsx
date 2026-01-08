@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
 import { lazy, Suspense } from "react";
+import { Toaster } from "sonner";
 
 import LoadingSpinner from "./components/LoadingSpinner";
 
@@ -18,6 +19,9 @@ const JMR = lazy(() => import("./pages/TrustedPartners/JMR"));
 const App = () => {
   return (
     <main>
+      {/* Add the Toaster component */}
+      <Toaster richColors position="top-right" />
+      
       <Suspense fallback={<LoadingSpinner className="size-6" />}>
         <Routes>
           {/* Main Layout */}
