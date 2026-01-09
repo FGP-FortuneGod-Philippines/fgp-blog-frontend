@@ -3,6 +3,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import Timeline from "../../src/components/Timeline";
+import "@testing-library/jest-dom";
 
 // 🔹 Mock timeline data
 vi.mock("../../src/constants/contents", () => ({
