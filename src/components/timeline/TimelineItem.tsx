@@ -2,6 +2,7 @@
 const TimelineItem = ({ item, width }: any) => {
   return (
     <div
+      data-testid="timeline-item"
       className="flex-shrink-0 text-center px-2 sm:px-3 lg:px-4"
       style={{ width }}
     >
