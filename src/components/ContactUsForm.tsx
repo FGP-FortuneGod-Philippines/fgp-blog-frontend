@@ -128,8 +128,9 @@ const ContactUsForm = () => {
       className="w-full flex flex-col gap-3"
     >
       <div className="w-full flex flex-col">
-        <label className="label">Your Name</label>
+        <label htmlFor="name" className="label">Your Name</label>
         <input
+          id="name"
           type="text"
           name="name"
           value={formData.name}
@@ -140,8 +141,9 @@ const ContactUsForm = () => {
       </div>
 
       <div className="w-full flex flex-col">
-        <label className="label">Your Email</label>
+        <label htmlFor="email" className="label">Your Email</label>
         <input
+          id="email"
           type="email"
           name="email"
           value={formData.email}
@@ -152,8 +154,9 @@ const ContactUsForm = () => {
       </div>
 
       <div className="w-full flex flex-col">
-        <label className="label">Your Message</label>
+        <label htmlFor="message" className="label">Your Message</label>
         <textarea
+          id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
