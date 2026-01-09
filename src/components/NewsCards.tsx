@@ -1,8 +1,8 @@
-import type { NewsProps } from "@/interfaces";
-import { formatDate } from "@/utils/formatDate";
+import type { NewsProps } from "../interfaces/index";
+import { formatDate } from "../utils/formatDate";
 import LazyImage from "./LazyImage";
 import { Link } from "react-router";
-import noImage from "@/assets/no-image-news.png";
+import noImage from "../assets/no-image-news.png";
 
 const NewsCards = ({ data }: { data: NewsProps }) => {
   return (

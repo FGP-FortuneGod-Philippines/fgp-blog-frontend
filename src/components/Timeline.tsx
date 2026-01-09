@@ -1,10 +1,10 @@
-import { timelineData } from "@/constants/contents";
+import { timelineData } from "../constants/contents";
 import diamond from "../assets/diamond.png";
 import TimelineItem from "./timeline/TimelineItem";
 import TimelineItemBottom from "./timeline/TimelineItemBottom";
 import { Button } from "./ui/button";
 import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
-import type { TimelineProps } from "@/interfaces/contents";
+import type { TimelineProps } from "../interfaces/contents";
 
 const Timeline = ({
   handlePrev,
@@ -26,7 +26,7 @@ const Timeline = ({
           disabled={currentIndex === 0}
           aria-label="Previous"
           className="absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-10 
-          bg-trasparent text-[#584910] hover:bg-transparent"
+          bg-trasparent text-[var(--olive-text)] hover:bg-transparent disabled:opacity-100"
         >
           <LuArrowLeft className="text-2xl size-auto" />
         </Button>
@@ -37,9 +37,9 @@ const Timeline = ({
           disabled={currentIndex >= maxIndex}
           aria-label="Next"
           className="absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-10
-          bg-trasparent text-[#584910] hover:bg-transparent"
+          bg-trasparent text-[var(--olive-text)] hover:bg-transparent disabled:opacity-100"
         >
-          <LuArrowRight className="text-2xl size-auto" />
+          <LuArrowRight className="text-2xl size-auto " />
         </Button>
 
         {/* TOP CONTENT */}
@@ -56,7 +56,7 @@ const Timeline = ({
           {/* LINE + DOTS */}
           <div className="relative">
             <div
-              className="absolute top-1/2 left-0 -translate-y-1/2 h-0.5 bg-[#584910]"
+              className="absolute top-1/2 left-0 -translate-y-1/2 h-0.5 bg-[var(--olive-bg)]"
               style={{
                 width: `${(100 / itemsPerPage) * timelineData.length}%`,
               }}
@@ -72,7 +72,7 @@ const Timeline = ({
                   className="flex-shrink-0 flex justify-center"
                   style={{ width: itemWidth }}
                 >
-                  <div className="w-7 h-7 rounded-full bg-[#584910] flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-full bg-[var(--olive-bg)] flex items-center justify-center">
                     <img src={diamond} alt="diamond icon" />
                   </div>
                 </div>
@@ -95,14 +95,14 @@ const Timeline = ({
       {/* PAGINATION */}
       <div className="flex justify-center gap-2 mt-6 sm:mt-8">
         {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-          <button
+          <Button
             key={index}
             aria-label={`Go to slide ${index + 1}`}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
+            className={`w-2 h-2 rounded-full transition-all p-0 ${
               currentIndex === index
-                ? "bg-[#584910] w-6"
-                : "bg-gray-300 hover:bg-gray-400"
+                ? "bg-[var(--olive-bg)] hover:bg-[var(--olive-bg)] w-6"
+                : "bg-[var(--gray-bg)] hover:bg-gray-400"
             }`}
           />
         ))}

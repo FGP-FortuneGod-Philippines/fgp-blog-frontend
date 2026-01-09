@@ -4,10 +4,10 @@ import path from "path";
 
 export default defineConfig({
   test: {
+    globals: true, // important for expect
     environment: "jsdom",
-    globals: true,
-    setupFiles: ["./vitest.setup.ts"],
     css: true,
+    setupFiles: ["./tests/setup.ts"], // ✅ relative path, not absoluteq 
   },
   // Add resolve.alias to match your vite.config.ts
   resolve: {
