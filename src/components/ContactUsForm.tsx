@@ -82,48 +82,44 @@ const ContactUsForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
 
     if (isSending) return;
 
-    // Set sending state immediately to prevent multiple submissions
     setIsSending(true);
 
-    // Validation of forms and using toast for the ui
     if (!formData.name.trim()) {
       toast.error("Please enter your name");
-      setIsSending(false); // Reset sending state on validation error
+      setIsSending(false);
       return;
     }
 
     if (!formData.email.trim()) {
       toast.error("Please enter your email");
-      setIsSending(false); // Reset sending state on validation error
+      setIsSending(false);
       return;
     }
 
     if (!EMAIL_REGEX.test(formData.email)) {
       toast.error("Please enter a valid email address");
-      setIsSending(false); // Reset sending state on validation error
+      setIsSending(false);
       return;
     }
 
     if (!formData.message.trim()) {
       toast.error("Please enter your message");
-      setIsSending(false); // Reset sending state on validation error
+      setIsSending(false);
       return;
     }
 
-    // CAPTCHA validation
     if (!captchaToken) {
       toast.error("Please verify that you are not a robot");
-      setIsSending(false); // Reset sending state on validation error
+      setIsSending(false);
       return;
     }
 
-    // send email function
-    sendEmail();
+    await sendEmail();
   };
 
   return (

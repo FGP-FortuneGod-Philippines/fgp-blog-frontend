@@ -311,8 +311,13 @@ describe("ContactUsForm – Email sending", () => {
     // Submit form
     await userEvent.click(screen.getByRole("button", { name: /submit/i }));
 
-    // Toast error for failed send (not CAPTCHA)
-    expect(toast.error).toHaveBeenCalledWith("Failed to send message. Please try again.", { id: undefined });
+    // WAIT for async rejection handling
+    await waitFor(() => {
+      expect(toast.error).toHaveBeenCalledWith(
+        "Failed to send message. Please try again.",
+        { id: undefined }
+      );
+    });
 
     // EmailJS should have been called
     expect(emailjs.sendForm).toHaveBeenCalledTimes(1);
