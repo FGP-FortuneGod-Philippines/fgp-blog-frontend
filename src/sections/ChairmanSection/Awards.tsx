@@ -1,6 +1,7 @@
 import BaseCards from "@/components/base-components/BaseCards";
 import awardIcon from "@/assets/awardsFGP-1.png";
 import { awardsCard } from "@/constants";
+import LazyImage from "@/components/LazyImage";
 
 const Awards = () => {
   return (
@@ -14,7 +15,7 @@ const Awards = () => {
             className="flex flex-col items-center gap-2 p-10 transition-transform duration-300 ease-out hover:bg-[#E9D291] hover:-translate-y-3"
           >
             <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-30 h-30">
-              <img
+              <LazyImage
                 src={awardIcon}
                 alt="award icon"
                 className="w-full h-full object-contain"

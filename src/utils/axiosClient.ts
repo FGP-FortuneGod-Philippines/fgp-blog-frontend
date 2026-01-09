@@ -2,7 +2,7 @@ import axios, { type AxiosInstance } from "axios";
 
 // External News Api Clients
 export const axiosClient: AxiosInstance = axios.create({
-  baseURL: `${import.meta.env.VITE_BASE_URL_DEVELOPMENT}`,
+  baseURL: `${import.meta.env.VITE_BASE_URL}`,
   timeout: 5000, // 5 seconds timeout
   headers: {
     "Content-Type": "application/json",

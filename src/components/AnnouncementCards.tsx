@@ -1,6 +1,7 @@
 import type { AnnouncementProps } from "@/interfaces";
 import { LuFolderOpen, LuClock4, LuArrowLeft } from "react-icons/lu";
 import { Link } from "react-router";
+import LazyImage from "./LazyImage";
 
 const AnnouncementCards = ({ data }: { data: AnnouncementProps }) => {
   return (
@@ -10,7 +11,7 @@ const AnnouncementCards = ({ data }: { data: AnnouncementProps }) => {
     >
       {/* Image */}
       <div className="w-full h-[18rem] cursor-pointer relative group">
-        <img
+        <LazyImage
           src={data.image}
           alt={data.slug}
           className="w-full h-full object-cover"

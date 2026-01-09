@@ -60,7 +60,7 @@ const JMRHero = () => {
       <div className="block md:hidden mt-8 relative h-[500px]">
         <CoverflowCarousel startIndex={1} onSlideChange={handleSlideChange}>
           {JMRHeroImages.map((image, index) => (
-            <img
+            <LazyImage
               key={index}
               src={image.src}
               alt={image.alt}

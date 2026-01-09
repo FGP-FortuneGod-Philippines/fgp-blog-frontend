@@ -1,5 +1,6 @@
 import type { AnnouncementProps } from "@/interfaces";
 import { LuUser, LuFolderOpen } from "react-icons/lu";
+import LazyImage from "./LazyImage";
 
 const AnnouncementDetailsViews = ({
   announcement,
@@ -45,7 +46,7 @@ const AnnouncementDetailsViews = ({
 
         {/* Image is 1440 x 400 px */}
         <div className="w-full h-[25rem] max-lg:h-[20rem] max-md:h-[15rem]">
-          <img
+          <LazyImage
             src={announcement.image}
             alt="anouncement image"
             className="w-full h-full object-cover"

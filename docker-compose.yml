@@ -7,6 +7,6 @@ services:
     ports:
       - "3001:80"
     environment:
-      - VITE_BASE_URL=${VITE_NEWS_API}
+      - VITE_BASE_URL=${VITE_BASE_URL}
       - VITE_NEWS_API_KEY=${VITE_NEWS_API_KEY}
     restart: unless-stopped

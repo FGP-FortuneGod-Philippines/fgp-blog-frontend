@@ -13,14 +13,11 @@ export const fetchNews = async (): Promise<NewsProps[]> => {
         },
       }
     );
-    console.log(typeof response.data, response.data);
 
     // safety check to ensure response structure
     if (!response.data?.data) {
       throw new Error("Invalid API response");
     }
-
-    console.log(typeof response.data, response.data);
 
     return response.data.data;
   } catch (error: unknown) {
