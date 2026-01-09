@@ -11,13 +11,6 @@ import emailjs from "@emailjs/browser";
 vi.mock("sonner");
 vi.mock("@emailjs/browser");
 
-// Mock Button to avoid dependency on "@/components/ui/button"
-vi.mock("@/components/ui/button", () => ({
-  Button: ({ children, ...props }: any) => (
-    <button {...props}>{children}</button>
-  ),
-}));
-
 describe("ContactUsForm – validation", () => {
   beforeEach(() => {
     vi.clearAllMocks();
