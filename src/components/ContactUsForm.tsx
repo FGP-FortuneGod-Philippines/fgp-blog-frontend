@@ -46,8 +46,6 @@ const ContactUsForm = () => {
     const toastId = toast.loading("Sending message...");
 
     try {
-      setIsSending(true);
-
       await emailjs.sendForm(
         "service_4y1h1mo",
         "template_rzxiweu",
@@ -89,30 +87,38 @@ const ContactUsForm = () => {
 
     if (isSending) return;
 
+    // Set sending state immediately to prevent multiple submissions
+    setIsSending(true);
+
     // Validation of forms and using toast for the ui
     if (!formData.name.trim()) {
       toast.error("Please enter your name");
+      setIsSending(false); // Reset sending state on validation error
       return;
     }
 
     if (!formData.email.trim()) {
       toast.error("Please enter your email");
+      setIsSending(false); // Reset sending state on validation error
       return;
     }
 
     if (!EMAIL_REGEX.test(formData.email)) {
       toast.error("Please enter a valid email address");
+      setIsSending(false); // Reset sending state on validation error
       return;
     }
 
     if (!formData.message.trim()) {
       toast.error("Please enter your message");
+      setIsSending(false); // Reset sending state on validation error
       return;
     }
 
     // CAPTCHA validation
     if (!captchaToken) {
       toast.error("Please verify that you are not a robot");
+      setIsSending(false); // Reset sending state on validation error
       return;
     }
 
