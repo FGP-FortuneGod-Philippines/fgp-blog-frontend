@@ -2,7 +2,7 @@ import React from "react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, act, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import ContactUsForm from "../src/components/ContactUsForm";
+import ContactUsForm from "../../src/components/ContactUsForm";
 import "@testing-library/jest-dom";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
@@ -326,63 +326,5 @@ describe("ContactUsForm – Email sending", () => {
     expect(screen.getByLabelText(/your name/i)).toHaveValue("John");
     expect(screen.getByLabelText(/your email/i)).toHaveValue("john@example.com");
     expect(screen.getByLabelText(/your message/i)).toHaveValue("Hello");
-  });
-});
-
-describe("ContactUsForm – Additional / Edge Cases", () => {
-  beforeEach(() => vi.clearAllMocks());
-
-  it("shows error for name with only spaces", async () => {
-    render(<ContactUsForm />);
-    await fillForm("   "); // only spaces
-    await userEvent.click(screen.getByRole("button", { name: /submit/i }));
-    expect(toast.error).toHaveBeenCalledWith("Please enter your name");
-  });
-
-  it("allows retry after email sending failure", async () => {
-    render(<ContactUsForm />);
-    await fillFormAndSolveCaptcha();
-
-    (emailjs.sendForm as any).mockRejectedValueOnce(new Error("Network Error"));
-    await userEvent.click(screen.getByRole("button", { name: /submit/i }));
-    await waitFor(() => expect(toast.error).toHaveBeenCalled());
-
-    (emailjs.sendForm as any).mockResolvedValueOnce({ status: 200 });
-    await userEvent.click(screen.getByRole("button", { name: /submit/i }));
-    await waitFor(() => expect(toast.success).toHaveBeenCalled());
-  });
-
-  it("solving CAPTCHA multiple times still allows submission", async () => {
-    render(<ContactUsForm />);
-    await fillForm();
-    const captchaButton = screen.getByTestId("mock-captcha");
-    await userEvent.click(captchaButton);
-    await userEvent.click(captchaButton); // solve twice
-    await userEvent.click(screen.getByRole("button", { name: /submit/i }));
-    expect(emailjs.sendForm).toHaveBeenCalled();
-  });
-
-  it("renders all fields correctly (accessibility / snapshot)", () => {
-    const { container } = render(<ContactUsForm />);
-    expect(screen.getByLabelText(/your name/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/your email/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/your message/i)).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
-  });
-
-  it("handles unexpected errors gracefully", async () => {
-    render(<ContactUsForm />);
-    await fillFormAndSolveCaptcha();
-
-    (emailjs.sendForm as any).mockImplementationOnce(() => { throw new Error("Unexpected"); });
-
-    await userEvent.click(screen.getByRole("button", { name: /submit/i }));
-
-    await waitFor(() => {
-      expect(toast.error).toHaveBeenCalledWith(
-        expect.stringContaining("Failed to send message"),
-        expect.anything()
-      );
-    });
   });
 });

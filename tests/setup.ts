@@ -11,6 +11,9 @@ window.scrollTo = vi.fn();
 import { cleanup } from "@testing-library/react";
 import { afterEach, vi } from "vitest";
 
+// Silence console.error for intentional error-path tests
+vi.spyOn(console, "error").mockImplementation(() => {});
+
 afterEach(() => {
   cleanup();
 });
