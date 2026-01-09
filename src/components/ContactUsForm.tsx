@@ -46,8 +46,6 @@ const ContactUsForm = () => {
     const toastId = toast.loading("Sending message...");
 
     try {
-      setIsSending(true);
-
       await emailjs.sendForm(
         "service_4y1h1mo",
         "template_rzxiweu",
@@ -84,40 +82,44 @@ const ContactUsForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
 
     if (isSending) return;
 
-    // Validation of forms and using toast for the ui
+    setIsSending(true);
+
     if (!formData.name.trim()) {
       toast.error("Please enter your name");
+      setIsSending(false);
       return;
     }
 
     if (!formData.email.trim()) {
       toast.error("Please enter your email");
+      setIsSending(false);
       return;
     }
 
     if (!EMAIL_REGEX.test(formData.email)) {
       toast.error("Please enter a valid email address");
+      setIsSending(false);
       return;
     }
 
     if (!formData.message.trim()) {
       toast.error("Please enter your message");
+      setIsSending(false);
       return;
     }
 
-    // CAPTCHA validation
     if (!captchaToken) {
       toast.error("Please verify that you are not a robot");
+      setIsSending(false);
       return;
     }
 
-    // send email function
-    sendEmail();
+    await sendEmail();
   };
 
   return (
@@ -128,8 +130,9 @@ const ContactUsForm = () => {
       className="w-full flex flex-col gap-3"
     >
       <div className="w-full flex flex-col">
-        <label className="label">Your Name</label>
+        <label htmlFor="name" className="label">Your Name</label>
         <input
+          id="name"
           type="text"
           name="name"
           value={formData.name}
@@ -140,8 +143,9 @@ const ContactUsForm = () => {
       </div>
 
       <div className="w-full flex flex-col">
-        <label className="label">Your Email</label>
+        <label htmlFor="email" className="label">Your Email</label>
         <input
+          id="email"
           type="email"
           name="email"
           value={formData.email}
@@ -152,8 +156,9 @@ const ContactUsForm = () => {
       </div>
 
       <div className="w-full flex flex-col">
-        <label className="label">Your Message</label>
+        <label htmlFor="message" className="label">Your Message</label>
         <textarea
+          id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
