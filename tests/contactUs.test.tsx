@@ -1,12 +1,11 @@
 import React from "react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, act, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ContactUsForm from "../src/components/ContactUsForm";
 import "@testing-library/jest-dom";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
-import { act } from "@testing-library/react";
 
 // --------------------------
 // MOCKS
@@ -64,6 +63,55 @@ async function fillFormAndSolveCaptcha() {
   // Solve CAPTCHA by clicking mocked button
   await userEvent.click(screen.getByTestId("mock-captcha"));
 }
+
+// --------------------------
+// INTEGRATION TESTS
+// --------------------------
+describe("ContactUsForm – Integration / Happy Path", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it("completes full user journey: fill → CAPTCHA → submit → success → reset", async () => {
+    // Arrange
+    render(<ContactUsForm />);
+    const user = userEvent.setup();
+    
+    // Mock EmailJS to succeed
+    (emailjs.sendForm as any).mockResolvedValueOnce({ status: 200 });
+
+    // Get form elements
+    const nameInput = screen.getByLabelText(/your name/i);
+    const emailInput = screen.getByLabelText(/your email/i);
+    const messageInput = screen.getByLabelText(/your message/i);
+    const submitButton = screen.getByRole("button", { name: /submit/i });
+    const captchaButton = screen.getByTestId("mock-captcha");
+
+    // Fill form
+    await user.type(nameInput, "Jane Doe");
+    await user.type(emailInput, "jane.doe@example.com");
+    await user.type(messageInput, "Test message");
+    
+    // Solve CAPTCHA
+    await user.click(captchaButton);
+    
+    // Submit form
+    await user.click(submitButton);
+    
+    // Wait for submission to complete
+    await waitFor(() => {
+      expect(toast.success).toHaveBeenCalled();
+    });
+
+    // Verify all success conditions
+    expect(emailjs.sendForm).toHaveBeenCalledTimes(1);
+    expect(nameInput).toHaveValue("");
+    expect(emailInput).toHaveValue("");
+    expect(messageInput).toHaveValue("");
+    expect(submitButton).toBeEnabled();
+    expect(submitButton).toHaveTextContent("Submit");
+  });
+});
 
 // --------------------------
 // VALIDATION TESTS
