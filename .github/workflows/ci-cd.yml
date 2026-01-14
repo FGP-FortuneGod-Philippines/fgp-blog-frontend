@@ -32,27 +32,12 @@ jobs:
     - name: Run Tests
       run: npm test
   cd:
-    name: Continuous Deployment
+    name: Continuous Deployment (Render)
     runs-on: ubuntu-latest
     needs: ci
     if: github.ref == 'refs/heads/main' # Only deploy from main branch
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Log in to Docker Hub
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-
-    - name: Build Docker image
+    - name: Trigger Render Deployment
       run: |
-        docker build -t moriiarty/fgp-blog-frontend-web:latest .
-        docker tag moriiarty/fgp-blog-frontend-web:latest moriiarty/fgp-blog-frontend-web:${{ github.sha }}
-
-    - name: Push Docker image
-      run: |
-        docker push moriiarty/fgp-blog-frontend-web:latest
-        docker push moriiarty/fgp-blog-frontend-web:${{ github.sha }}
+        curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
