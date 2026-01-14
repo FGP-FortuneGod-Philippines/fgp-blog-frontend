@@ -1,0 +1,15 @@
+{
+  "routes": [
+    {
+      "path": "/index.html",
+      "methods": ["GET"],
+      "status": 200
+    },
+    {
+      "path": "/:path*",
+      "methods": ["GET"],
+      "status": 200,
+      "destination": "/index.html"
+    }
+  ]
+}
