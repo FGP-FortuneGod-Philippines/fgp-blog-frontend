@@ -47,11 +47,11 @@ const ContactUsForm = () => {
 
     try {
       await emailjs.sendForm(
-        "service_4y1h1mo",
-        "template_rzxiweu",
+        "service_jznih4e",
+        "template_udeoesb",
         formRef.current,
         {
-          publicKey: "eXnJjZFqasYto_ZtR",
+          publicKey: "Sk_yv3AzPF5zsYJCw",
         }
       );
 
@@ -171,7 +171,7 @@ const ContactUsForm = () => {
       <div className="w-full flex justify-center mt-2 mb-4">
         <div className="transform scale-90 sm:scale-100">
           <ReCAPTCHA
-            sitekey="6LesxEMsAAAAAJnT78AIVVFpWh1E-zvd3wX4no0E"
+            sitekey="6LcD_UksAAAAAKMeOqk9wlO8hDY93dy_JTDVBHDM"
             onChange={(token) => setCaptchaToken(token)}
             onExpired={() => setCaptchaToken(null)}
           />
