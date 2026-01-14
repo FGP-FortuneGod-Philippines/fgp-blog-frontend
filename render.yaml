@@ -1,6 +1,6 @@
 services:
 - type: static
-  name: fgp-blog-frontend
+  name: fortunegodph
   staticPublishPath: dist
   routes:
   - type: rewrite
