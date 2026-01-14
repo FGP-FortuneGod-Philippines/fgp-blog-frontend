@@ -1,8 +1,6 @@
 services:
-- type: web
-  name: fortunegodph
-  env: static
-  buildCommand: npm install && npm run build
+- type: static
+  name: fgp-blog-frontend
   staticPublishPath: dist
   routes:
   - type: rewrite
