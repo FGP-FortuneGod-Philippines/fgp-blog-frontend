@@ -10,13 +10,13 @@ import stanley from "@/assets/executives/stanley(no border).webp";
 
 import duke from "@/assets/foreign-affairs/Duke-Liu(no border).webp";
 import elden from "@/assets/foreign-affairs/Elden-Tu(no border).webp";
-import steven from "@/assets/foreign-affairs/Steven-Lien(no border).webp";
 import william from "@/assets/foreign-affairs/William(no border).webp";
 
 import fidel from "@/assets/ph-business-associates/fidel-ferrer.webp";
 
 import hera from "@/assets/operations-team/Hera(no border).webp";
 import gelo from "@/assets/operations-team/Gelo(no border).webp";
+import ordiales from "@/assets/operations-team/ordiales.webp";
 import cess from "@/assets/operations-team/Cess(no border).webp";
 import jin from "@/assets/operations-team/jin(no border).webp";
 import lane from "@/assets/operations-team/Lane(no border).webp";
@@ -170,7 +170,7 @@ import type {
   AwardsProps,
   BannerSlidesProps,
   BiographyProps,
-    ChairmanMilestonesProps,
+  ChairmanMilestonesProps,
   CoreValues,
   Engagement,
   JMRProjectCardProps,
@@ -366,11 +366,6 @@ export const executiveTeam: MeetTeamProps[] = [
 export const foreignTeam: MeetTeamProps[] = [
   { name: "Duke Liu", position: "Director International Affairs", image: duke },
   { name: "Elden Tu", position: "Senior Consultant", image: elden },
-  {
-    name: "Steven Lien",
-    position: "Director International Affairs",
-    image: steven,
-  },
   { name: "William Wang", position: "Project Manager", image: william },
 ];
 
@@ -398,6 +393,11 @@ export const operationsTeam: MeetTeamProps[] = [
     name: "Angelo Lopez",
     position: "IT Web Management & Graphic Design Artist",
     image: gelo,
+  },
+  {
+    name: "Fernando Jose Ordiaels",
+    position: "IT Web Developer",
+    image: ordiales,
   },
   {
     name: "Nerilane Maranan",
@@ -618,40 +618,172 @@ export const announcementData: AnnouncementProps[] = [
 ];
 
 export const galleryImg: ChairmanMilestonesProps[] = [
-  { src: gallery1, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery2, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery3, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery4, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery5, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery6, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery7, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery8, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery9, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery10, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery11, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery12, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery13, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery14, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
-  { src: gallery15, alt: "Chairman’s FortuneGod milestones", category: "FortuneGod" },
+  {
+    src: gallery1,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery2,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery3,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery4,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery5,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery6,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery7,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery8,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery9,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery10,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery11,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery12,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery13,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery14,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
+  {
+    src: gallery15,
+    alt: "Chairman’s FortuneGod milestones",
+    category: "FortuneGod",
+  },
 
-  { src: gallery16, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery17, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery18, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery19, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery20, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery21, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery22, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery23, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery24, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery25, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery26, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery27, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery28, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery29, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery30, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery31, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery32, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
-  { src: gallery33, alt: "Chairman’s ShoPilipinas milestones", category: "ShoPilipinas" },
+  {
+    src: gallery16,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery17,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery18,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery19,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery20,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery21,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery22,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery23,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery24,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery25,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery26,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery27,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery28,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery29,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery30,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery31,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery32,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
+  {
+    src: gallery33,
+    alt: "Chairman’s ShoPilipinas milestones",
+    category: "ShoPilipinas",
+  },
 ];
 
 export const partnerships: PartnershipProps[] = [
@@ -667,13 +799,21 @@ export const marquee1: LogoMarqueeProps[] = [
   { label: "Fukuda", src: fukuda, alt: "Fukuda logo" },
   { label: "INGCO", src: ingco, alt: "INGCO logo" },
   { label: "Meralco Green", src: meralcoGreen, alt: "Meralco Green logo" },
-  { label: "Meralco Terra Solar", src: meralcoTerraSolar, alt: "Meralco Terra Solar logo" },
+  {
+    label: "Meralco Terra Solar",
+    src: meralcoTerraSolar,
+    alt: "Meralco Terra Solar logo",
+  },
   { label: "Noveaulab", src: nouveaulab, alt: "Noveaulab logo" },
   { label: "Power China", src: powerChina, alt: "Power China logo" },
   { label: "Promega", src: promega, alt: "Promega logo" },
   { label: "Shakeys", src: shakeys, alt: "Shakey’s logo" },
   { label: "Sumec", src: sumec, alt: "SUMEC logo" },
-  { label: "Taiheiyo Cement", src: taiheiyoCement, alt: "Taiheiyo Cement logo" },
+  {
+    label: "Taiheiyo Cement",
+    src: taiheiyoCement,
+    alt: "Taiheiyo Cement logo",
+  },
   { label: "Touch Dog", src: touchDog, alt: "Touch Dog logo" },
   { label: "Vena Energy", src: venaEnergy, alt: "Vena Energy logo" },
   { label: "Xiaomi", src: xiaomi, alt: "Xiaomi logo" },
@@ -688,7 +828,6 @@ export const marquee2: LogoMarqueeProps[] = [
   { label: "Starbucks", src: Starbucks, alt: "Starbucks logo" },
   { label: "Wilcon Depot", src: WilconDepot, alt: "Wilcon Depot logo" },
 ];
-
 
 export const jmrCoreValues: Accordion[] = [
   {
@@ -732,29 +871,61 @@ export const projectSamples: JMRProjectCategory[] = [
   {
     category: "Vena Energy",
     projects: [
-      { name: "Vena Project 1", image: vena1, alt: "Vena Energy milestone project" },
-      { name: "Vena Project 2", image: vena2, alt: "Vena Energy milestone project" },
+      {
+        name: "Vena Project 1",
+        image: vena1,
+        alt: "Vena Energy milestone project",
+      },
+      {
+        name: "Vena Project 2",
+        image: vena2,
+        alt: "Vena Energy milestone project",
+      },
     ],
   },
   {
     category: "NSEC Nuevo Solar Energy Corp",
     projects: [
-      { name: "NSEC Project 1", image: nsec1, alt: "NSEC solar energy milestone" },
-      { name: "NSEC Project 2", image: nsec2, alt: "NSEC solar energy milestone" },
+      {
+        name: "NSEC Project 1",
+        image: nsec1,
+        alt: "NSEC solar energy milestone",
+      },
+      {
+        name: "NSEC Project 2",
+        image: nsec2,
+        alt: "NSEC solar energy milestone",
+      },
     ],
   },
   {
     category: "Taiheiyo Cement",
     projects: [
-      { name: "Taiheiyo Project 1", image: taiheiyo1, alt: "Taiheiyo Cement milestone project" },
-      { name: "Taiheiyo Project 2", image: taiheiyo2, alt: "Taiheiyo Cement milestone project" },
+      {
+        name: "Taiheiyo Project 1",
+        image: taiheiyo1,
+        alt: "Taiheiyo Cement milestone project",
+      },
+      {
+        name: "Taiheiyo Project 2",
+        image: taiheiyo2,
+        alt: "Taiheiyo Cement milestone project",
+      },
     ],
   },
   {
     category: "Prime Infra",
     projects: [
-      { name: "Prime Project 1", image: prime1, alt: "Prime Infra milestone project" },
-      { name: "Prime Project 2", image: prime2, alt: "Prime Infra milestone project" },
+      {
+        name: "Prime Project 1",
+        image: prime1,
+        alt: "Prime Infra milestone project",
+      },
+      {
+        name: "Prime Project 2",
+        image: prime2,
+        alt: "Prime Infra milestone project",
+      },
     ],
   },
 ];
@@ -779,7 +950,8 @@ export const jmrProjects: JMRProjectCardProps[] = [
   },
   {
     title: "Greentech Solar Energy Corp.",
-    subtitle: "20ft & 40ft Container Delivery and Breakbulk Transformer Transport",
+    subtitle:
+      "20ft & 40ft Container Delivery and Breakbulk Transformer Transport",
     description:
       "Delivery of 20ft and 40ft containers, including breakbulk transport of two (2) transformer units.",
     align: "right",
@@ -806,7 +978,7 @@ export const jmrProjects: JMRProjectCardProps[] = [
   },
 ];
 
-export const whyChooseUs : WhyChooseUsProps[] = [
+export const whyChooseUs: WhyChooseUsProps[] = [
   {
     icon: rocket,
     title: "Unparalleled Expertise",
@@ -832,7 +1004,7 @@ export const whyChooseUs : WhyChooseUsProps[] = [
 ];
 
 export const JMRHeroImages = [
-    { src: chairhero, alt: "chairhero" },
-    { src: chairhero1, alt: "chairhero1" },
-    { src: chairhero2, alt: "chairhero2" },
-]
+  { src: chairhero, alt: "chairhero" },
+  { src: chairhero1, alt: "chairhero1" },
+  { src: chairhero2, alt: "chairhero2" },
+];
