@@ -201,8 +201,8 @@ export const navLinks: NavLink[] = [
 ];
 
 export const engagementStats: Engagement[] = [
-  { label: "Total Views", count: 521 },
-  { label: "Total Visitors", count: 235 },
+  { label: "Total Views", count: 2570 },
+  { label: "Total Visitors", count: 580 },
   { label: "Today's Views", count: 52 },
   { label: "Today's Visitors", count: 21 },
 ];
