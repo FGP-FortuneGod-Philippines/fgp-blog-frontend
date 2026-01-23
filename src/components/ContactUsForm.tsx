@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
 
 /**
  * ContactUsForm Component
@@ -10,13 +9,11 @@ import ReCAPTCHA from "react-google-recaptcha";
  * Handles:
  * - Name, Email, Message inputs
  * - Validation & error handling
- * - CAPTCHA verification
  * - Email sending via EmailJS to multiple recipients
  * - Notifications via Sonner
  *
  * Dependencies:
- * - emailjs-com
- * - react-google-recaptcha
+ * - emailjs
  * - sonner
  */
 
@@ -37,7 +34,6 @@ const ContactUsForm = () => {
   });
 
   const [isSending, setIsSending] = useState<boolean>(false);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   // Send email via EmailJS
   const sendEmail = async () => {
@@ -62,11 +58,8 @@ const ContactUsForm = () => {
         email: "",
         message: "",
       });
-
-      setCaptchaToken(null);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (err: any) {
-      console.error(err?.text || err);
+    } catch (err) {
+      console.error(err);
       toast.error("Failed to send message. Please try again.", {
         id: toastId,
       });
@@ -113,12 +106,6 @@ const ContactUsForm = () => {
       return;
     }
 
-    if (!captchaToken) {
-      toast.error("Please verify that you are not a robot");
-      setIsSending(false);
-      return;
-    }
-
     await sendEmail();
   };
 
@@ -130,7 +117,9 @@ const ContactUsForm = () => {
       className="w-full flex flex-col gap-3"
     >
       <div className="w-full flex flex-col">
-        <label htmlFor="name" className="label">Your Name</label>
+        <label htmlFor="name" className="label">
+          Your Name
+        </label>
         <input
           id="name"
           type="text"
@@ -143,7 +132,9 @@ const ContactUsForm = () => {
       </div>
 
       <div className="w-full flex flex-col">
-        <label htmlFor="email" className="label">Your Email</label>
+        <label htmlFor="email" className="label">
+          Your Email
+        </label>
         <input
           id="email"
           type="email"
@@ -156,7 +147,9 @@ const ContactUsForm = () => {
       </div>
 
       <div className="w-full flex flex-col">
-        <label htmlFor="message" className="label">Your Message</label>
+        <label htmlFor="message" className="label">
+          Your Message
+        </label>
         <textarea
           id="message"
           name="message"
@@ -165,17 +158,6 @@ const ContactUsForm = () => {
           className="input h-[10rem]"
           disabled={isSending}
         />
-      </div>
-
-      {/* CAPTCHA */}
-      <div className="w-full flex justify-center mt-2 mb-4">
-        <div className="transform scale-90 sm:scale-100">
-          <ReCAPTCHA
-            sitekey="6LcD_UksAAAAAKMeOqk9wlO8hDY93dy_JTDVBHDM"
-            onChange={(token) => setCaptchaToken(token)}
-            onExpired={() => setCaptchaToken(null)}
-          />
-        </div>
       </div>
 
       <Button

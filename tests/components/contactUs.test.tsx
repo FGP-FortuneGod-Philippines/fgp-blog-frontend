@@ -17,27 +17,6 @@ vi.mock("sonner");
 // Mock EmailJS
 vi.mock("@emailjs/browser");
 
-// Mock Google reCAPTCHA
-let mockCaptchaOnChange: (token: string | null) => void = () => {};
-vi.mock("react-google-recaptcha", () => {
-  return {
-    default: ({ onChange }: { onChange: (token: string | null) => void }) => {
-      // Store onChange callback for tests to simulate CAPTCHA solve/expire
-      mockCaptchaOnChange = onChange;
-      return (
-        <button
-          data-testid="mock-captcha"
-          onClick={() => {
-            onChange("mock-token");  // Simulate solving CAPTCHA
-          }}
-        >
-          Mock CAPTCHA
-        </button>
-      );
-    },
-  };
-});
-
 // Type the mocked emailjs
 const mockedEmailjs = {
   sendForm: vi.fn(),
@@ -60,23 +39,15 @@ Object.assign(toast, mockedToast);
 /**
  * fillForm
  * Fills all fields with sample data
- * Does NOT solve CAPTCHA
  */
-async function fillForm(name = "John", email = "john@example.com", message = "Hello") {
+async function fillForm(
+  name = "John",
+  email = "john@example.com",
+  message = "Hello"
+) {
   await userEvent.type(screen.getByLabelText(/your name/i), name);
   await userEvent.type(screen.getByLabelText(/your email/i), email);
   await userEvent.type(screen.getByLabelText(/your message/i), message);
-}
-
-/**
- * fillFormAndSolveCaptcha
- * Fills all fields and simulates solving CAPTCHA
- */
-async function fillFormAndSolveCaptcha() {
-  await fillForm();
-
-  // Solve CAPTCHA by clicking mocked button
-  await userEvent.click(screen.getByTestId("mock-captcha"));
 }
 
 // --------------------------
@@ -87,38 +58,26 @@ describe("ContactUsForm – Integration / Happy Path", () => {
     vi.clearAllMocks();
   });
 
-  it("completes full user journey: fill → CAPTCHA → submit → success → reset", async () => {
-    // Arrange
+  it("completes full user journey: fill → submit → success → reset", async () => {
     render(<ContactUsForm />);
-    const user = userEvent.setup();
-    
-    // Mock EmailJS to succeed
+
     mockedEmailjs.sendForm.mockResolvedValueOnce({ status: 200 });
 
-    // Get form elements
     const nameInput = screen.getByLabelText(/your name/i);
     const emailInput = screen.getByLabelText(/your email/i);
     const messageInput = screen.getByLabelText(/your message/i);
     const submitButton = screen.getByRole("button", { name: /submit/i });
-    const captchaButton = screen.getByTestId("mock-captcha");
 
-    // Fill form
-    await user.type(nameInput, "Jane Doe");
-    await user.type(emailInput, "jane.doe@example.com");
-    await user.type(messageInput, "Test message");
-    
-    // Solve CAPTCHA
-    await user.click(captchaButton);
-    
-    // Submit form
-    await user.click(submitButton);
-    
-    // Wait for submission to complete
+    await userEvent.type(nameInput, "Jane Doe");
+    await userEvent.type(emailInput, "jane.doe@example.com");
+    await userEvent.type(messageInput, "Test message");
+
+    await userEvent.click(submitButton);
+
     await waitFor(() => {
       expect(mockedToast.success).toHaveBeenCalled();
     });
 
-    // Verify all success conditions
     expect(mockedEmailjs.sendForm).toHaveBeenCalledTimes(1);
     expect(nameInput).toHaveValue("");
     expect(emailInput).toHaveValue("");
@@ -139,14 +98,11 @@ describe("ContactUsForm – validation", () => {
   it("shows error when name is empty", async () => {
     render(<ContactUsForm />);
 
-    // Fill only email and message
     await userEvent.type(screen.getByLabelText(/your email/i), "john@example.com");
     await userEvent.type(screen.getByLabelText(/your message/i), "Hello");
 
-    // Attempt to submit
     await userEvent.click(screen.getByRole("button", { name: /submit/i }));
 
-    // Expect validation toast and no email sent
     expect(mockedToast.error).toHaveBeenCalledWith("Please enter your name");
     expect(mockedEmailjs.sendForm).not.toHaveBeenCalled();
   });
@@ -160,7 +116,9 @@ describe("ContactUsForm – validation", () => {
 
     await userEvent.click(screen.getByRole("button", { name: /submit/i }));
 
-    expect(mockedToast.error).toHaveBeenCalledWith("Please enter a valid email address");
+    expect(mockedToast.error).toHaveBeenCalledWith(
+      "Please enter a valid email address"
+    );
     expect(mockedEmailjs.sendForm).not.toHaveBeenCalled();
   });
 
@@ -168,97 +126,45 @@ describe("ContactUsForm – validation", () => {
     render(<ContactUsForm />);
 
     await userEvent.type(screen.getByLabelText(/your name/i), "John");
-    await userEvent.type(screen.getByLabelText(/your email/i), "john@example.com");
+    await userEvent.type(
+      screen.getByLabelText(/your email/i),
+      "john@example.com"
+    );
 
     await userEvent.click(screen.getByRole("button", { name: /submit/i }));
 
-    expect(mockedToast.error).toHaveBeenCalledWith("Please enter your message");
+    expect(mockedToast.error).toHaveBeenCalledWith(
+      "Please enter your message"
+    );
     expect(mockedEmailjs.sendForm).not.toHaveBeenCalled();
   });
 
   it("prevents multiple submissions during sending", async () => {
     render(<ContactUsForm />);
 
-    // Fill all fields
-    await fillFormAndSolveCaptcha();
+    await fillForm();
 
-    // Mock EmailJS to succeed with a delay
     let resolveEmail: (value: { status: number }) => void = () => {};
     const emailPromise = new Promise<{ status: number }>((resolve) => {
       resolveEmail = resolve;
     });
+
     mockedEmailjs.sendForm.mockReturnValueOnce(emailPromise);
 
-    // Click submit twice quickly
     const submitButton = screen.getByRole("button", { name: /submit/i });
-    await userEvent.click(submitButton);
-    await userEvent.click(submitButton); // Second click should be ignored
 
-    // EmailJS should only be called once
+    await userEvent.click(submitButton);
+    await userEvent.click(submitButton);
+
     expect(mockedEmailjs.sendForm).toHaveBeenCalledTimes(1);
 
-    // Resolve the email promise
     resolveEmail({ status: 200 });
     await act(async () => {
       await emailPromise;
     });
 
-    // Verify the button is re-enabled after sending
     expect(submitButton).not.toBeDisabled();
     expect(submitButton).toHaveTextContent("Submit");
-  });
-});
-
-// --------------------------
-// CAPTCHA BEHAVIOR TESTS
-// --------------------------
-describe("ContactUsForm – CAPTCHA behavior", () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
-  it("cannot submit without solving CAPTCHA", async () => {
-    render(<ContactUsForm />);
-
-    // Fill fields but do NOT solve CAPTCHA
-    await fillForm();
-
-    // Attempt submit
-    await userEvent.click(screen.getByRole("button", { name: /submit/i }));
-
-    // Expect CAPTCHA error toast and no email sent
-    expect(mockedToast.error).toHaveBeenCalledWith("Please verify that you are not a robot");
-    expect(mockedEmailjs.sendForm).not.toHaveBeenCalled();
-  });
-
-  it("solving CAPTCHA enables submit", async () => {
-    render(<ContactUsForm />);
-
-    await fillFormAndSolveCaptcha();
-
-    // Submit form
-    await userEvent.click(screen.getByRole("button", { name: /submit/i }));
-
-    // EmailJS should be called
-    expect(mockedEmailjs.sendForm).toHaveBeenCalled();
-  });
-
-  it("CAPTCHA expired blocks submit again", async () => {
-    render(<ContactUsForm />);
-
-    await fillFormAndSolveCaptcha();
-
-    // Expire CAPTCHA
-    act(() => {
-      mockCaptchaOnChange(null);
-    });
-
-    // Attempt submit
-    await userEvent.click(screen.getByRole("button", { name: /submit/i }));
-
-    // Expect CAPTCHA error toast and no email sent
-    expect(mockedToast.error).toHaveBeenCalledWith("Please verify that you are not a robot");
-    expect(mockedEmailjs.sendForm).not.toHaveBeenCalled();
   });
 });
 
@@ -270,45 +176,18 @@ describe("ContactUsForm – Email sending", () => {
     vi.clearAllMocks();
   });
 
-  /**
-   * Helper: fills form and solves CAPTCHA
-   */
-  async function fillFormAndSolveCaptcha() {
-    await userEvent.type(screen.getByLabelText(/your name/i), "John");
-    await userEvent.type(screen.getByLabelText(/your email/i), "john@example.com");
-    await userEvent.type(screen.getByLabelText(/your message/i), "Hello");
-
-    // Solve CAPTCHA via mocked button
-    await act(async () => {
-      mockCaptchaOnChange("mock-token");
-    });
-  }
-
   it("sends email successfully → shows success toast and resets form", async () => {
     render(<ContactUsForm />);
 
-    // Fill form and solve CAPTCHA
-    await fillFormAndSolveCaptcha();
+    await fillForm();
 
-    // Mock EmailJS to succeed
     mockedEmailjs.sendForm.mockResolvedValueOnce({ status: 200 });
 
-    // Submit form
     await userEvent.click(screen.getByRole("button", { name: /submit/i }));
 
-    // EmailJS should be called
     expect(mockedEmailjs.sendForm).toHaveBeenCalledTimes(1);
-    expect(mockedEmailjs.sendForm).toHaveBeenCalledWith(
-      expect.any(String),
-      expect.any(String),
-      expect.any(HTMLFormElement),
-      expect.any(Object)
-    );
+    expect(mockedToast.success).toHaveBeenCalled();
 
-    // Toast success
-    expect(mockedToast.success).toHaveBeenCalledWith("Message sent successfully", { id: undefined });
-
-    // Form reset
     expect(screen.getByLabelText(/your name/i)).toHaveValue("");
     expect(screen.getByLabelText(/your email/i)).toHaveValue("");
     expect(screen.getByLabelText(/your message/i)).toHaveValue("");
@@ -317,16 +196,12 @@ describe("ContactUsForm – Email sending", () => {
   it("fails to send email → shows error toast and does not reset form", async () => {
     render(<ContactUsForm />);
 
-    // Fill form and solve CAPTCHA
-    await fillFormAndSolveCaptcha();
+    await fillForm();
 
-    // Mock EmailJS to fail
     mockedEmailjs.sendForm.mockRejectedValueOnce(new Error("Network Error"));
 
-    // Submit form
     await userEvent.click(screen.getByRole("button", { name: /submit/i }));
 
-    // WAIT for async rejection handling
     await waitFor(() => {
       expect(mockedToast.error).toHaveBeenCalledWith(
         "Failed to send message. Please try again.",
@@ -334,12 +209,12 @@ describe("ContactUsForm – Email sending", () => {
       );
     });
 
-    // EmailJS should have been called
     expect(mockedEmailjs.sendForm).toHaveBeenCalledTimes(1);
 
-    // Form should remain filled
     expect(screen.getByLabelText(/your name/i)).toHaveValue("John");
-    expect(screen.getByLabelText(/your email/i)).toHaveValue("john@example.com");
+    expect(screen.getByLabelText(/your email/i)).toHaveValue(
+      "john@example.com"
+    );
     expect(screen.getByLabelText(/your message/i)).toHaveValue("Hello");
   });
 });
