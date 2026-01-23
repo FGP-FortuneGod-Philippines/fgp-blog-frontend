@@ -58,8 +58,8 @@ const ContactUsForm = () => {
         email: "",
         message: "",
       });
-    } catch (err: any) {
-      console.error(err?.text || err);
+    } catch (err) {
+      console.error(err);
       toast.error("Failed to send message. Please try again.", {
         id: toastId,
       });
@@ -117,7 +117,9 @@ const ContactUsForm = () => {
       className="w-full flex flex-col gap-3"
     >
       <div className="w-full flex flex-col">
-        <label htmlFor="name" className="label">Your Name</label>
+        <label htmlFor="name" className="label">
+          Your Name
+        </label>
         <input
           id="name"
           type="text"
@@ -130,7 +132,9 @@ const ContactUsForm = () => {
       </div>
 
       <div className="w-full flex flex-col">
-        <label htmlFor="email" className="label">Your Email</label>
+        <label htmlFor="email" className="label">
+          Your Email
+        </label>
         <input
           id="email"
           type="email"
@@ -143,7 +147,9 @@ const ContactUsForm = () => {
       </div>
 
       <div className="w-full flex flex-col">
-        <label htmlFor="message" className="label">Your Message</label>
+        <label htmlFor="message" className="label">
+          Your Message
+        </label>
         <textarea
           id="message"
           name="message"
